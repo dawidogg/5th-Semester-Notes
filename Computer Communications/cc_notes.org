@@ -1,0 +1,155 @@
+#+AUTHOR: Denis Davidoglu
+
+* BLG 337E - Computer Communications
+** Time & place
+   - Monday 14:30-17:29, INB A205
+** Course plan
+** Textbook
+   - Crosses Computer Networking Top-Down approach
+** Notes
+*** Week 3
+**** Section 1
+     - Notion of Application layer protocol.
+     - Internet is based on packet switch. Alternative name, store and forward.
+     - Host -> router(xN) -> destination
+     - Packets should be stored in router
+     - Host divides a single long message into packets, because there is a certain capacity for transmission units.
+     - Packets are transmitted independenty
+     - Packet is divided into header and data. Router just looks at the header to find the destination IP. Then router decides where to send.
+     - TCP/IP network
+     - Destination point is responsible for reordering packets that arrived in arbitrary order.
+     - While moving through each router, there are four types of delays:
+       1. Transmission delay. Related to length of the packet and the transmission medium's limitation (bandwidth) (L bits)/ (R bits/second).
+       2. Queueing delay. Packets are buffered and waiting for the outgoing link to become empty.
+       3. Processing delay. Find packet, open header, decide outgoing link. Time spent inside CPU.
+       4. Propagation delay. Time for a single bit signal to be transmitted. Depends on the physical characteristics on the link. Length (D). Transmission capacity, propagation speed of a signal (S). D/S.
+     - Nodal delay: sum of all delays related to a router.
+     - No overlapping between transmission and propagation delays.
+**** Traceroute program. Project assignment. Write down a program call traceroute function to calculate minimum and maximum delays for different locations. Any programming language.
+      1) Choose 10 locations going further apart from each other.
+      2) From nearest to the furtherst.
+      3) Repeat these measuremenets in 5 different days.
+      4) Repeat in different 3 different time.
+      5) Repeat 100/200/300/1000 times.
+      6) Tell about the feelings about end-to-end delays.
+      7) Generate graph
+      8) Don't give home address.
+**** Section 2
+     - Application layer protocols. We write down software for hosts devices.
+       1. Client-server approach paradigm
+	  + Clients don't have permanent IP addresses.
+	  + Servers are always on and have permanent IP addresses.
+	  + Client is the process who initiates the communication.
+	  + Server is the process waiting for service.
+       2. Peer-to-peer approach paradigm
+	  + Arbitrary systems, end devices directly connect without a server.
+	  + Self-scalable network
+	  + Ad-hoc
+	  + Not designed previously
+	  + Torrent
+	  + Uses client-service paradigm. If downloading, it is client. If providing, server.
+	  + In the same device, there can be both client and server processes at the same time.
+     - Notion of process: program running within a host.
+     - Either processors can comunicate on the same host or different hosts. Processors are the ones who communicate. Process communication by exchanging messages.
+     - If running on the same device, it is called inter-process communication.
+     - In the beginning, there is a client-server paradigm to connect clients. Afterwards, communication is peer-to-peer.
+     - Types of messages
+       + Syntax
+       + Semantics
+       + Rules of message exchanges. HTTP file transmission.
+     - Application layer protocol requests from Transport layer:
+       + Data integrity. Should providing service guaranteeing transmission form source to destination. Reliability.
+       + Timing. Minimize delay.
+       + Security.
+       + Throughput. Transmit without dividing into small packets.
+     - TCP/IP designed in 1969, therefore no security in the design philosophy.
+     - With the came of online shopping, distributed versions started dealing with security. Each layer layer assumed security, but no separate layer for security.
+     - Elastic applications, throughput
+     - TCP protocol: data integrity
+       + File transfers doesn't care about throughput, time sensitivity, but cares about data integrity.
+     - UDP protocol: speed
+       + Streaming is loss-tolerant, but has throughput and time sensitivity, with a minimum bandwidth.
+**** Web & HTTP protocol
+     - Web pages consists of object of different formats.
+     - Base HTML file and connected objects.
+     - Host: *www.someschool.edu/* somedir/x.html
+     - Dir(path): www.someschool.edu/ *somedir/x.html*
+     - To download from server to client, HTTP protocol is used. Web browser's application protocol.
+     - TCP protocol is used as a transport layer for data integrity
+     - Before transmission, TCP communication is initiated.
+     - Client: TCP Request
+     - Server: TCP Connect
+     - Client: HTTP Request
+     - Server: HTTP Response
+     - TCP connection close
+     - Connection-oriented communication model. In order to tranport a message, a connection is needed.
+     - Setup - transfer - close. Reliable.
+     - HTTP is a stateless protocol. The history of the communication information is not kept. Every new connection is not related to previous connections.
+     - Persistent HTTP
+       + TCP connection is created, all objects are downloaded, and then connections is closed. More efficient.
+     - Non-persistent HTTP
+       + Make TCP, download first index.html, close. Repeats many times. HTTP 1.0.
+     - HTTP is stateless. Cookies introduce states. In classical Cookies, all requests are independently handled.
+       1. Cookie Header Line (HTTP Response message). Should be added into the first message after request.
+       2. Cookie header line next html request.
+       3. Cookie file kept on the user's browser
+       4. Backend database on the server side
+     - Assume client is reaching server for the first time, making HTTP request.
+       + Site sees the client for the first time and creates a record in its database
+       + Client receives the response with cookie information.
+       + A week later, client made another connection. The request contains cookie information in the header file now.
+       + Server recognizes the client.
+       + What if cookie is altered? Does the server ban you?
+**** Web Caches (Proxy servers)
+     - Speeding up the connection by caching data.
+     - Keep and copy in local environment
+     - To increase speed in a bottleneck, the easiest solution is to invest into new infrastructure to increase capacity.
+     - Better solution is to install a proxy server. Around 40% of request can be found inside the local proxy server. Drastic improvement.
+     - Proxy is not set by a provider
+     - Caches must be refreshed
+**** HTTP/2
+     - Multiple pipeline operations
+     - Requests are sent without waiting the responses
+     - Automatic repeat request approach
+     - Full bandwidth can be used for as much requests as needed
+**** HTTP/3
+     - Adding security per object error control and congestion control mechanics
+     - Can choose between UDP and TCP
+**** Email systems
+     1) User agents.
+	+ Example: Outlook
+	+ Sends messages to server
+	+ SMTP protocol between user and local server, as well as between servers
+     2) Mail servers
+     3) SMTP simple mail transfer protocol. Outlook.
+	- Not the single approach.
+	- Mail access protocols
+	- IMAP - internet message access protocol. Used by webmail environments.
+	- HTTP based protocols. Gmail, hotmail.
+**** DNS - Distributed Database System?
+     - Yellow pages for internet
+     - Companies where posting their IP address
+     - Difficult to reach
+     - Application layer protocol
+     - Related or implemented into the core internet functionality
+     - IP addresses work on the middle, network layer. But we are dealing with it on application level.
+     - Isn't this a dilemma for you?
+     - Host aliasing function
+     - Load balancing function
+     - Works in a hierarchical and distribited manner
+     - Top level DNS servers (tr, com)
+     - Authoritative DNS servers (itu.edu.tr, amazon.com)
+     - 300 server in USA
+     - DNS naem resolution is handled in two ways:
+       1. Iterative.
+	  + First request from local DNS server.
+	  + If doesn't know, looks at the root DNS server.
+	  + Pushes towards top-level domain server
+	  + Client keeps the information
+       2. Recursive
+	  + Local DNS
+	  + Root DNS. Gets responsibility on its own and asks for the top-level domain.
+	  + Check for the authoritative DNS
+	  + Everything sent back. Authortitative - TLD - Root - Local DNS - host
+     - We don't want to put burden on the root DNS, recursive not commonly used
+**** P2P architectures - next week.
