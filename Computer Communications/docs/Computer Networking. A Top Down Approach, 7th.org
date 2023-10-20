@@ -1,0 +1,1442 @@
+* Computer Networking. A Top Down Approach, 7th
+  :PROPERTIES:
+  :NOTER_DOCUMENT: Computer Networking. A Top Down Approach, 7th.pdf
+  :END:
+** Skeleton
+*** Computer Networking: A Top-Down Approach, 7th Edition
+    :PROPERTIES:
+    :NOTER_PAGE: 2
+    :END:
+*** Content
+    :PROPERTIES:
+    :NOTER_PAGE: 16
+    :END:
+*** Chapter 1 Computer Networks and the Internet
+    :PROPERTIES:
+    :NOTER_PAGE: 26
+    :END:
+*** 1.1 What Is the Internet?
+    :PROPERTIES:
+    :NOTER_PAGE: 28
+    :END:
+***  What are nontraditional devices being connected to the Internet referred to as in Internet jargon?
+    :PROPERTIES:
+    :NOTER_PAGE: 28
+    :HIGHLIGHT: #s(pdf-highlight 28 ((0.6085080147965475 0.5296867695184666 0.7965474722564735 0.5722300140252454)))
+    :END:
+#+BEGIN_QUOTE
+Internet. Indeed, the term computer
+network is beginning to sound a bit dated, given the many nontraditional devices that are being hooked
+up to the Internet. In Internet jargon, all of these devices are called hosts or end systems.
+#+END_QUOTE
+*** How are end systems connected in a network of communication?
+    :PROPERTIES:
+    :NOTER_PAGE: 29
+    :HIGHLIGHT: #s(pdf-highlight 29 ((0.0659679408138101 0.9093034128097243 0.8674475955610358 0.9149135109864424)))
+    :END:
+#+BEGIN_QUOTE
+End systems are connected together by a network of communication links and packet switches.
+#+END_QUOTE
+*** Notes for page 30
+    :PROPERTIES:
+    :NOTER_PAGE: 30
+    :HIGHLIGHT: #s(pdf-highlight 30 ((0.07891491985203453 0.07152875175315568 0.17447595561035759 0.10846189808321646)))
+    :END:
+#+BEGIN_QUOTE
+Different links can transmit data at different rates, with the transmission rate of a link measured in
+bits/second.
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+The resulting packages of information,
+known as packets in the jargon of computer networks, are then sent through the network to the
+destination end system, where they are reassembled into the original data.
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+A packet switch takes a packet arriving on one of its incoming communication links and forwards that
+packet on one of its outgoing communication links. Packet switches come in many shapes and flavors,
+but the two most prominent types in today’s Internet are routers and link-layer switches.
+#+END_QUOTE
+*** End systems access the Internet through Internet Service Providers (ISPs),
+    :PROPERTIES:
+    :NOTER_PAGE: 30
+    :HIGHLIGHT: #s(pdf-highlight 30 ((0.08446362515413071 0.6839644693782142 0.6781750924784217 0.6802244039270687)))
+    :END:
+*** Notes for page 31
+    :PROPERTIES:
+    :NOTER_PAGE: 31
+    :HIGHLIGHT: #s(pdf-highlight 31 ((0.4599260172626387 0.14118747078073868 0.686189889025894 0.16549789621318373)))
+    :END:
+#+BEGIN_QUOTE
+The Transmission Control Protocol (TCP) and the
+Internet Protocol (IP) are two of the most important protocols in the Internet.
+#+END_QUOTE
+
+#+BEGIN_QUOTE
+Internet ­standards are developed by the Internet Engineering Task Force
+(IETF) [IETF 2016]. The IETF standards documents are called requests for comments (RFCs)
+#+END_QUOTE
+*** Notes for page 32
+    :PROPERTIES:
+    :NOTER_PAGE: 32
+    :HIGHLIGHT: #s(pdf-highlight 32 ((0.08261405672009864 0.2267414679756896 0.7016029593094945 0.30014025245441794)))
+    :END:
+#+BEGIN_QUOTE
+End systems attached to the Internet provide a socket interface that specifies how a program running
+on one end system asks the Internet infrastructure to deliver data to a specific destination program
+running on another end system. This Internet socket interface is a set of rules that the sending program
+must follow so that the Internet can deliver the data to the destination program.
+#+END_QUOTE
+*** Use internet services and don't write everything from scratch
+    :PROPERTIES:
+    :NOTER_PAGE: 32
+    :HIGHLIGHT: #s(pdf-highlight 32 ((0.07829839704069051 0.544179523141655 0.5147965474722564 0.6129032258064516)))
+    :END:
+#+BEGIN_QUOTE
+The postal service, of course, provides more than one service to its customers. It provides express
+delivery, reception confirmation, ordinary use, and many more services. In a similar manner, the Internet
+provides multiple services to its applications. When you develop an Internet application, you too must
+choose one of the Internet’s services for your application.
+#+END_QUOTE
+*** Definition of protocol
+    :PROPERTIES:
+    :NOTER_PAGE: 35
+    :HIGHLIGHT: #s(pdf-highlight 35 ((0.11220715166461159 0.1187470780738663 0.218249075215783 0.16035530621785882)))
+    :END:
+#+BEGIN_QUOTE
+A protocol defines the format and the order of messages exchanged between two or more
+communicating entities, as well as the actions taken on the transmission and/or receipt of a message
+or other event.
+#+END_QUOTE
+*** 1.2 The Network Edge
+    :PROPERTIES:
+    :NOTER_PAGE: 36
+    :END:
+*** End systems, because they sit at the edge of the internet. Also reffered to as hosts, because they run the application
+    :PROPERTIES:
+    :NOTER_PAGE: 36
+    :HIGHLIGHT: #s(pdf-highlight 36 ((0.6307028360049322 0.3394109396914446 0.5684340320591862 0.3599812996727443)))
+    :END:
+#+BEGIN_QUOTE
+the computers and other devices
+connected to the Internet are often referred to as end systems.
+#+END_QUOTE
+*** Access network
+    :PROPERTIES:
+    :NOTER_PAGE: 38
+    :HIGHLIGHT: #s(pdf-highlight 38 ((0.08754623921085081 0.8803179055633474 0.7108508014796547 0.916783543712015)))
+    :END:
+#+BEGIN_QUOTE
+access network—the network that physically connects an end system to the first router (also known as
+the “edge router”) on a path from the end system to any other distant end system.
+#+END_QUOTE
+*** Stationary phones. Data is analog and decoded into digital at the office's DSLAM
+    :PROPERTIES:
+    :NOTER_PAGE: 40
+    :HIGHLIGHT: #s(pdf-highlight 40 ((0.08261405672009864 0.18513323983169708 0.4716399506781751 0.23796166432912577)))
+    :END:
+#+BEGIN_QUOTE
+Today, the two most prevalent types of broadband residential access are digital subscriber line (DSL)
+and cable. A residence typically obtains DSL Internet access from the same local telephone company
+(telco) that provides its wired local phone access.
+#+END_QUOTE
+*** Internet through coaxial television cable
+    :PROPERTIES:
+    :NOTER_PAGE: 41
+    :HIGHLIGHT: #s(pdf-highlight 41 ((0.08199753390875462 0.38709677419354843 0.5357583230579531 0.5212716222533894)))
+    :END:
+#+BEGIN_QUOTE
+While DSL makes use of the telco’s existing local telephone infrastructure, cable Internet access
+makes use of the cable television company’s existing cable television infrastructure. A residence obtains
+cable Internet access from the same company that provides its cable television. As illustrated in Figure
+1.6, fiber optics connect the cable head end to neighborhood-level junctions, from which traditional
+coaxial cable is then used to reach individual houses and apartments. Each neighborhood junction
+typically supports 500 to 5,000 homes. Because both fiber and coaxial cable are employed in this
+system, it is often referred to as hybrid fiber coax (HFC).
+#+END_QUOTE
+*** Why DSL networks are asymmetric
+    :PROPERTIES:
+    :NOTER_PAGE: 42
+    :HIGHLIGHT: #s(pdf-highlight 42 ((0.2644882860665845 0.1841982234689107 0.6134401972872996 0.23048153342683497)))
+    :END:
+#+BEGIN_QUOTE
+The ­DOCSIS 2.0 standard defines downstream rates up to 42.8 Mbps and
+upstream rates of up to 30.7 Mbps. As in the case of DSL networks, the maximum achievable rate may
+not be realized due to lower contracted data rates or media impairments.
+#+END_QUOTE
+*** Local area network (LAN)
+    :PROPERTIES:
+    :NOTER_PAGE: 43
+    :HIGHLIGHT: #s(pdf-highlight 43 ((0.4919852034525278 0.8695652173913044 0.876078914919852 0.8962131837307153)))
+    :END:
+#+BEGIN_QUOTE
+Although there are many types of LAN technologies,
+Ethernet is by far the most prevalent access technology in corporate, university, and home networks.
+#+END_QUOTE
+*** Speed of Ethernet
+    :PROPERTIES:
+    :NOTER_PAGE: 44
+    :HIGHLIGHT: #s(pdf-highlight 44 ((0.6750924784217016 0.394109396914446 0.24784217016029594 0.44506778868630203)))
+    :END:
+#+BEGIN_QUOTE
+With Ethernet access, users
+typically have 100 Mbps or 1 Gbps access to the Ethernet switch, whereas servers may have 1 Gbps or
+even 10 Gbps access.
+#+END_QUOTE
+*** Cell network
+    :PROPERTIES:
+    :NOTER_PAGE: 45
+    :HIGHLIGHT: #s(pdf-highlight 45 ((0.08076448828606658 0.4015895278167368 0.6208384710234279 0.493221131369799)))
+    :END:
+#+BEGIN_QUOTE
+Increasingly, devices such as iPhones and Android devices are being used to message, share photos in
+social networks, watch movies, and stream music while on the run. These devices employ the same
+wireless infrastructure used for cellular telephony to send/receive packets through a base station that is
+operated by the cellular network provider. Unlike WiFi, a user need only be within a few tens of
+kilometers (as opposed to a few tens of meters) of the base station.
+#+END_QUOTE
+*** Guided & unguided media
+    :PROPERTIES:
+    :NOTER_PAGE: 46
+    :HIGHLIGHT: #s(pdf-highlight 46 ((0.17077681874229347 0.292192613370734 0.5591861898890259 0.36231884057971014)))
+    :END:
+#+BEGIN_QUOTE
+Physical media fall into two categories: guided media and unguided media. With guided
+media, the waves are guided along a solid medium, such as a fiber-optic cable, a twisted-pair copper
+wire, or a coaxial cable. With unguided media, the waves propagate in the atmosphere and in outer
+space, such as in a wireless LAN or a digital satellite channel.
+#+END_QUOTE
+*** twisted wire pairs
+    :PROPERTIES:
+    :NOTER_PAGE: 46
+    :HIGHLIGHT: #s(pdf-highlight 46 ((0.3027127003699137 0.788218793828892 0.7755856966707768 0.8574100046750819)))
+    :END:
+#+BEGIN_QUOTE
+A wire pair constitutes a single communication link. Unshielded twisted
+pair (UTP) is commonly used for computer networks within a building, that is, for LANs. Data rates for
+LANs using twisted pair today range from 10 Mbps to 10 Gbps. The data rates that can be achieved
+depend on the thickness of the wire and the distance between transmitter and receiver.
+#+END_QUOTE
+*** Fiber Optics
+    :PROPERTIES:
+    :NOTER_PAGE: 47
+    :HIGHLIGHT: #s(pdf-highlight 47 ((0.08323057953144267 0.5558672276764843 0.5776818742293465 0.6493688639551193)))
+    :END:
+#+BEGIN_QUOTE
+An optical fiber is a thin, flexible medium that conducts pulses of light, with each pulse representing a
+bit. A single optical fiber can support tremendous bit rates, up to tens or even hundreds of gigabits per
+second. They are immune to electromagnetic interference, have very low signal attenuation up to 100
+kilometers, and are very hard to tap. These characteristics have made fiber optics the preferred long-
+haul guided transmission media, particularly for overseas links.
+#+END_QUOTE
+*** 1.3 The Network Core
+    :PROPERTIES:
+    :NOTER_PAGE: 49
+    :END:
+*** Network core
+    :PROPERTIES:
+    :NOTER_PAGE: 49
+    :HIGHLIGHT: #s(pdf-highlight 49 ((0.7108508014796547 0.18045815801776532 0.6652281134401973 0.20617110799438992)))
+    :END:
+#+BEGIN_QUOTE
+network core—the mesh
+of packet switches and links that interconnects the Internet’s end systems.
+#+END_QUOTE
+*** Transmission rate
+    :PROPERTIES:
+    :NOTER_PAGE: 50
+    :HIGHLIGHT: #s(pdf-highlight 50 ((0.6855733662145499 0.3394109396914446 0.4525277435265105 0.41748480598410476)))
+    :END:
+#+BEGIN_QUOTE
+Packets are transmitted over
+each communication link at a rate equal to the full transmission rate of the link. So, if a source end
+system or a packet switch is sending a packet of L bits over a link with transmission rate R bits/sec, then
+the time to transmit the packet is L / R seconds.
+#+END_QUOTE
+*** Store and forward transmission
+    :PROPERTIES:
+    :NOTER_PAGE: 50
+    :HIGHLIGHT: #s(pdf-highlight 50 ((0.08569667077681874 0.4988312295465171 0.46054254007398276 0.544179523141655)))
+    :END:
+#+BEGIN_QUOTE
+Most packet switches use store-and-forward transmission at the inputs to the links. Store-and-forward
+transmission means that the packet switch must receive the entire packet before it can begin to transmit
+the first bit of the packet onto the outbound link.
+#+END_QUOTE
+*** Formula for end-to-end transmission delay
+    :PROPERTIES:
+    :NOTER_PAGE: 51
+    :HIGHLIGHT: #s(pdf-highlight 51 ((0.07953144266337854 0.5717625058438522 0.21763255240443896 0.6657316503038804)))
+    :END:
+#+BEGIN_QUOTE
+Let’s now consider the general case of sending one packet from source to destination over a path
+consisting of N links each of rate R (thus, there are N-1 routers between source and destination).
+Applying the same logic as above, we see that the end-to-end delay is:
+dend-to-end=NLR
+#+END_QUOTE
+*** How routers know where to forwards the packet
+    :PROPERTIES:
+    :NOTER_PAGE: 53
+    :HIGHLIGHT: #s(pdf-highlight 53 ((0.2521578298397041 0.10799438990182329 0.24475955610357583 0.2356241234221599)))
+    :END:
+#+BEGIN_QUOTE
+As with postal addresses, this address has a hierarchical structure. When a packet
+arrives at a router in the network, the router examines a portion of the packet’s destination address and
+forwards the packet to an adjacent router. More specifically, each router has a forwarding table that
+maps destination addresses (or portions of the destination addresses) to that router’s outbound links.
+When a packet arrives at a router, the router examines the address and searches its forwarding table,
+using this destination address, to find the appropriate outbound link. The router then directs the packet
+to this outbound link.
+#+END_QUOTE
+*** Routing protocol
+    :PROPERTIES:
+    :NOTER_PAGE: 53
+    :HIGHLIGHT: #s(pdf-highlight 53 ((0.38286066584463624 0.7611033193080879 0.2644882860665845 0.8382421692379617)))
+    :END:
+#+BEGIN_QUOTE
+Internet has a number of special routing protocols that are used
+to automatically set the forwarding tables. A routing protocol may, for example, determine the shortest
+path from each router to each destination and use the shortest path results to configure the forwarding
+tables in the routers.
+#+END_QUOTE
+*** Trace-route is for seeing how packets take end-to-end routes in the internet
+    :PROPERTIES:
+    :NOTER_PAGE: (53 0.860682561944834 . 0.05980271270036989)
+    :END:
+*** Circuit-switched networks
+    :PROPERTIES:
+    :NOTER_PAGE: 54
+    :HIGHLIGHT: #s(pdf-highlight 54 ((0.08569667077681874 0.24029920523609163 0.41800246609124536 0.33099579242636745)))
+    :END:
+#+BEGIN_QUOTE
+In circuit-switched networks, the resources needed along a path (buffers, link transmission rate) to
+provide for communication between the end systems are reserved for the duration of the communication
+session between the end systems. In packet-switched networks, these resources are not reserved; a
+session’s messages use the resources on demand and, as a consequence, may have to wait (that is,
+queue) for access to a communication link.
+#+END_QUOTE
+*** Advantage of circuit-switch approach
+    :PROPERTIES:
+    :NOTER_PAGE: 54
+    :HIGHLIGHT: #s(pdf-highlight 54 ((0.3316892725030826 0.646096306685367 0.8723797780517879 0.683496961196821)))
+    :END:
+#+BEGIN_QUOTE
+Since a given transmission rate has been reserved for this sender-to-
+receiver connection, the sender can transfer the data to the receiver at the guaranteed constant rate.
+#+END_QUOTE
+*** Circuit link is implemented by reserving a bandwidth
+    :PROPERTIES:
+    :NOTER_PAGE: 55
+    :HIGHLIGHT: #s(pdf-highlight 55 ((0.08199753390875462 0.6171107994389902 0.6066584463625154 0.7503506311360449)))
+    :END:
+#+BEGIN_QUOTE
+A circuit in a link is implemented with either frequency-division multiplexing (FDM) or time-division
+multiplexing (TDM). With FDM, the frequency spectrum of a link is divided up among the connections
+established across the link. Specifically, the link dedicates a frequency band to each connection for the
+duration of the connection. In telephone networks, this frequency band typically has a width of 4 kHz
+(that is, 4,000 hertz or 4,000 cycles per second). The width of the band is called, not surprisingly, the
+bandwidth. FM radio stations also use FDM to share the frequency spectrum between 88 MHz and 108
+MHz, with each station being allocated a specific frequency band.
+#+END_QUOTE
+*** FDM
+    :PROPERTIES:
+    :NOTER_PAGE: 56
+    :HIGHLIGHT: #s(pdf-highlight 56 ((0.8144266337854501 0.44647031323048153 0.07706535141800247 0.32071061243571763)))
+    :END:
+#+BEGIN_QUOTE
+Figure 1.14 illustrates FDM and TDM for a specific network link supporting up to four circuits. For FDM,
+the frequency domain is segmented into four bands, each of bandwidth 4 kHz. For TDM, the time
+domain is segmented into frames, with four time slots in each frame; each circuit is assigned the same
+dedicated slot in the revolving TDM frames. For TDM, the transmission rate of a circuit is equal to the
+frame rate multiplied by the number of bits in a slot. For example, if the link transmits 8,000 frames per
+second and each slot consists of 8 bits, then the transmission rate of each circuit is 64 kbps.
+#+END_QUOTE
+*** FDM vs TDM
+    :PROPERTIES:
+    :NOTER_PAGE: 56
+    :HIGHLIGHT: #s(pdf-highlight 56 ((0.08138101109741061 0.22440392706872372 0.6750924784217016 0.2697522206638616)))
+    :END:
+#+BEGIN_QUOTE
+Figure 1.14
+With FDM, each circuit continuously gets a fraction of the bandwidth. With TDM, each circuit gets all of
+the bandwidth periodically during brief intervals of time (that is, during slots)
+#+END_QUOTE
+*** TDM calculation
+    :PROPERTIES:
+    :NOTER_PAGE: 56
+    :HIGHLIGHT: #s(pdf-highlight 56 ((0.34525277435265106 0.7844787283777467 0.6676942046855734 0.9111734455352969)))
+    :END:
+#+BEGIN_QUOTE
+Let us consider how long it takes to send a file of 640,000 bits from
+Host A to Host B over a circuit-switched network. Suppose that all links in the network use TDM with 24
+slots and have a bit rate of 1.536 Mbps. Also suppose that it takes 500 msec to establish an end-to-end
+circuit before Host A can begin to transmit the file. How long does it take to send the file? Each circuit
+has a transmission rate of (1.536 Mbps)/24=64 kbps, so it takes (640,000 bits)/(64 kbps)=10 seconds to
+transmit the file. To this 10 seconds we add the circuit establishment time, giving 10.5 seconds to send
+the file. Note that the transmission time is independent of the number of links:
+#+END_QUOTE
+*** Superiority of packet switching over circuit switching
+    :PROPERTIES:
+    :NOTER_PAGE: 58
+    :HIGHLIGHT: #s(pdf-highlight 58 ((0.5135635018495684 0.21131369798971483 0.1498150431565968 0.2926601215521272)))
+    :END:
+#+BEGIN_QUOTE
+Circuit switching pre-allocates use of the
+transmission link regardless of demand, with allocated but unneeded link time going unused. Packet
+switching on the other hand allocates link use on demand. Link transmission capacity will be shared on
+a packet-by-packet basis only among those users who have packets that need to be transmitted over
+the link.
+#+END_QUOTE
+*** multi-home, lower latency and protections against failures
+    :PROPERTIES:
+    :NOTER_PAGE: 60
+    :HIGHLIGHT: #s(pdf-highlight 60 ((0.3279901356350185 0.23094904160822816 0.6078914919852034 0.3165030388031791)))
+    :END:
+#+BEGIN_QUOTE
+Any ISP (except for tier-1 ISPs) may choose to multi-home, that is, to
+connect to two or more provider ISPs. So, for example, an access ISP may multi-home with two regional
+ISPs, or it may multi-home with two regional ISPs and also with a tier-1 ISP. Similarly, a regional ISP
+may multi-home with multiple tier-1 ISPs. When an ISP multi-homes, it can continue to send and receive
+packets into the Internet even if one of its providers has a failure.
+#+END_QUOTE
+*** internet exchange points
+    :PROPERTIES:
+    :NOTER_PAGE: 60
+    :HIGHLIGHT: #s(pdf-highlight 60 ((0.26078914919852036 0.5273492286115007 0.3557336621454994 0.5591397849462366)))
+    :END:
+#+BEGIN_QUOTE
+Along these same lines, a third-party company can create an Internet Exchange
+Point (IXP), which is a meeting point where multiple ISPs can peer together. An IXP is typically in a
+stand-alone building with its own switches
+#+END_QUOTE
+*** Content-provider networks, today's internet
+    :PROPERTIES:
+    :NOTER_PAGE: 60
+    :HIGHLIGHT: #s(pdf-highlight 60 ((0.08138101109741061 0.6573165030388032 0.29469790382244143 0.7442730247779337)))
+    :END:
+#+BEGIN_QUOTE
+We now finally arrive at Network Structure 5, which describes today’s Internet. Network Structure 5,
+illustrated in Figure 1.15, builds on top of Network Structure 4 by adding content-provider networks.
+Google is currently one of the leading examples of such a content-provider network. As of this writing, it
+is estimated that Google has 50–100 data centers distributed across North America, Europe, Asia,
+South America, and Australia.
+#+END_QUOTE
+*** 1.4 Delay, Loss, and Throughput in Packet-Switched Networks
+    :PROPERTIES:
+    :NOTER_PAGE: 62
+    :END:
+*** Processing Delay
+    :PROPERTIES:
+    :NOTER_PAGE: 63
+    :HIGHLIGHT: #s(pdf-highlight 63 ((0.07953144266337854 0.44880785413744745 0.1535141800246609 0.5717625058438522)))
+    :END:
+#+BEGIN_QUOTE
+The time required to examine the packet’s header and determine where to direct the packet is part of
+the processing delay. The processing delay can also include other factors, such as the time needed to
+check for bit-level errors in the packet that occurred in transmitting the packet’s bits from the upstream
+node to router A. Processing delays in high-speed routers are typically on the order of microseconds or
+less. After this nodal processing, the router directs the packet to the queue that precedes the link to
+router B.
+#+END_QUOTE
+*** Queueing Delay
+    :PROPERTIES:
+    :NOTER_PAGE: 63
+    :HIGHLIGHT: #s(pdf-highlight 63 ((0.08199753390875462 0.6517064048620851 0.42293464858199753 0.8209443665264142)))
+    :END:
+#+BEGIN_QUOTE
+At the queue, the packet experiences a queuing delay as it waits to be transmitted onto the link. The
+length of the queuing delay of a specific packet will depend on the number of earlier-arriving packets
+that are queued and waiting for transmission onto the link. If the queue is empty and no other packet is
+currently being transmitted, then our packet’s queuing delay will be zero. On the other hand, if the traffic
+is heavy and many other packets are also waiting to be transmitted, the queuing delay will be long. We
+will see shortly that the number of packets that an arriving packet might expect to find is a function of the
+intensity and nature of the traffic arriving at the queue. ­Queuing delays can be on the order of
+microseconds to milliseconds in practice.
+#+END_QUOTE
+*** Transmission Delay
+    :PROPERTIES:
+    :NOTER_PAGE: 63
+    :HIGHLIGHT: #s(pdf-highlight 63 ((0.07644882860665844 0.8957456755493222 0.8951911220715166 0.9401589527816737)))
+    :END:
+#+BEGIN_QUOTE
+Assuming that packets are transmitted in a first-come-first-served manner, as is common in packet-
+switched networks, our packet can be transmitted only after all the packets that have arrived before it
+have been transmitted. Denote the length of the packet by L bits, and denote the transmission rate of
+the link from router A to router B by R bits/sec. For example, for a 10 Mbps Ethernet link, the rate is
+R=10 Mbps; for a 100 Mbps Ethernet link, the rate is R=100 Mbps. The transmission delay is L/R. This
+is the amount of time required to push (that is, transmit) all of the packet’s bits into the link.
+Transmission delays are typically on the order of microseconds to milliseconds in practice.
+#+END_QUOTE
+*** Propagation Delay
+    :PROPERTIES:
+    :NOTER_PAGE: 64
+    :HIGHLIGHT: #s(pdf-highlight 64 ((0.08199753390875462 0.201028517999065 0.7281134401972873 0.40766713417484807)))
+    :END:
+#+BEGIN_QUOTE
+Once a bit is pushed into the link, it needs to propagate to router B. The time required to propagate from
+the beginning of the link to router B is the propagation delay. The bit propagates at the propagation
+speed of the link. The propagation speed depends on the physical medium of the link (that is, fiber
+optics, twisted-pair copper wire, and so on) and is in the range of
+2⋅108 meters/sec to 3⋅108 meters/sec
+which is equal to, or a little less than, the speed of light. The propagation delay is the distance between
+two routers divided by the propagation speed. That is, the propagation delay is d/s, where d is the
+distance between router A and router B and s is the propagation speed of the link.
+#+END_QUOTE
+*** Difference between transmission and propagation
+    :PROPERTIES:
+    :NOTER_PAGE: 64
+    :HIGHLIGHT: #s(pdf-highlight 64 ((0.5197287299630087 0.8798503973819543 0.8199753390875463 0.7615708274894811)))
+    :END:
+#+BEGIN_QUOTE
+The
+transmission delay is the amount of time required for the router to push out the packet; it is a function of
+the packet’s length and the transmission rate of the link, but has nothing to do with the distance between
+the two routers. The propagation delay, on the other hand, is the time it takes a bit to propagate from
+one router to the next; it is a function of the distance between the two routers, but has nothing to do with
+the packet’s length or the transmission rate of the link.
+#+END_QUOTE
+*** Queuing delay is not constant and is analyzed using probability theory
+    :PROPERTIES:
+    :NOTER_PAGE: 66
+    :HIGHLIGHT: #s(pdf-highlight 66 ((0.19510703363914372 0.5672541743970315 0.8880733944954128 0.6808905380333952)))
+    :END:
+#+BEGIN_QUOTE
+Unlike the other three delays (namely, dproc, dtrans, and dprop), the queuing delay can vary
+from packet to packet. For example, if 10 packets arrive at an empty queue at the same time, the first
+packet transmitted will suffer no queuing delay, while the last packet transmitted will suffer a relatively
+large queuing delay (while it waits for the other nine packets to be transmitted). Therefore, when
+characterizing queuing delay, one typically uses statistical measures, such as average queuing delay,
+variance of queuing delay, and the probability that the queuing delay exceeds some specified value.
+#+END_QUOTE
+*** Traffic intensity
+    :PROPERTIES:
+    :NOTER_PAGE: 66
+    :HIGHLIGHT: #s(pdf-highlight 66 ((0.38470948012232414 0.8849721706864564 0.8048929663608562 0.922077922077922)))
+    :END:
+#+BEGIN_QUOTE
+The ratio La/R, called the traffic intensity, often plays an
+important role in estimating the extent of the queuing delay. If La/R > 1, then the average rate at which
+bits arrive at the queue exceeds the rate at which the bits can be transmitted from the queue.
+#+END_QUOTE
+*** Design your system so that the traffic intensity is no greater than 1.
+    :PROPERTIES:
+    :NOTER_PAGE: 67
+    :HIGHLIGHT: #s(pdf-highlight 67 ((0.601834862385321 0.07838589981447125 0.3009174311926605 0.11410018552875696)))
+    :END:
+*** Average queing delay grows exponentially compared to La/R
+    :PROPERTIES:
+    :NOTER_PAGE: 68
+    :HIGHLIGHT: #s(pdf-highlight 68 ((0.6948012232415902 0.300556586270872 0.056880733944954125 0.3051948051948052)))
+    :END:
+``Figure 1.18 Dependence of average queuing delay on traffic intensity''
+*** Packets are lost due to finite queues inside routers
+    :PROPERTIES:
+    :NOTER_PAGE: (68 0.5500927643784786 . 0.06330275229357796)
+    :END:
+*** Packetization delay
+    :PROPERTIES:
+    :NOTER_PAGE: 71
+    :HIGHLIGHT: #s(pdf-highlight 71 ((0.3021406727828746 0.39192949907235625 0.6232415902140672 0.5273654916512059)))
+    :END:
+#+BEGIN_QUOTE
+For example, an end system wanting to transmit a packet into a shared
+medium (e.g., as in a WiFi or cable modem scenario) may purposefully delay its transmission as part of
+its protocol for sharing the medium with other end systems; we’ll consider such protocols in detail in
+Chapter 6. Another important delay is media packetization delay, which is present in Voice-over-IP
+(VoIP) applications. In VoIP, the sending side must first fill a packet with encoded digitized speech
+before passing the packet to the Internet. This time to fill a packet—called the packetization delay—can
+be significant and can impact the user-perceived quality of a VoIP call.
+#+END_QUOTE
+*** Throughput and bottleneck
+    :PROPERTIES:
+    :NOTER_PAGE: 72
+    :HIGHLIGHT: #s(pdf-highlight 72 ((0.7180428134556575 0.6897031539888683 0.6342507645259938 0.8070500927643784)))
+    :END:
+#+BEGIN_QUOTE
+Thus, for this simple
+two-link network, the throughput is min{Rc, Rs}, that is, it is the transmission rate of the bottleneck link.
+Having determined the throughput, we can now approximate the time it takes to transfer a large file of F
+bits from server to client as F/min{Rs, Rc}. For a specific example, suppose you are downloading an MP3
+file of F=32 million bits, the server has a transmission rate of Rs=2 Mbps, and you have an access link
+of Rc=1 Mbps. The time needed to transfer the file is then 32 seconds.
+#+END_QUOTE
+*** Java applets: https://computerscience.unicam.it/marcantoni/reti/applet/
+*** the constraining factor for throughput in today’s Internet is typically the access network.
+    :PROPERTIES:
+    :NOTER_PAGE: 73
+    :HIGHLIGHT: #s(pdf-highlight 73 ((0.2697247706422018 0.3098330241187384 0.1565749235474006 0.33487940630797774)))
+    :END:
+*** Throughput approximation
+    :PROPERTIES:
+    :NOTER_PAGE: 74
+    :HIGHLIGHT: #s(pdf-highlight 74 ((0.08440366972477063 0.6892393320964749 0.21590214067278285 0.7068645640074211)))
+    :END:
+#+BEGIN_QUOTE
+throughput can simply be approximated as the minimum transmission rate along the path between
+source and destination.
+#+END_QUOTE
+*** 1.5 Protocol Layers and Their Service Models
+    :PROPERTIES:
+    :NOTER_PAGE: 75
+    :END:
+*** Protocol Layering functions
+    :PROPERTIES:
+    :NOTER_PAGE: 77
+    :HIGHLIGHT: #s(pdf-highlight 77 ((0.6819571865443425 0.35111317254174396 0.6207951070336392 0.49211502782931354)))
+    :END:
+#+BEGIN_QUOTE
+We are again interested in
+the services that a layer offers to the layer above—the so-called service model of a layer. Just as in
+the case of our airline example, each layer provides its service by (1) performing certain actions within
+that layer and by (2) using the services of the layer directly below it. For example, the services provided
+by layer n may include reliable delivery of messages from one edge of the network to the other. This
+might be implemented by using an unreliable edge-to-edge message delivery service of layer n−1, and
+adding layer n functionality to detect and retransmit lost messages.
+#+END_QUOTE
+*** Internet protocol stack
+    :PROPERTIES:
+    :NOTER_PAGE: 78
+    :HIGHLIGHT: #s(pdf-highlight 78 ((0.08440366972477063 0.4457328385899815 0.15779816513761466 0.5)))
+    :END:
+#+BEGIN_QUOTE
+When taken together, the protocols of the various layers are called the protocol stack. The Internet
+protocol stack consists of five layers: the physical, link, network, transport, and application layers.
+#+END_QUOTE
+*** application layer
+    :PROPERTIES:
+    :NOTER_PAGE: 78
+    :HIGHLIGHT: #s(pdf-highlight 78 ((0.0801223241590214 0.8353432282003711 0.7333333333333333 0.8803339517625232)))
+    :END:
+#+BEGIN_QUOTE
+An application-layer protocol is distributed over multiple end systems, with the application in one end
+system using the protocol to exchange packets of information with the application in another end
+system. We’ll refer to this packet of information at the application layer as a message.
+#+END_QUOTE
+*** Disadvantages: layers can have duplicate functionalities, layers might need information from other layer (violates the principle of separation)
+    :PROPERTIES:
+    :NOTER_PAGE: (78 0.35064935064935066 . 0.04250764525993882)
+    :END:
+*** transport layer
+    :PROPERTIES:
+    :NOTER_PAGE: 79
+    :HIGHLIGHT: #s(pdf-highlight 79 ((0.07767584097859327 0.055658627087198514 0.20795107033639143 0.10064935064935066)))
+    :END:
+**** TCP provides a ­connection-oriented service to its applications.
+**** The UDP protocol provides a connectionless service to its applications.
+**** we’ll refer to a transport-layer packet as a segment.
+#+BEGIN_QUOTE
+The Internet’s transport layer transports application-layer messages between application endpoints. In
+the Internet there are two transport protocols, TCP and UDP, either of which can transport application-
+layer messages.
+#+END_QUOTE
+*** Network layer, packets called datagrams, one protocol called IP
+    :PROPERTIES:
+    :NOTER_PAGE: 79
+    :HIGHLIGHT: #s(pdf-highlight 79 ((0.07986309184255562 0.4610726643598616 0.49458071876782655 0.5579584775086506)))
+    :END:
+#+BEGIN_QUOTE
+The Internet’s network layer is responsible for moving network-layer packets known as datagrams from
+one host to another.
+...
+The Internet’s network layer includes the celebrated IP protocol, which defines the fields in the datagram
+as well as how the end systems and routers act on these fields. There is only one IP protocol, and all
+Internet components that have a network layer must run the IP protocol. The Internet’s network layer
+also contains routing protocols that determine the routes that datagrams take between sources and
+destinations. The Internet has many routing protocols.
+#+END_QUOTE
+*** Link layer
+    :PROPERTIES:
+    :NOTER_PAGE: 79
+    :HIGHLIGHT: #s(pdf-highlight 79 ((0.0838562464346834 0.736159169550173 0.814033086138049 0.8023356401384083)))
+    :END:
+#+BEGIN_QUOTE
+The Internet’s network layer routes a datagram through a series of routers between the source and
+destination. To move a packet from one node (host or router) to the next node in the route, the network
+layer relies on the services of the link layer. In particular, at each node, the network layer passes the
+datagram down to the link layer, which delivers the datagram to the next node along the route.
+#+END_QUOTE
+*** Physical layer, protocols dependent on the medium
+    :PROPERTIES:
+    :NOTER_PAGE: 80
+    :HIGHLIGHT: #s(pdf-highlight 80 ((0.8111808328579577 0.37543252595155713 0.132344552196235 0.30839100346020765)))
+    :END:
+#+BEGIN_QUOTE
+The protocols in this layer are again link dependent and further depend on the actual transmission
+medium of the link (for example, twisted-pair copper wire, single-mode fiber optics). For example,
+Ethernet has many physical-layer protocols: one for twisted-pair copper wire, another for coaxial cable,
+another for fiber, and so on. In each case, a bit is moved across the link in a different way.
+#+END_QUOTE
+*** Crapware of the OSI model: presentation layer and session layer
+    :PROPERTIES:
+    :NOTER_PAGE: 80
+    :HIGHLIGHT: #s(pdf-highlight 80 ((0.08157444381061038 0.7768166089965398 0.749001711351968 0.9126297577854672)))
+    :END:
+#+BEGIN_QUOTE
+Thus, let’s consider the two additional layers present in the OSI reference model—the presentation layer
+and the session layer. The role of the presentation layer is to provide services that allow communicating
+applications to interpret the meaning of data exchanged. These services include data compression and
+data encryption (which are self-explanatory) as well as data description (which frees the applications
+from having to worry about the internal format in which data are represented/stored—formats that may
+differ from one computer to another). The session layer provides for delimiting and synchronization of
+data exchange, including the means to build a checkpointing and recovery scheme.
+#+END_QUOTE
+*** Protocols of the link layer
+    :PROPERTIES:
+    :NOTER_PAGE: (80 0.05709342560553633 . 0.22589845978322873)
+    :HIGHLIGHT: #s(pdf-highlight 80 ((0.22589845978322873 0.05709342560553633 0.719908727895037 0.058823529411764705)))
+    :END:
+``Ethernet, WiFi, and the cable access network’s DOCSIS protocol.''
+*** Encapsulation
+    :PROPERTIES:
+    :NOTER_PAGE: 81
+    :HIGHLIGHT: #s(pdf-highlight 81 ((0.07472903593839132 0.717128027681661 0.4489446662863662 0.7426470588235294)))
+    :END:
+#+BEGIN_QUOTE
+Figure 1.24 Hosts, routers, and link-layer switches; each contains a ­different set of layers,
+reflecting their differences in ­functionality
+#+END_QUOTE
+*** Partial stack
+    :PROPERTIES:
+    :NOTER_PAGE: 81
+    :HIGHLIGHT: #s(pdf-highlight 81 ((0.645750142612664 0.8499134948096886 0.19680547632629777 0.8910034602076125)))
+    :END:
+#+BEGIN_QUOTE
+But routers and link-layer
+switches do not implement all of the layers in the protocol stack; they typically implement only the
+bottom layers.
+#+END_QUOTE
+*** Encapsulation, accumulation of payload fields
+    :PROPERTIES:
+    :NOTER_PAGE: 82
+    :HIGHLIGHT: #s(pdf-highlight 82 ((0.6531660011409013 0.4411764705882353 0.6383342840844266 0.14619377162629757)))
+    :END:
+#+BEGIN_QUOTE
+At the sending host, an
+application-layer message (M in Figure 1.24) is passed to the transport layer. In the simplest case,
+the transport layer takes the message and appends additional information (so-called transport-layer
+header information, Ht in Figure 1.24) that will be used by the receiver-side transport layer. The
+application-layer message and the transport-layer header information together constitute the transport-
+layer segment. The transport-layer segment thus encapsulates the application-layer message. The
+added information might include information allowing the receiver-side transport layer to deliver the
+message up to the appropriate application, and error-detection bits that allow the receiver to determine
+whether bits in the message have been changed in route. The transport layer then passes the segment
+to the network layer, which adds network-layer header information (Hn in Figure 1.24) such as source
+and destination end system addresses, creating a network-layer datagram. The datagram is then
+passed to the link layer, which (of course!) will add its own link-layer header information and create a
+link-layer frame. Thus, we see that at each layer, a packet has two types of fields: header fields and a
+payload field. The payload is typically a packet from the layer above.
+#+END_QUOTE
+*** 1.6 Networks Under Attack
+    :PROPERTIES:
+    :NOTER_PAGE: 83
+    :END:
+*** Botnet
+    :PROPERTIES:
+    :NOTER_PAGE: 83
+    :HIGHLIGHT: #s(pdf-highlight 83 ((0.7529948659440958 0.8321799307958477 0.6491728465487735 0.9078719723183392)))
+    :END:
+#+BEGIN_QUOTE
+Our compromised
+host may also be enrolled in a network of thousands of similarly compromised devices, collectively
+known as a botnet, which the bad guys control and leverage for spam e-mail distribution or distributed
+denial-of-service attacks (soon to be discussed) against targeted hosts.
+#+END_QUOTE
+*** Viruses and worms
+    :PROPERTIES:
+    :NOTER_PAGE: 84
+    :HIGHLIGHT: #s(pdf-highlight 84 ((0.32230462065031373 0.11807958477508651 0.2236166571591557 0.30276816608996543)))
+    :END:
+#+BEGIN_QUOTE
+Viruses are malware that require some form of user interaction to infect
+the user’s device. The classic example is an e-mail attachment containing malicious executable code. If
+a user receives and opens such an attachment, the user inadvertently runs the malware on the device.
+Typically, such e-mail viruses are self-replicating: once executed, the virus may send an identical
+message with an identical malicious attachment to, for example, every recipient in the user’s address
+book. Worms are malware that can enter a device without any explicit user interaction. For example, a
+user may be running a vulnerable network application to which an attacker can send malware. In some
+cases, without any user intervention, the application may accept the malware from the Internet and run
+it, creating a worm.
+#+END_QUOTE
+*** DoS attacks
+    :PROPERTIES:
+    :NOTER_PAGE: 84
+    :HIGHLIGHT: #s(pdf-highlight 84 ((0.3525385054192812 0.5506055363321799 0.5151169423844837 0.47923875432525953)))
+    :END:
+#+BEGIN_QUOTE
+denial-of-service (DoS) attacks. As the name
+suggests, a DoS attack renders a network, host, or other piece of infrastructure unusable by legitimate
+users. Web servers, e-mail servers, DNS servers (discussed in Chapter 2), and institutional networks
+can all be subject to DoS attacks.
+#+END_QUOTE
+*** DoS attacks categories
+    :PROPERTIES:
+    :NOTER_PAGE: 84
+    :HIGHLIGHT: #s(pdf-highlight 84 ((0.08727895037079292 0.6427335640138409 0.8482601254991443 0.8243944636678201)))
+    :END:
+**** Vulnerability attack.
+**** Bandwidth flooding. 
+**** Connection flooding. 
+*** DDoS attack
+    :PROPERTIES:
+    :NOTER_PAGE: 85
+    :HIGHLIGHT: #s(pdf-highlight 85 ((0.5733029092983457 0.07525951557093426 0.3804905875641757 0.13451557093425606)))
+    :END:
+#+BEGIN_QUOTE
+In a distributed DoS (DDoS) attack,
+illustrated in Figure 1.25, the attacker controls multiple sources and has each source blast traffic at the
+target. With this approach, the aggregate traffic rate across all the controlled sources needs to be
+approximately R to cripple the ­service.
+#+END_QUOTE
+*** packet sniffer
+    :PROPERTIES:
+    :NOTER_PAGE: 85
+    :HIGHLIGHT: #s(pdf-highlight 85 ((0.6292070735881345 0.8442906574394464 0.14945807187678264 0.9169550173010381)))
+    :END:
+#+BEGIN_QUOTE
+packets can contain all kinds of
+sensitive information, including passwords, social security numbers, trade secrets, and private personal
+messages. A passive receiver that records a copy of every packet that flies by is called a packet
+sniffer.
+#+END_QUOTE
+*** We will sniff data illegally!
+    :PROPERTIES:
+    :NOTER_PAGE: 86
+    :HIGHLIGHT: #s(pdf-highlight 86 ((0.5533371363377068 0.2586505190311419 0.2738163148887621 0.3070934256055363)))
+    :END:
+#+BEGIN_QUOTE
+Professors teaching a networking course have been known to assign lab exercises that involve writing a packet-
+sniffing and application-layer data reconstruction program. Indeed, the Wireshark [Wireshark 2016]
+labs associated with this text (see the introductory Wireshark lab at the end of this chapter) use exactly
+such a packet sniffer!
+#+END_QUOTE
+*** Fake packets, IP spoofing
+    :PROPERTIES:
+    :NOTER_PAGE: 86
+    :HIGHLIGHT: #s(pdf-highlight 86 ((0.32686822589845976 0.6842560553633218 0.1990872789503708 0.5938581314878892)))
+    :END:
+#+BEGIN_QUOTE
+Imagine the unsuspecting receiver (say an Internet router) who receives such a packet,
+takes the (false) source address as being truthful, and then performs some command embedded in the
+packet’s contents (say modifies its forwarding table). The ability to inject packets into the Internet with a
+false source address is known as IP spoofing, and is but one of many ways in which one user can
+masquerade as another user.
+#+END_QUOTE
+*** 1.7 History of Computer Networking and the Internet
+    :PROPERTIES:
+    :NOTER_PAGE: 88
+    :END:
+*** How today's TCP, IP and UDP were formed
+    :PROPERTIES:
+    :NOTER_PAGE: 91
+    :HIGHLIGHT: #s(pdf-highlight 91 ((0.30690245293782087 0.2106401384083045 0.13918996006845408 0.3468858131487889)))
+    :END:
+#+BEGIN_QUOTE
+The early versions of TCP combined a reliable in-sequence delivery of data
+via end-system retransmission (still part of today’s TCP) with forwarding functions (which today are
+performed by IP). Early experimentation with TCP, combined with the recognition of the importance of
+an unreliable, non-flow-controlled, end-to-end transport service for applications such as packetized
+voice, led to the separation of IP out of TCP and the development of the UDP protocol. The three key
+Internet protocols that we see today—TCP, UDP, and IP—were conceptually in place by the end of the
+1970s.
+#+END_QUOTE
+*** How today's Ethernet and LAN were invented
+    :PROPERTIES:
+    :NOTER_PAGE: 91
+    :HIGHLIGHT: #s(pdf-highlight 91 ((0.17056474614945807 0.4139273356401384 0.4500855675984027 0.6115916955017301)))
+    :END:
+#+BEGIN_QUOTE
+In Hawaii, Norman Abramson was developing ALOHAnet, a packet-based radio network that
+allowed multiple remote sites on the Hawaiian Islands to communicate with each other. The ALOHA
+protocol [Abramson 1970] was the first multiple-access protocol, allowing geographically distributed
+users to share a single broadcast communication medium (a radio ­frequency). Metcalfe and Boggs
+built on Abramson’s multiple-access protocol work when they developed the Ethernet protocol [Metcalfe
+1976] for wire-based shared broadcast networks. Interestingly, Metcalfe and Boggs’ Ethernet protocol
+was motivated by the need to connect multiple PCs, printers, and shared disks [Perkins 1994]. Twenty-
+five years ago, well before the PC revolution and the explosion of networks, Metcalfe and Boggs were
+laying the foundation for today’s PC LANs.
+#+END_QUOTE
+*** French were the first regular people that got access to internet, for free
+    :PROPERTIES:
+    :NOTER_PAGE: 92
+    :HIGHLIGHT: #s(pdf-highlight 92 ((0.7204791785510553 0.4619377162629758 0.08214489446662863 0.24740484429065746)))
+    :END:
+#+BEGIN_QUOTE
+Paralleling this development of the ARPAnet (which was for the most part a US effort), in the early
+1980s the French launched the Minitel project, an ambitious plan to bring data networking into
+everyone’s home. Sponsored by the French government, the Minitel system consisted of a public
+packet-switched network (based on the X.25 protocol suite), Minitel servers, and inexpensive terminals
+with built-in low-speed modems. The Minitel became a huge success in 1984 when the French
+government gave away a free Minitel terminal to each French household that wanted one. Minitel sites
+included free sites—such as a telephone directory site—as well as private sites, which collected a
+usage-based fee from each user. At its peak in the mid 1990s, it offered more than 20,000 services,
+ranging from home banking to specialized research databases. The Minitel was in a large proportion of
+French homes 10 years before most Americans had ever heard of the Internet.
+#+END_QUOTE
+*** 1.8 Summary
+    :PROPERTIES:
+    :NOTER_PAGE: 95
+    :END:
+*** Homework Problems and Questions
+    :PROPERTIES:
+    :NOTER_PAGE: 97
+    :END:
+*** Chapter 2 Application Layer
+    :PROPERTIES:
+    :NOTER_PAGE: 112
+    :END:
+*** https://www.geeksforgeeks.org/socket-programming-cc/
+*** Killer features of the internet
+    :PROPERTIES:
+    :NOTER_PAGE: 112
+    :HIGHLIGHT: #s(pdf-highlight 112 ((0.08157444381061038 0.4195501730103806 0.3029092983456931 0.5112456747404844)))
+    :END:
+#+BEGIN_QUOTE
+Internet applications include the classic text-based applications that became popular in the 1970s and
+1980s: text e-mail, remote access to computers, file transfers, and newsgroups. They include the killer
+application of the mid-1990s, the World Wide Web, encompassing Web surfing, search, and electronic
+commerce. They include instant messaging and P2P file sharing, the two killer applications introduced
+at the end of the millennium.
+#+END_QUOTE
+*** 2.1 Principles of Network Applications
+    :PROPERTIES:
+    :NOTER_PAGE: 114
+    :END:
+*** Software is developed only for the application layer
+    :PROPERTIES:
+    :NOTER_PAGE: 114
+    :HIGHLIGHT: #s(pdf-highlight 114 ((0.690815744438106 0.49134948096885817 0.8220193953223046 0.6241349480968859)))
+    :END:
+#+BEGIN_QUOTE
+Importantly, you do not
+need to write software that runs on network-core devices, such as routers or link-layer switches. Even if
+you wanted to write application software for these network-core devices, you wouldn’t be able to do so.
+As we learned in Chapter 1, and as shown earlier in Figure 1.24, network-core devices do not function
+at the application layer but instead function at lower layers—specifically at the network layer and below.
+This basic design—namely, confining application software to the end systems—as shown in Figure 2.1,
+has facilitated the rapid development and deployment of a vast array of network applications.
+#+END_QUOTE
+*** Don't confuse network architecture and application architecture
+    :PROPERTIES:
+    :NOTER_PAGE: 116
+    :HIGHLIGHT: #s(pdf-highlight 116 ((0.09127210496292071 0.04195501730103807 0.7541357672561323 0.11980968858131488)))
+    :END:
+#+BEGIN_QUOTE
+Before diving into software coding, you should have a broad architectural plan for your application. Keep
+in mind that an application’s architecture is distinctly different from the network architecture (e.g., the
+five-layer Internet architecture discussed in Chapter 1). From the application developer’s perspective,
+the network architecture is fixed and provides a specific set of services to applications.
+#+END_QUOTE
+*** client & server roles in p2p
+    :PROPERTIES:
+    :NOTER_PAGE: 119
+    :HIGHLIGHT: #s(pdf-highlight 119 ((0.2977752424415288 0.11678200692041522 0.6423274386765544 0.14100346020761245)))
+    :END:
+``With P2P file sharing, the peer that is downloading''
+*** Client & server definitions
+    :PROPERTIES:
+    :NOTER_PAGE: 119
+    :HIGHLIGHT: #s(pdf-highlight 119 ((0.11409013120365087 0.32698961937716264 0.8146035367940673 0.3680795847750865)))
+    :END:
+#+BEGIN_QUOTE
+In the context of a communication session between a pair of processes, the process that initiates the
+communication (that is, initially contacts the other process at the beginning of the session) is labeled
+as the client. The process that waits to be contacted to begin the session is the server.
+#+END_QUOTE
+*** Socket
+    :PROPERTIES:
+    :NOTER_PAGE: 119
+    :HIGHLIGHT: #s(pdf-highlight 119 ((0.34341129492298916 0.6604671280276817 0.48830576155162575 0.689446366782007)))
+    :END:
+#+BEGIN_QUOTE
+A process sends messages into, and receives messages from, the
+network through a software interface called a socket.
+#+END_QUOTE
+*** Socket is an API
+    :PROPERTIES:
+    :NOTER_PAGE: 119
+    :HIGHLIGHT: #s(pdf-highlight 119 ((0.3553907586993725 0.9104671280276817 0.8379920136908157 0.9338235294117647)))
+    :END:
+#+BEGIN_QUOTE
+a socket is the interface between the application layer and the
+transport layer within a host. It is also referred to as the Application Programming Interface (API) between the application and the network, since the socket is the programming interface with which
+network applications are built. The application developer has control of everything on the application-
+layer side of the socket but has little control of the transport-layer side of the socket.
+#+END_QUOTE
+*** Allowed tweaks in transport layer
+    :PROPERTIES:
+    :NOTER_PAGE: 120
+    :HIGHLIGHT: #s(pdf-highlight 120 ((0.7552766685681688 0.0990484429065744 0.19794637763833428 0.16046712802768168)))
+    :END:
+#+BEGIN_QUOTE
+The only control
+that the application developer has on the transport-layer side is (1) the choice of transport protocol and
+(2) perhaps the ability to fix a few transport-layer parameters such as maximum buffer and maximum
+segment sizes
+#+END_QUOTE
+*** IP and port
+    :PROPERTIES:
+    :NOTER_PAGE: 120
+    :HIGHLIGHT: #s(pdf-highlight 120 ((0.07016543069024529 0.7512975778546713 0.7626925270964061 0.7802768166089966)))
+    :END:
+#+BEGIN_QUOTE
+To identify the receiving process, two pieces of information need to be specified: (1) the address of the
+host and (2) an identifier that specifies the receiving process in the destination host.
+#+END_QUOTE
+*** IP address is a 32-bit quantity
+    :PROPERTIES:
+    :NOTER_PAGE: 120
+    :HIGHLIGHT: #s(pdf-highlight 120 ((0.49629207073588133 0.8481833910034602 0.7227609811751283 0.8507785467128028)))
+    :END:
+*** List of standard ports
+    :PROPERTIES:
+    :NOTER_PAGE: 121
+    :HIGHLIGHT: #s(pdf-highlight 121 ((0.5567598402738163 0.10164359861591696 0.6685681688533941 0.11764705882352941)))
+    :END:
+``www.iana.org.''
+*** services of a transport layer
+    :PROPERTIES:
+    :NOTER_PAGE: 121
+    :HIGHLIGHT: #s(pdf-highlight 121 ((0.08043354249857387 0.5333044982698962 0.20193953223046204 0.5882352941176471)))
+    :END:
+#+BEGIN_QUOTE
+What are the services that a transport-layer protocol can offer to applications invoking it? We can
+broadly classify the possible services along four dimensions: reliable data transfer, throughput, timing,
+and security.
+#+END_QUOTE
+*** Throughput can be guaranteed by transport layer
+    :PROPERTIES:
+    :NOTER_PAGE: 122
+    :HIGHLIGHT: #s(pdf-highlight 122 ((0.6491728465487735 0.3070934256055363 0.6891043924700513 0.38321799307958476)))
+    :END:
+#+BEGIN_QUOTE
+natural service that a transport-
+layer protocol could provide, namely, guaranteed available throughput at some specified rate. With such
+a service, the application could request a guaranteed throughput of r bits/sec, and the transport protocol
+would then ensure that the available throughput is always at least r bits/sec.
+#+END_QUOTE
+*** Elastic applications
+    :PROPERTIES:
+    :NOTER_PAGE: 122
+    :HIGHLIGHT: #s(pdf-highlight 122 ((0.713063320022818 0.6189446366782008 0.6879634911580148 0.6911764705882353)))
+    :END:
+#+BEGIN_QUOTE
+elastic applications can
+make use of as much, or as little, throughput as happens to be available. Electronic mail, file transfer,
+and Web transfers are all elastic applications. Of course, the more throughput, the better. There’san
+adage that says that one cannot be too rich, too thin, or have too much throughput!
+#+END_QUOTE
+*** A transport-layer protocol can also provide timing guarantees.
+    :PROPERTIES:
+    :NOTER_PAGE: 122
+    :HIGHLIGHT: #s(pdf-highlight 122 ((0.07701083856246434 0.7807093425605537 0.5670279520821448 0.7742214532871973)))
+    :END:
+*** security in transport layer
+    :PROPERTIES:
+    :NOTER_PAGE: 123
+    :HIGHLIGHT: #s(pdf-highlight 123 ((0.8009127210496292 0.189878892733564 0.5807187678265829 0.2876297577854671)))
+    :END:
+#+BEGIN_QUOTE
+For example,
+in the sending host, a transport protocol can encrypt all data transmitted by the sending process, and in
+the receiving host, the transport-layer protocol can decrypt the data before delivering the data to the
+receiving process. Such a service would provide confidentiality between the two processes, even if the
+data is somehow observed between sending and receiving processes.
+#+END_QUOTE
+*** TCP's connection-oriented service
+    :PROPERTIES:
+    :NOTER_PAGE: 123
+    :HIGHLIGHT: #s(pdf-highlight 123 ((0.10895607529948659 0.7634083044982699 0.8425556189389617 0.8416955017301039)))
+    :END:
+#+BEGIN_QUOTE
+Connection-oriented service. TCP has the client and server exchange transport-layer control
+information with each other before the application-level messages begin to flow. This so-called
+handshaking procedure alerts the client and server, allowing them to prepare for an onslaught of
+packets. After the handshaking phase, a TCP connection is said to exist between the sockets
+#+END_QUOTE
+*** TCP's reliable data transfer service
+    :PROPERTIES:
+    :NOTER_PAGE: 124
+    :HIGHLIGHT: #s(pdf-highlight 124 ((0.11409013120365087 0.4930795847750865 0.40102681118083283 0.5618512110726643)))
+    :END:
+#+BEGIN_QUOTE
+Reliable data transfer service. The communicating processes can rely on TCP to deliver all data
+sent without error and in the proper order. When one side of the application passes a stream of
+bytes into a socket, it can count on TCP to deliver the same stream of bytes to the receiving socket,
+with no missing or duplicate bytes.
+#+END_QUOTE
+*** TCP is not egoistic
+    :PROPERTIES:
+    :NOTER_PAGE: 124
+    :HIGHLIGHT: #s(pdf-highlight 124 ((0.08841985168282943 0.6042387543252595 0.2316029663434113 0.6764705882352942)))
+    :END:
+#+BEGIN_QUOTE
+TCP also includes a congestion-control mechanism, a service for the general welfare of the Internet
+rather than for the direct benefit of the communicating processes. The TCP congestion-control
+mechanism throttles a sending process (client or server) when the network is congested between
+sender and receiver.
+#+END_QUOTE
+*** TCP-enhanced-with-SSL can use encryption
+    :PROPERTIES:
+    :NOTER_PAGE: 124
+    :HIGHLIGHT: #s(pdf-highlight 124 ((0.8043354249857387 0.9273356401384083 0.12892184826012548 0.7993079584775087)))
+    :END:
+#+BEGIN_QUOTE
+Neither TCP nor UDP provides any encryption—the data that the sending process passes into
+its socket is the same data that travels over the network to the destination process. So, for
+example, if the sending process sends a password in cleartext (i.e., unencrypted) into its socket,
+the cleartext password will travel over all the links between sender and receiver, potentially
+getting sniffed and discovered at any of the intervening links. Because privacy and other security
+issues have become critical for many applications, the Internet community has developed an
+enhancement for TCP, called Secure Sockets Layer (SSL). TCP-enhanced-with-SSL
+#+END_QUOTE
+*** Application layer protocol defines:
+    :PROPERTIES:
+    :NOTER_PAGE: 127
+    :HIGHLIGHT: #s(pdf-highlight 127 ((0.10096976611523102 0.05147058823529412 0.8357102110667427 0.15484429065743946)))
+    :END:
+**** The types of messages exchanged, for example, request messages and response messages
+**** The syntax of the various message types, such as the fields in the message and how the fields are delineated
+**** The semantics of the fields, that is, the meaning of the information in the fields
+**** Rules for determining when and how a process sends messages and responds to messages
+*** Public vs proprietary application layer protocols
+    :PROPERTIES:
+    :NOTER_PAGE: 127
+    :HIGHLIGHT: #s(pdf-highlight 127 ((0.2549914432401597 0.231401384083045 0.5755847119224187 0.3023356401384083)))
+    :END:
+#+BEGIN_QUOTE
+If a browser developer follows the rules of the HTTP RFC, the browser will be able
+to retrieve Web pages from any Web server that has also followed the rules of the HTTP RFC. Many
+other application-layer protocols are proprietary and intentionally not available in the public domain. For
+example, Skype uses proprietary application-layer protocols.
+#+END_QUOTE
+*** Application-layer protocol < Network application
+    :PROPERTIES:
+    :NOTER_PAGE: 127
+    :HIGHLIGHT: #s(pdf-highlight 127 ((0.08100399315459213 0.3438581314878893 0.34854535082715343 0.39273356401384085)))
+    :END:
+#+BEGIN_QUOTE
+It is important to distinguish between network applications and application-layer protocols. An
+application-layer protocol is only one piece of a network application (albeit, a very important piece of the
+application from our point of view!).
+...
+The Web’s application-layer protocol, HTTP,
+defines the format and sequence of messages exchanged between browser and Web server. Thus,
+HTTP is only one piece (albeit, an important piece) of the Web application.
+...
+The principal application-layer protocol
+for electronic mail is SMTP (Simple Mail Transfer Protocol) [RFC 5321]. Thus, e-mail’s principal
+application-layer protocol, SMTP, is only one piece (albeit an important piece) of the e-mail application.
+#+END_QUOTE
+*** 2.2 The Web and HTTP
+    :PROPERTIES:
+    :NOTER_PAGE: 129
+    :END:
+*** 2.3 Electronic Mail in the Internet
+    :PROPERTIES:
+    :NOTER_PAGE: 149
+    :END:
+*** 2.4 DNS—The Internet’s Directory Service
+    :PROPERTIES:
+    :NOTER_PAGE: 160
+    :END:
+*** 2.5 Peer-to-Peer File Distribution
+    :PROPERTIES:
+    :NOTER_PAGE: 175
+    :END:
+*** 2.6 Video Streaming and Content Distribution Networks
+    :PROPERTIES:
+    :NOTER_PAGE: 182
+    :END:
+*** 2.7 Socket Programming: Creating Network Applications
+    :PROPERTIES:
+    :NOTER_PAGE: 193
+    :END:
+*** 2.8 Summary
+    :PROPERTIES:
+    :NOTER_PAGE: 207
+    :END:
+*** Homework Problems and Questions
+    :PROPERTIES:
+    :NOTER_PAGE: 208
+    :END:
+*** Chapter 3 Transport Layer
+    :PROPERTIES:
+    :NOTER_PAGE: 223
+    :END:
+*** 3.1 Introduction and Transport-Layer Services
+    :PROPERTIES:
+    :NOTER_PAGE: 224
+    :END:
+*** 3.2 Multiplexing and Demultiplexing
+    :PROPERTIES:
+    :NOTER_PAGE: 230
+    :END:
+*** 3.3 Connectionless Transport: UDP
+    :PROPERTIES:
+    :NOTER_PAGE: 238
+    :END:
+*** 3.4 Principles of Reliable Data Transfer
+    :PROPERTIES:
+    :NOTER_PAGE: 244
+    :END:
+*** 3.5 Connection-Oriented Transport: TCP
+    :PROPERTIES:
+    :NOTER_PAGE: 272
+    :END:
+*** 3.6 Principles of Congestion Control
+    :PROPERTIES:
+    :NOTER_PAGE: 302
+    :END:
+*** 3.7 TCP Congestion Control
+    :PROPERTIES:
+    :NOTER_PAGE: 311
+    :END:
+*** 3.8 Summary
+    :PROPERTIES:
+    :NOTER_PAGE: 327
+    :END:
+*** Homework Problems and Questions
+    :PROPERTIES:
+    :NOTER_PAGE: 330
+    :END:
+*** Chapter 4 The Network Layer: Data Plane
+    :PROPERTIES:
+    :NOTER_PAGE: 348
+    :END:
+*** 4.1 Overview of Network Layer
+    :PROPERTIES:
+    :NOTER_PAGE: 350
+    :END:
+*** 4.2 What’s Inside a Router?
+    :PROPERTIES:
+    :NOTER_PAGE: 358
+    :END:
+*** 4.3 The Internet Protocol (IP): IPv4, Addressing, IPv6, and More
+    :PROPERTIES:
+    :NOTER_PAGE: 376
+    :END:
+*** 4.4 Generalized Forwarding and SDN
+    :PROPERTIES:
+    :NOTER_PAGE: 402
+    :END:
+*** 4.5 Summary
+    :PROPERTIES:
+    :NOTER_PAGE: 410
+    :END:
+*** Homework Problems and Questions
+    :PROPERTIES:
+    :NOTER_PAGE: 411
+    :END:
+*** Chapter 5 The Network Layer: Control Plane
+    :PROPERTIES:
+    :NOTER_PAGE: 422
+    :END:
+*** 5.1 Introduction
+    :PROPERTIES:
+    :NOTER_PAGE: 423
+    :END:
+*** 5.2 Routing Algorithms
+    :PROPERTIES:
+    :NOTER_PAGE: 426
+    :END:
+*** 5.3 Intra-AS Routing in the Internet: OSPF
+    :PROPERTIES:
+    :NOTER_PAGE: 442
+    :END:
+*** 5.4 Routing Among the ISPs: BGP
+    :PROPERTIES:
+    :NOTER_PAGE: 446
+    :END:
+*** 5.5 The SDN Control Plane
+    :PROPERTIES:
+    :NOTER_PAGE: 459
+    :END:
+*** 5.6 ICMP: The Internet Control Message Protocol
+    :PROPERTIES:
+    :NOTER_PAGE: 472
+    :END:
+*** 5.7 Network Management and SNMP
+    :PROPERTIES:
+    :NOTER_PAGE: 475
+    :END:
+*** 5.7 Summary
+    :PROPERTIES:
+    :NOTER_PAGE: 481
+    :END:
+*** Homework Problems and Questions
+    :PROPERTIES:
+    :NOTER_PAGE: 482
+    :END:
+*** Chapter 6 The Link Layer and LANs
+    :PROPERTIES:
+    :NOTER_PAGE: 493
+    :END:
+*** 6.1 Introduction to the Link Layer
+    :PROPERTIES:
+    :NOTER_PAGE: 495
+    :END:
+*** 6.2 Error-Detection and -Correction Techniques
+    :PROPERTIES:
+    :NOTER_PAGE: 500
+    :END:
+*** 6.3 Multiple Access Links and Protocols
+    :PROPERTIES:
+    :NOTER_PAGE: 507
+    :END:
+*** 6.4 Switched Local Area Networks
+    :PROPERTIES:
+    :NOTER_PAGE: 524
+    :END:
+*** 6.5 Link Virtualization: A Network as a Link Layer
+    :PROPERTIES:
+    :NOTER_PAGE: 548
+    :END:
+*** 6.6 Data Center Networking
+    :PROPERTIES:
+    :NOTER_PAGE: 552
+    :END:
+*** 6.7 Retrospective: A Day in the Life of a Web Page Request
+    :PROPERTIES:
+    :NOTER_PAGE: 558
+    :END:
+*** 6.8 Summary
+    :PROPERTIES:
+    :NOTER_PAGE: 564
+    :END:
+*** Homework Problems and Questions
+    :PROPERTIES:
+    :NOTER_PAGE: 566
+    :END:
+*** Chapter 7 Wireless and Mobile Networks
+    :PROPERTIES:
+    :NOTER_PAGE: 577
+    :END:
+*** 7.1 Introduction
+    :PROPERTIES:
+    :NOTER_PAGE: 579
+    :END:
+*** 7.2 Wireless Links and Network Characteristics
+    :PROPERTIES:
+    :NOTER_PAGE: 584
+    :END:
+*** 7.3 WiFi: 802.11 Wireless LANs
+    :PROPERTIES:
+    :NOTER_PAGE: 591
+    :END:
+*** 7.4 Cellular Internet Access
+    :PROPERTIES:
+    :NOTER_PAGE: 612
+    :END:
+*** 7.5 Mobility Management: Principles
+    :PROPERTIES:
+    :NOTER_PAGE: 622
+    :END:
+*** 7.6 Mobile IP
+    :PROPERTIES:
+    :NOTER_PAGE: 632
+    :END:
+*** 7.7 Managing Mobility in Cellular Networks
+    :PROPERTIES:
+    :NOTER_PAGE: 637
+    :END:
+*** 7.8 Wireless and Mobility: Impact on ­Higher-Layer Protocols
+    :PROPERTIES:
+    :NOTER_PAGE: 644
+    :END:
+*** 7.9 Summary
+    :PROPERTIES:
+    :NOTER_PAGE: 646
+    :END:
+*** Homework Problems and Questions
+    :PROPERTIES:
+    :NOTER_PAGE: 647
+    :END:
+*** Chapter 8 Security in Computer Networks
+    :PROPERTIES:
+    :NOTER_PAGE: 655
+    :END:
+*** 8.1 What Is Network Security?
+    :PROPERTIES:
+    :NOTER_PAGE: 657
+    :END:
+*** 8.2 Principles of Cryptography
+    :PROPERTIES:
+    :NOTER_PAGE: 660
+    :END:
+*** 8.3 Message Integrity and Digital Signatures
+    :PROPERTIES:
+    :NOTER_PAGE: 674
+    :END:
+*** 8.4 End-Point Authentication
+    :PROPERTIES:
+    :NOTER_PAGE: 686
+    :END:
+*** 8.5 Securing E-Mail
+    :PROPERTIES:
+    :NOTER_PAGE: 692
+    :END:
+*** 8.6 Securing TCP Connections: SSL
+    :PROPERTIES:
+    :NOTER_PAGE: 698
+    :END:
+*** 8.7 Network-Layer Security: IPsec and Virtual Private Networks
+    :PROPERTIES:
+    :NOTER_PAGE: 705
+    :END:
+*** 8.8 Securing Wireless LANs
+    :PROPERTIES:
+    :NOTER_PAGE: 714
+    :END:
+*** 8.9 Operational Security: Firewalls and Intrusion Detection Systems
+    :PROPERTIES:
+    :NOTER_PAGE: 720
+    :END:
+*** 8.10 Summary
+    :PROPERTIES:
+    :NOTER_PAGE: 732
+    :END:
+*** Homework Problems and Questions
+    :PROPERTIES:
+    :NOTER_PAGE: 734
+    :END:
+*** Chapter 9 Multimedia Networking
+    :PROPERTIES:
+    :NOTER_PAGE: 747
+    :END:
+*** 9.1 Multimedia Networking Applications
+    :PROPERTIES:
+    :NOTER_PAGE: 748
+    :END:
+*** 9.2 Streaming Stored Video
+    :PROPERTIES:
+    :NOTER_PAGE: 754
+    :END:
+*** 9.3 Voice-over-IP
+    :PROPERTIES:
+    :NOTER_PAGE: 762
+    :END:
+*** 9.4 Protocols for Real-Time Conversational Applications
+    :PROPERTIES:
+    :NOTER_PAGE: 774
+    :END:
+*** 9.5 Network Support for Multimedia
+    :PROPERTIES:
+    :NOTER_PAGE: 784
+    :END:
+*** 9.6 Summary
+    :PROPERTIES:
+    :NOTER_PAGE: 802
+    :END:
+*** Homework Problems and Questions
+    :PROPERTIES:
+    :NOTER_PAGE: 803
+    :END:
+*** References
+    :PROPERTIES:
+    :NOTER_PAGE: 814
+    :END:
+*** Index
+    :PROPERTIES:
+    :NOTER_PAGE: 856
+    :END:
