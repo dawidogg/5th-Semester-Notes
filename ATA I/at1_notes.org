@@ -11,7 +11,25 @@
    - 5 rights not to attend classes, 70%
    - 60 or more to pass the course
 ** Course plan
+   | Week | Topic                                                                                           |   Pages |
+   |------+-------------------------------------------------------------------------------------------------+---------|
+   |    1 | Introduction - The Purpose of the Course                                                        |         |
+   |    2 | Decline of the Ottoman Empire (the era of Sultans Selim III and Mahmut II)                      |   21-36 |
+   |    3 | Modernization era and reformation attempts in 19th century (Era of Tanzimat) and Young Ottomans |   36-50 |
+   |    4 | Abdülhamit II era                                                                               |   76-93 |
+   |    4 | Axis and Allied powers, Tripoli, Balkan and World War I                                         | 106-110 |
+   |    5 | An international issue: Eastern Question, Secret Pacts of Ottoman territorial loss              | 110-121 |
+   |    6 | Reforms of Young Turks                                                                          | 121-132 |
+   |    7 | The Struggle for Independence: National Congresses in Anatolia (1919-1920)                      | 133-152 |
+   |    8 | National Pact and the First Grand National Assembly in Ankara (April 23, 1920)                  | 156-160 |
+   |    9 | The Eastern Front in National Resistance and Treaty of Alexandropol                             | 152-156 |
+   |   10 | The Western Front and Turkish-Greek War                                                         | 155-156 |
+   |   11 | Political Developments in the post-war era: The Constitution of 1921                            |         |
+   |   12 | The End of War: Armistice of Mudanya and abolution of the Sultanate                             |     156 |
+   |   13 | Lausanne Conference and Treaty                                                                  | 160-163 |
+   |   14 | Wrap up                                                                                         |         |
 ** Textbook
+   - [[file:docs/Eric Zürcher-Book (English).pdf][Zürcher, J.Eric, Turkey: A Modern History, 2010]]
 ** Notes
 *** Week 1
     - 19th century history presentation.
@@ -77,7 +95,6 @@
       - 1960-1980: Coalitions. Islamic Party, RPP-*Bulent Ecevit*.
       - Suleyman Demiral Right Justice Party.
       - 1982 Constitution still valid today.
-**** Chat link: https://chat.whatsapp.com/CgHs7CxjgejDTLvkIWRdyZ
 **** Breaking points in European history
 ***** Affected Turkish history. Leicism is separation of state and religion. Secularism covers the individuals. The state must be laistic, but individuals can be secular.
 ***** Laicus X Clericus
@@ -100,4 +117,5 @@
 ***** Beylikler donemi, princeships. Byzantine Empire
 ***** Osman bey, the founder of Ottoman Princeship. 
 ***** Orthodox Turks have been exiled in 20th century. All christian communities were exiled. Pizdec.
+*** Week 4
 
