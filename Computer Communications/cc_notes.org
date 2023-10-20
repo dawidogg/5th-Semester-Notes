@@ -5,11 +5,10 @@
    - Monday 14:30-17:29, INB A205
 ** Course plan
 ** Textbook
-   - Crosses Computer Networking Top-Down approach
+   - [[file:docs/Computer Networking. A Top Down Approach, 7th.pdf][Computer Networking. A Top Down Approach.]]
 ** Notes
 *** Week 3
-**** Section 1
-     - Notion of Application layer protocol.
+**** Delay, Loss, and Throughput in Packet-Switched Networks
      - Internet is based on packet switch. Alternative name, store and forward.
      - Host -> router(xN) -> destination
      - Packets should be stored in router
@@ -29,12 +28,12 @@
       1) Choose 10 locations going further apart from each other.
       2) From nearest to the furtherst.
       3) Repeat these measuremenets in 5 different days.
-      4) Repeat in different 3 different time.
+      4) Repeat in 3 different time.
       5) Repeat 100/200/300/1000 times.
       6) Tell about the feelings about end-to-end delays.
       7) Generate graph
       8) Don't give home address.
-**** Section 2
+**** Application Layer
      - Application layer protocols. We write down software for hosts devices.
        1. Client-server approach paradigm
 	  + Clients don't have permanent IP addresses.
@@ -140,7 +139,7 @@
      - Top level DNS servers (tr, com)
      - Authoritative DNS servers (itu.edu.tr, amazon.com)
      - 300 server in USA
-     - DNS naem resolution is handled in two ways:
+     - DNS name resolution is handled in two ways:
        1. Iterative.
 	  + First request from local DNS server.
 	  + If doesn't know, looks at the root DNS server.
