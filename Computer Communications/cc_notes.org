@@ -4,6 +4,8 @@
 ** Time & place
    - Monday 14:30-17:29, INB A205
 ** Course plan
+** Projects
+   - [[file:projects/traceroute][Traceroute]]
 ** Textbook
    - [[file:docs/Computer Networking. A Top Down Approach, 7th.pdf][Computer Networking. A Top Down Approach.]]
 ** Notes
@@ -152,3 +154,238 @@
 	  + Everything sent back. Authortitative - TLD - Root - Local DNS - host
      - We don't want to put burden on the root DNS, recursive not commonly used
 **** P2P architectures - next week.
+*** Week 4
+**** So far, client-server protocols have been discussed
+**** P2P network
+     - Does not require any server
+     - Arbitrary devices can communicate directly
+     - Adhoc network
+     - Network is based on the number of the self-scalable devices
+     - Example: SKype, Bittorrent
+**** File distribution: client-server vs p2p
+     - Distributing a file from many clients
+     - Client server example:
+       + File of size F and N peers downloading
+       + They have a certain limited upload/download capacities
+       + D_{c-s} >= max{N*F/u_s, F/d_min}. Time to distribute F to N clients using client-server approach
+       + Server upload capacity = u_s.
+       + d_min = bottle-neck speed of download on the client side
+       + Increases linearly depending on N.
+     - P2P:
+       + Each client keeps a copy or a part of the file
+       + D_P2P >= max{F/u_s, F/d_min, NF/(u_s + SUM(u_i))}
+       + Uploading the file to the network, F/u_s
+       + Each client keeps a copy, F/d_min
+       + If we keep a copy of the file among many users, N*F bits will be distributed across clients. Can take either u_s, copy from server, or SUM(u_i), from all clients.
+     - Increases on average logarithmically depending on N, eventually becoming stable.
+**** Example BitTorrent
+     - Ethical perspective, when using torrent file sharing programs. Professor explains how to desing such a network, but does not recommend sharing illegal and copyrighted materials.
+     - The file is divided into small portions of subfiles, called *chunks*. Size of 256 Kbits.
+     - Torrent: group of peers exchanging chunks.
+     - At the beginning, a tracker tracks peers participating in torrent. Finds a list of peers active, who have chunks of that file.
+     - Peer joining torrent. Has no chunks, but will accumulate from other peers over time
+     - While downloading, a peer is also uploading to other peers
+     - Once peer finishes downloading, they can selfighly leave or altruistically remain on torrent
+**** Example: pirating the "Led Zeppelin" album
+     - Px - peer, |x| chunk available
+     - P1: |1|3|4|7|
+     - P2: |2|5|6|
+     - P3: |8|9|
+     - P4: |10|
+     - P5: |2|3|4|
+     - P6: |1|9|10|       
+     - Chunk 1 has two copies, 10 has two copies
+     - Rarest available chunks are downloaded as fast as possible, because peers can leave
+     - Rarest-first algorithm
+     - Sending chunks:
+       + tit-for-tat agreement.
+       + Choose peers based on their trasfer rate (bandwidth), if there are multiple sources of the same chunk available, or multiple peers request the same chunks.
+       + Reevaluate every top peers every 4 seconds, assuming better services would be provided by others
+     - Top-four providers are situated on the bottlenecks
+     - Tracker keeps and updates the list
+**** Question, when was P2P invented?
+     - P2P for file sharing was first developed in the 1990's, but in the 2000's became popular
+**** Video streaming and CDNs:
+     - stream video traffic consumes 80% of the residential ISP traffic (2020 data)
+     - Example: Netflix, YouTube, Amazon Prime
+     - Challange: how to reach ~1 billion users
+     - Challange: heterogenety
+       + Different users have differnet capabilies (computers, mobile phones)
+     - Solution: distributed application level infrastructre
+**** Multimedia: video
+     - video: sequence of images displayed at constant rate
+     - spatial coding example: instead of sending N values of cam ecolor, send only two values: the color and duration
+     - temporal coding example: instead of sending complete frame at i+1, send only differences from frame i.
+     - Bit rate affects the bandwidth.
+     - CBR (contant bit rate) for voice, VBR (variable bit rate) for video.
+     - Available bit rate, internet.
+     - MPEG 4 bandwidth
+**** Streaming stored video
+     - Challanges of server-client approach.
+       + Internet is random, speed is always different
+       + Packet loss and delay due to congestion will delay playout or result in poor video quality
+     - Cummulative data will increase as time passes. Video recording delay, network delay, video receiving delay.
+     - jitter - delay variation
+     - If network delay is constant, we can store images in a buffer
+     - But network is not constnat, buffer can become empty and client doesn't receive anything
+     - Once playback beings, client-side buffer should mach playout requirement
+     - Client interactivity: Pause, fast-forwars, rewind, jump.
+**** Streaming multipedia: DASH
+     - Dynamic Adaptive Streaming over HTTP.
+     - server
+       + divides video into multple chunks
+       + Each chunk sotred, encoded at different rates
+       + manifest file: provides urls for different chunk
+     - client
+       + periodically measures server-to-cient bandwidth
+     - Intelligence in client:
+       - when to request chunk
+       - what encoding rate
+       - where to request chunk
+     - Streaming video = encoding + DASH + playout buffering
+**** Content distribution networks (CDN)
+     - Challange: how to steram content  seelctom form milions of videos to hundreds of thousands simultaneous users
+     - Solution 1: Large mega server
+       + single point of failure
+       + point of network congestion
+       + long path to distant client
+       + multiple copies of video sent over outgoinl king
+       + This solution doens't scale
+     - Solutuion 2: store/sever multiple copies of vidoes at multiple geographically distributed sytes (CDN)
+       + enter deep: push cdn dervers into many access networks
+       + bring home
+     - CDN stores copies contnet at CDN nodes
+     - subscriber requests content from CDN
+       + directed to nearby copy, retrieves copeis
+       + may choose different copy if network path congested
+     - Over the top services: coping with a congested internet
+       + from which cdn node to retrieve
+       + ???
+       + what content to place on the cdn node
+     - Example with BOB (client)
+       1. Video requested
+       2. Resolve address via local DNS
+       3. Authoritative DNS will answer to BOB with the ip address of the CDN server, content provider
+     - Netflix
+       1. BOB manages Netflix accout
+       2. Search netflix video
+       3. Manifest file requested returned for specific video
+       4. DASH server is contacted and streaming begins
+     - The file is obtained as a whole, not chunks. But similar to the P2P approach of the BitTorrent.
+     - Many CDN servers instead of peers
+**** HOMEWORK UPDATE
+     - 4 days/ up to 100 traceroute calls
+     - Next week new project will be annoucned. Client and socket program.
+     - STILL EASYY
+     - 6th of November midterm (/hopefully/)
+**** Transport layer protocols
+     - Purpose: multiplexing, demultiplexing, reliable data transfer
+     - Deals with the flow control mechanisms
+     - Flow control
+     - Congestion control
+     - TCP as the first example
+**** Trasnport services and protocols
+     - Provides logical communciation between application processes nd running on differnet hosts
+     - Transport protocols
+       + On sender side: breaks information to packets
+       + On receiver side: reassebmles information
+     - Household analogy:
+       + 12 kids in Ann's house sending letters to 12 kids in Bill's house
+       + hosts = houses
+       + processes = kids
+       + app mesages = letters in envelopes
+       + What is the role of the trasport layer?
+       + Keeping integrity of the messages
+       + In the analogy, transport layer = envelopes (make sure messages are delivered to the right location)
+       + Which one is the network layer?
+       + Network layer = postal service. Transferring messages from A to B.
+       + Link layer = router or in analogy plane, bike, post box
+       + Similar questions on midterm, making analogies
+       + Divide and conquer reference
+       + Understand the philosophy!
+**** Transport layer actions
+     - Message given to the transport layer, which appends a transport layer segment 
+**** Two protocols: TCP, UDP
+**** Multiplexing and demultiplexing skipped
+**** Summary of the transport layer
+     - Mux demux happens at all layers
+**** UDP: User Datagram Protocol
+     - no frills, bare bones protocol
+     - out of order delivery
+     - connectionless transmission
+     - no setup
+     - small header size
+     - Usage: DNS, SNMP, HTTP/3
+     - UDP segment generated and transferred directly to IP
+     - Cheksum header value for error control
+     - Segment header:
+       + source port
+       + dest port
+       + length,
+       + checksum
+       + application data (payload)
+     - UPD checksum
+       + detect flipped bits in transmitted segment.
+       + 5, 6 trasmitted, 11 sum, 11 checksum.
+       + 4, 6 trasmitted, 10 sum, 11 checksum.
+**** Internet checksum
+     - addition one's complement sum of segment content.
+     - example
+       + Carry wraps around, added to the least significant bit
+       + Be sure that this will be on midterm
+       + Documents can be brought to exam.
+       + Don't bring this: https://github.com/dawidogg/5th-Semester-Notes/blob/main/Computer%20Communications/cc_notes.org
+       + No sharing of documents during the exam
+**** Principles of reliable data transfer
+     - Reliable data tranfer protocol (rdt): interfaces
+       + rdt_send(). Provides data through a port through transport layer protocol. TLP provides message to an unreliable channel.
+       + udt_send(). Unreliable data send? Push message based on the data from app layer
+       + rdt_rcv(). Receive from unreliable data channel. Check for errors. If correct, deliver to the receiver of the communication.
+       + Remove some data portion and pass.
+       + deliver_data(). Called by rdt to deliver data to the upper layer
+     - Start defining protocols based on extended finite state machines (FSMs).
+**** rdt1.0 protocol. perfect case.
+      - assumtion taht underlying channel is perfectly reliable.
+      - separate FSMs for sender, receiver.
+      - We create a packet and rdt_send(data) is triggered by incoming data.
+      - During transaction, packet = make_pkt(data); udt_send(packet).
+      - Send message through channel
+      - We didn't add any extra value like sumcheck, because we know the channel is safe
+      - On the receiver side, rdt_rcv(packet) listens the channel.
+      - When receive event triggered, extract(packet data), deliver_data(data)
+****  rdt2.0. introduce errors.
+      - add bit errors after channel transmission, no packet loss
+      - to recover from errors (stop and wait protocols category):
+	1. acknowledgements (ACKs). Message that packet received without error. Tell to procceed to other packets.
+	2. negative acknowledgement (NAKs). Message that there has been an error. Resend.
+      - FSM specification - Sender
+	1. wait for call from above state. 
+	2. wait for ACK or NAK
+      - FSM - Receiver
+	- wait for call ??
+      - Does not count for the corruption of acknowledgement/nacknowledgment
+      - Solution: count the id numbers of the packet and track duplicated
+**** rdt2.1.
+     - Introduce a parity bit.
+     - Sender:
+       + Wait for call 0 from above. 
+       + Wait for ACK 0. If bit not matched.
+       + Wait for call 1 from above.
+       + Wait for ACK 1.
+     - Receiver
+       + Wait for 0 from below
+       + Wait for 1 from below
+**** rdt2.2 a NAK-free protocol
+     - Sending positive and negative acknowledgement is harming performance
+     - Send only the positive acknowledgement
+     - Same functionality as rdt2.1
+     - Receiver must include
+     - Sender
+       + Wait call 0 from above
+       + Wait for ACK 0
+     - Receiver
+       + If wrong sequence number, either corrupt or not expected. Resend the message.
+       + If the message has right sequence number and is not corrupt,
+       + Wait 0 from below
+**** rdt3.0 next week
+

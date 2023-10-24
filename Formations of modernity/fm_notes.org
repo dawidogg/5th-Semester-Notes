@@ -1,0 +1,322 @@
+#+AUTHOR: Denis Davidoglu
+
+* ITB 020E - Formations of Modernity
+** Time & place
+   - Tuesday 11:30-14:29, FEB D204
+** Grading
+   - Midterm 40%
+   - Final 50%
+   - Attendance 10%
+** Reading by weeks
+*** Week 1. Introduction: What is Modern ? 
+
+*** Week 2. The Rise of Europe: Renaissance, Reform and Reconnaissance 
+**** Norman Davies, Europe: A History, pp. 469-503 (Chapter VII Renatio)
+**** Niccolo Machiavelli, “The Prince”
+**** Martin Luther, “The Freedom of a Christian”
+**** John Calvin, “The Institutes of the Christian Religion”
+
+*** Week 3. The Development of the Modern State
+**** Stuart Hall, Bram Gieben (ed.), Formations of Modernity, David Held, “The Development of the Modern State”, pp. 71-125
+     
+*** Week 4. Enlightenment and the French Revolution
+**** Norman Davies, Europe: A History, pp. 596-614, 675-733 (Chapters Lumen and Revolutio)
+**** Thomas Hobbes, “Leviathan”
+**** John Locke, “Second Treatise of Government”
+**** Jean Jacques Rousseau, “The Social Contract”
+**** Thomas Jefferson, “The Declaration of Independence”
+
+*** Week 5. Liberalism and Nationalism; the Best of the Times
+**** Norman Davies, Europe: A History, pp. 782-835 (Chapter X, Dynamo)
+
+*** Week 6. The Rise of Socialism and Communism 
+**** Norman Davies, Europe: A History, pp. 835-865 (Chapter X Dynamo)
+**** Karl Marx, Friedrich Engels, The Communist Manifesto 
+**** Charles Darwin, “The Descent of Man”
+**** Friedrich Nietzsche, “Beyond Good and Evil”
+**** Sigmund Freud, “The Interpretation of Dreams”
+**** George Orwell, “Shooting an Elephant”
+
+*** Week 7. Imperialism, Fascism and World Wars
+**** Eric Hobsbawm, The Age of Extremes, pp. 21-53
+**** Mark Mazower, The Dark Continent, pp. 77-105 
+
+*** Week 8. Midterm
+
+*** Week 9. Cold War and the Age of Intellectuals
+**** Tony Judt, Reappraisals, pp. 95-146
+**** Nikita Kruschev, “Report to the Communist Party Congress”
+**** Winston Churchill, “The Iron Curtain”
+
+*** Week 10. The Rise of the Modern Economy 
+**** Stuart Hall, Bram Gieben (ed.), Formations of Modernity, Vivienne Brown,    
+**** “The Emergence of the Economy”, pp. 127-175
+
+*** Week 11. 1968 and Beyond: The Rise of Identity Politics 
+**** Tony Judt, Postwar, London: The Penguin Press, 2005, pp. 390-421
+
+*** Week 12. The End of History or Clash of Civilizations ?
+**** Francis Fukuyama, “The End of History ?”, National Interest, Spring 1989
+
+*** Week 13. The Age of Populism
+**** Jan-Werner Müller, What is Populism, Philadelphia: University of Pennsylvania Press, 2016, pp. 1-40
+
+*** Week 14. Conclusions
+    
+** Textbooks
+*** [[file:docs/Norman Davies - Europe_ A History-Harper Perennial (1998).epub][Norman Davies. Europe, a History. (1998)]]
+    :PROPERTIES:
+    :NOTER_DOCUMENT: docs/Norman Davies - Europe_ A History-Harper Perennial (1998).epub
+    :END:
+**** Renaissances and Reformations
+     :PROPERTIES:
+     :NOTER_PAGE: (20 . 847)
+     :END:
+**** Notes for page (20 . 1080)
+     :PROPERTIES:
+     :NOTER_PAGE: (20 . 1080)
+     :END:
+#+BEGIN_QUOTE
+In the so-called ‘Age of the Renaissance and Reformation’ which
+conventionally begins c.1450, it can only be described as a minority interest.
+#+END_QUOTE
+**** Notes for page (20 . 1961)
+     :PROPERTIES:
+     :NOTER_PAGE: (20 . 1961)
+     :END:
+#+BEGIN_QUOTE
+ One implication is that this ‘Early
+Modern Period’ may not be quite so modern after all. Despite the fresh seeds that were sown, it could
+well have had more in common with the medievalism that preceded it than with the Enlightenment
+which followed.
+#+END_QUOTE
+**** Notes for page (20 . 4248)
+     :PROPERTIES:
+     :NOTER_PAGE: (20 . 4248)
+     :END:
+#+BEGIN_QUOTE
+The essence of the Renaissance lay not in any sudden rediscovery of classical
+civilization but rather in the use which was made of classical models to test the authority
+underlying conventional taste and wisdom
+#+END_QUOTE
+**** Notes for page (20 . 5708)
+     :PROPERTIES:
+     :NOTER_PAGE: (20 . 5708)
+     :END:
+#+BEGIN_QUOTE
+Its ideal was a person who, by
+mastering all branches of art and thought, need depend on no outside authority for the formation
+of knowledge, tastes, and beliefs. Such a person was l‘uomo universale, the ‘complete man’
+#+END_QUOTE
+**** Notes for page (20 . 11228)
+     :PROPERTIES:
+     :NOTER_PAGE: (20 . 11228)
+     :END:
+#+BEGIN_QUOTE
+ Indeed, by giving a new lease of life to the
+Latin West, the Renaissance only deepened the gulf between East and West.
+#+END_QUOTE
+**** Flagellation
+     :PROPERTIES:
+     :NOTER_PAGE: (20 . 15439)
+     :END:
+#+BEGIN_QUOTE
+A leading British authority, however, is adamant that the picture represents The Dream of St Jerome.
+Jerome once dreamed that he was being flogged for reading the pagan Cicero. This would explain the
+discordance between the two sections. The three foreground figures—two men and ‘a barefoot
+angel’—’are discussing the relation between classical and patristic literature embodied in the story of St
+Jerome’s dream’.4
+#+END_QUOTE
+**** Notes for page (20 . 21026)
+     :PROPERTIES:
+     :NOTER_PAGE: (20 . 21026)
+     :END:
+#+BEGIN_QUOTE
+The causes of the Renaissance were as deep as they were broad. They can be related to the growth of
+cities and of late medieval trade, to the rise of rich and powerful capitalist patrons, to technical progress
+which affected both economic and artistic life. But the source of spiritual developments must be sought
+above all in the spiritual sphere. 
+#+END_QUOTE
+**** novel features
+     :PROPERTIES:
+     :NOTER_PAGE: (20 . 21026)
+     :END:
+#+BEGIN_QUOTE
+One was the cultivation of
+long-neglected classical authors, especially those such as Cicero or Homer who had not attracted the
+medieval schoolmen. The second was the cultivation of ancient Greek as an essential partner to Latin.
+The third was the rise of biblical scholarship based on the critical study of the original Hebrew and Greek
+texts. This last activity provided an important bond between the secular Renaissance and the religious
+Reformation which was to place special emphasis on the authority of the Scriptures. 
+#+END_QUOTE
+**** Notes for page (20 . 27338)
+     :PROPERTIES:
+     :NOTER_PAGE: (20 . 27338)
+     :END:
+#+BEGIN_QUOTE
+Renaissance humanism contradicted the prevailing modes and assumptions of Christian practice.
+Notwithstanding its intentions, traditionalists believed that it was destructive of religion, and ought to
+have been restrained. Five hundred years later, when the disintegration of Christendom was far more
+advanced, it has been seen by many Christian theologians as the source of all the rot. According to one
+Catholic philosopher:
+
+The difference between the Renaissance and the Middle Ages was not a difference by addition but by
+subtraction. The Renaissance … was not the Middle Ages plus Man, but the Middle Ages minus God.
+#+END_QUOTE
+**** Notes for page (20 . 50813)
+     :PROPERTIES:
+     :NOTER_PAGE: (20 . 50813)
+     :END:
+#+BEGIN_QUOTE
+The Lutheran musical tradition had far-reaching consequences. It required every parish to keep its
+cantor, its organist, its choir school, and its body of trained singers and instrumentalists. As a result, it
+played a  prominent role in turning Germany into the most musically educated nation in Europe—the
+richest resource for Europe’s secular music-making. The genius of J. S. Bach could have found no more
+fertile soil than in Lutheranism.
+
+#+END_QUOTE
+** Notes
+*** Week 2
+*** Week 3
+    - Protestant reformation is important because it signals emergence of modern ideas.
+    - Subjectivity, relativity, ambiguity.
+    - Stop popes speaking in the name of god. Popes were "innoncent", could not make mistakes
+    - Pope was intermediate between God and humans.
+    - Existance of God was undoubtable.
+    - There a skeptics in the 17th century, concept of Theodicity.
+    - Theodicity: the existance of evil. Why evil exists if there is God and salvation?
+      + It is a challange that humans accept.
+      + Then the question is why do premature deaths happens?
+    - Silence Scorsese (2016) trailer.
+      + Jesuits try to convert Japanese to Catholisism.
+      + Many missions. And 2-3% India, Japan, China.
+      + Missions stopped when Japanese banned Europeans from entering Japan expect in trading ports.
+      + Punishment for being Christian in Japan is burning alive.
+      + If you step on cross, you survive and can convert other people to Christianity.
+      + If you don't step, you sacrifice yourself for the religion.
+      + What should you do? Why is God silent?
+    - Zoroastrism is about evil and good, there a two Gods.
+    - Satan is powerful and is answer of why there exists evil.
+    - Omnipotence, omnipresence, omniscience and God questioning.
+      + If God is omnipotent, there is no free will. If there is free will, God is not omnipotent.
+      + Baruch Spinoza's solution is that God is everywhere. We act with the will of God.
+      + God doesn't care about what we do everytime.
+      + He links nature to God.
+      + God is not somewhere far away.
+      + Abstraction of God.
+      + God is not an entity that punishes
+      + Judaism is not about prohibition or rituals.
+      + If you act ethically, this is God.
+    - Kabala, Jewish sect.
+      + If everything is compliant with nature, there will be no evil.
+      + Perfection of God = no evil.
+      + Once humans act with their conciosness, no evil.
+    - In the 17th century, God is totally abstracted in comparison with Zeus and Christian and Islamic God.
+    - Fear God or love God?
+    - God sets the clock and it's up to humans to act. Agency of God. God is taken from with world, and placed in other world to be judge.
+    - Immanuel Kant
+      + God is idea, spirits
+      + Humanities aim is salvation by doing good things
+      + Focuses about ethics
+    - After Enlightment, Christianity turns into individual.
+    - Islam is about collectively feeling God
+    - Why do kings exist? Protector of authority and order.
+    - Legitimacy of sultans comes from power, brothers fight for the throne.
+    - How did the first king on the world appear?
+      + Thomas Hobbes
+      + Leviathan's cover. King consists of many people.
+      + People chose the wisest.
+      + If people are not happy anymore with the king, they cannot take his authority back.
+      + If people put someone they can take the authority back, there is no meaning in choosing the king in the first place.
+      + Decisions are not irrevocable.
+      + Author is not authority yalakalisi, but against republic.
+      + Fear is my twin, born prematurely because his moms of fear of Spanish invasion.
+      + In the 17th century the establishment of republic in England didn't work.
+      + Kings used to hold incredible power, but now parliament will do that.
+      + People in parliament cannot agree with each other on using the incredible power.
+      + King had final authority.
+      + King commanded the powerful military. Parliaments were couped by militaries now.
+      + Oliver Cromwell. Ataturk - Turkish Cromwell, powerful military leader who practices politcal power.
+      + When Thomas Cromwell died, his son became dictator.
+      + Trend of kings.
+      + If there are no kings, there would be chaos, violence. We need kings. (Thomas Hobbes)
+      + The real authority is king
+    - John Locke
+      + Struggle with wild life, dangers. First humans needed to colaborate. They chose the wisest to take decisions.
+      + Same as Thomas Hobbes reasoning.
+      + When they chose the leader, they gave them common rules to serve the community. If the king violates, he will be annulled.
+      + No revolution, just take the authoritive from the king.
+    - Popularization of the idea that king can be overthrown. Jean-Jacques Rousseau.
+      + The real authority is people.
+    - No difference between king and state. King can violate his own laws, therefore creating new laws.
+    - In Rome, there was a clear differentiation between state and the king.
+    - Sovereignity
+      + In monarchy, sovereignty belongs to king and king's body
+      + Church, king, land had some sovereignty.
+      + In modern time, sovereignty cannot be shared.
+      + Enlightment idea: sovereignty belongs to the people
+    - Rousseau thinks that elections are bad
+    - Cambodgia the wildest dictator ever lived
+      + Labour camps for burgeouse
+      + 1 ML died
+      + People who wear glasses should be punished
+    - Nobody gave you human rights, so nobody can take them from you. You were born free man.
+    - Declaration of Independence of USA - one of the best Enlightenment texts.
+      + ...which impel them to the separation
+      + Motivate the war with the fact that they have the human right to separate
+      + Not "we, the leaders", but "we, the people", the delegates
+      + All men are created equal. No explanation needed.
+      + God gave liberty, dignity, pursuit of happiness, no state can take them.
+      + To protect our rights, they need a new state. Legitimizing government.
+      + Reffers to God in many places but with other names. Deist text. Not Christian God.
+	#+begin_quote
+	The unanimous Declaration of the thirteen united States of America, When in the Course of human events, it becomes necessary for one people to dissolve the political bands which have connected them with another, and to assume among the powers of the earth, the separate and equal station to which the Laws of Nature and of Nature's God entitle them, a decent respect to the opinions of mankind requires that they should declare the causes which impel them to the separation.
+
+We hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.
+	#+end_quote
+    - Fyodor Doestoyevky supports that moral values are give only by God. Crime and Punishment.
+    - People motivate their liberty and rights with the existence of a Creator.
+*** Week 4
+**** Recap from last week
+     - We talked that In englightment is science against religion. But this misses the core.
+     - Understanding of nature, human soul and social order
+     - In the hierarchy of kingdoms, nobody could image another *moral order*.
+     - Religions failed to exists in the politics in Europe in the enlightment
+     - Before the modern age, religions aim to constitute the social order
+     - Secularism was not possible, church must say something about politics
+**** French revolution
+     - Liberty leading the people painting (1830), not related to the *real* french revolution
+     - Bourgeoisie runs the revolution
+     - King was struggling with poverty affecting peasant. He didn't want to take the resposibility.
+     - Parliament takes the resposiblity, nobility
+     - French parliament represents three orders
+       1) order - clergy
+       2) order - aristocracy
+       3) order - third estate (everybody else)
+     - Land was the money generator
+     - In 16th century, colonialism became more profitable. Huge plantations.
+     - More people became rich, because the wealth didn't depend on the land possesions
+     - Aristocrats were descendants Roman commanders, conquered the land. Not bought and sold.
+     - Overseas trade and proto-industry
+     - Clergy always comes from aristocracy
+     - Clergy and aristocrats are not legally equal to others
+     - Noble from birth, not becoming noble
+     - Siyes, "What is the third estate?"
+       + What is the third estate? Everything
+       + What had it been so far in the political order? Nothing
+       + What does it ask to be? Something
+       + Political and economic realities should be related and balanced
+     - "Oath of the tennis court" painting. Jews defend their right of the third estate.
+     - Parliament made coup, took the king into custody, and became the ruling power. General Assembly. Third Estate becomes the majority.
+     - Abolishment of priveledges of noble people, including land.
+     - Colonel Alfred Dreyfus. First Jewish colonel in the French army late 19th century. Persecuted.
+     - J'Accuse, book about Alfred Dreyfus.
+     - France was shuttered for a century. Left - proDreyfus, Right - anti Dreyfus.
+     - Paths of glory movie. French commmanders.
+     - After 1950's military lost political power.
+     - Land becomes a commodity
+     - Nobles are noble not because the state give them the title, but because they are noble. They are beyond the state.
+     - Papacy owned huge lands in France. "God" gave the land, and the state cannot revoke it.
+     - Clergy cannot give oath to the state, because God is always higher than the state. If state and God clushes, they would choose God.
+     - In Islamic states, state regulates the religion, and all state people are religious. 
+       

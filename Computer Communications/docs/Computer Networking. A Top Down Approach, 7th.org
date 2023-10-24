@@ -1,3 +1,5 @@
+#+AUTHOR: Denis Davidoglu
+
 * Computer Networking. A Top Down Approach, 7th
   :PROPERTIES:
   :NOTER_DOCUMENT: Computer Networking. A Top Down Approach, 7th.pdf

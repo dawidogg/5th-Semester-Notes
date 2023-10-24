@@ -1,3 +1,5 @@
+#+AUTHOR: Denis Davidoglu
+
 * Eric Zürcher-Book (English)
   :PROPERTIES:
   :NOTER_DOCUMENT: Eric Zürcher-Book (English).pdf
