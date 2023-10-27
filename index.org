@@ -6,8 +6,9 @@
   - [[file:ATA I/at1_notes.org::*ATA 121 - History of Modern Turkey][ATA 121  - History of Modern Turkey]]
   - [[file:Algo I/al1_notes.org::*BLG 335E - Analysis of Algorithms I][BLG 335E - Analysis of Algorithms I]]
   - [[file:Microprocessors/mp_notes.org::*BLG 212E - Microprocessor Systems][BLG 212E - Microprocessor Systems]]
-  - [[file:Microcomputer lab/mc_notes.org::*BLG 351E – Microcomputer Laboratory][BLG 351E – Microcomputer Laboratory]]
+  - [[file:Microcomputer lab/][BLG 351E - Microcomputer Laboratory]]
+  - [[file:Electronics lab/][EHB 311E - Electronics Laboratory]]
   - [[file:Databases/db_notes.org::*BLG 317E – Database Systems][BLG 317E – Database Systems]]
   - [[file:Computer Communications/cc_notes.org::*BLG 337E - Computer Communications][BLG 337E - Computer Communications]]
-  - [[file:Internship/ir_notes.org::*BLG 500 - Internship Report][BLG 500  - Internship Report]]
   - [[file:Formations of modernity/fm_notes.org::*ITB 020E - Formations of Modernity][ITB 020E - Formations of Modernity]]
+  - +[[file:Internship/ir_notes.org::*BLG 500 - Internship Report][BLG 500  - Internship Report]]+
