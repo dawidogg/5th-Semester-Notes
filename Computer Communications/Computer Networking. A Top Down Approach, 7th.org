@@ -934,6 +934,9 @@ queue. Also suppose, for simplicity, that all packets consist of L bits.
  This basic design—namely, confining application software to the end systems—as shown in Figure 2.1,
  has facilitated the rapid development and deployment of a vast array of network applications.
  #+END_QUOTE
+#+DOWNLOADED: screenshot @ 2023-10-28 12:05:40
+[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_12-05-40_screenshot.png]]
+
 **** Don't confuse network architecture and application architecture
      :PROPERTIES:
      :NOTER_PAGE: 116
@@ -1229,15 +1232,15 @@ queue. Also suppose, for simplicity, that all packets consist of L bits.
  client to server and then back to the client. The RTT includes packet-propagation delays, packet-
  queuing delays in intermediate routers and switches, and packet-processing delays.
  #+END_QUOTE
-**** Notes for page 134
+****  Figure 2.7 Back-of-the-envelope calculation for the time needed to request and receive an HTML file
 	 :PROPERTIES:
 	 :NOTER_PAGE: 134
 	 :HIGHLIGHT: #s(pdf-highlight 134 ((0.08348348348348349 0.052823315118397086 0.1135135135135135 0.0714936247723133)))
 	 :END:
- #+BEGIN_QUOTE
- Figure 2.7 Back-of-the-envelope calculation for the time needed to request and receive an HTML
- file
- #+END_QUOTE
+
+#+DOWNLOADED: screenshot @ 2023-10-28 12:07:00
+[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_12-07-00_screenshot.png]]
+
 **** Typical HTTP request message
 	 :PROPERTIES:
 	 :NOTER_PAGE: 135
@@ -1417,6 +1420,9 @@ queue. Also suppose, for simplicity, that all packets consist of L bits.
 	 :NOTER_PAGE: 141
 	 :HIGHLIGHT: #s(pdf-highlight 141 ((0.08288288288288288 0.6516393442622951 0.457057057057057 0.6530054644808743)))
 	 :END:
+#+DOWNLOADED: screenshot @ 2023-10-28 12:07:51
+[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_12-07-51_screenshot.png]]
+
 **** Web cache, proxy server
 	 :PROPERTIES:
 	 :NOTER_PAGE: 142
@@ -1470,6 +1476,9 @@ queue. Also suppose, for simplicity, that all packets consist of L bits.
 	 :NOTER_PAGE: 144
 	 :HIGHLIGHT: #s(pdf-highlight 144 ((0.08168168168168168 0.8538251366120219 0.7195195195195195 0.8506375227686703)))
 	 :END:
+#+DOWNLOADED: screenshot @ 2023-10-28 12:08:25
+[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_12-08-25_screenshot.png]]
+
 **** Total response time
 	 :PROPERTIES:
 	 :NOTER_PAGE: 144
@@ -1535,6 +1544,10 @@ queue. Also suppose, for simplicity, that all packets consist of L bits.
 	 :NOTER_PAGE: 150
 	 :HIGHLIGHT: #s(pdf-highlight 150 ((0.08108108108108107 0.5614754098360656 0.584984984984985 0.5765027322404371)))
 	 :END:
+
+#+DOWNLOADED: screenshot @ 2023-10-28 12:08:42
+[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_12-08-42_screenshot.png]]
+
 **** SMTP both client and server
 	 :PROPERTIES:
 	 :NOTER_PAGE: 150
@@ -1577,6 +1590,10 @@ queue. Also suppose, for simplicity, that all packets consist of L bits.
 	 :NOTER_PAGE: 152
 	 :HIGHLIGHT: #s(pdf-highlight 152 ((0.07687687687687687 0.27459016393442626 0.43723723723723723 0.2659380692167577)))
 	 :END:
+
+#+DOWNLOADED: screenshot @ 2023-10-28 12:09:03
+[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_12-09-03_screenshot.png]]
+
 **** port 25 at the server SMTP
 	 :PROPERTIES:
 	 :NOTER_PAGE: 152
@@ -1682,6 +1699,9 @@ S: 221 hamburger.edu closing connection
  repeatedly try to send the message to Bob’s mail server, say every 30 minutes, until Bob’s mail server
  becomes operational.
  #+END_QUOTE
+#+DOWNLOADED: screenshot @ 2023-10-28 12:09:45
+[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_12-09-45_screenshot.png]]
+
 **** Receiving mail by end user through SMTP is impossible, other protocols are involved
 	 :PROPERTIES:
 	 :NOTER_PAGE: 156
@@ -1813,6 +1833,9 @@ S: 221 hamburger.edu closing connection
  approximation, there are three classes of DNS servers—root DNS servers, top-level domain (TLD) DNS
  servers, and authoritative DNS servers—organized in a hierarchy as shown in Figure 2.17.
  #+END_QUOTE
+#+DOWNLOADED: screenshot @ 2023-10-28 12:10:14
+[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_12-10-14_screenshot.png]]
+
 **** Root name servers provide the IP addresses of the TLD servers.
 	 :PROPERTIES:
 	 :NOTER_PAGE: 164
@@ -1852,6 +1875,10 @@ S: 221 hamburger.edu closing connection
  In theory, any DNS query can be iterative or
  recursive. For example, Figure 2.20 shows a DNS query chain for which all of the queries are recursive.
  #+END_QUOTE
+
+#+DOWNLOADED: screenshot @ 2023-10-28 12:10:37
+[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_12-10-37_screenshot.png]]
+
 **** IP and hostname mappings are not permanent
 	 :PROPERTIES:
 	 :NOTER_PAGE: 168
@@ -1902,6 +1929,10 @@ S: 221 hamburger.edu closing connection
 	 :NOTER_PAGE: 171
 	 :HIGHLIGHT: #s(pdf-highlight 171 ((0.4028223220012829 0.05350194552529183 0.12892880051314945 0.05350194552529183)))
 	 :END:
+
+#+DOWNLOADED: screenshot @ 2023-10-28 12:11:27
+[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_12-11-27_screenshot.png]]
+
 **** nslookup program
 	 :PROPERTIES:
 	 :NOTER_PAGE: 171
