@@ -3,7 +3,26 @@
 * BLG 337E - Computer Communications
 ** Time & place
    - Monday 14:30-17:29, INB A205
+** Contact
+   - azaim@itu.edu.tr
 ** Course plan
+   | Week | Topic                                                           |
+   |------+-----------------------------------------------------------------|
+   |    1 | Computer Networks and the Internet (Chapter_1_v8.1)             |
+   |    2 | Protocol Concept and TCP/IP Protocol Stack (Traceroute Project) |
+   |    3 | Application Protocols: Web, HTTP, FTP, etc. (Chapter_2_v8.1)    |
+   |    4 | Application Protocols: Web, HTTP, FTP, etc.                     |
+   |    5 | Transport Layer Protocols (Chapter_3_V6.0)                      |
+   |    6 | Transport Layer Protocols                                       |
+   |    7 | Midterm Exam                                                    |
+   |    8 | Network Layer Protocols (Chapter_4_V6.0_1.ppt)                  |
+   |    9 | Network Layer Protocols (Chapter_4_V6.0_2.ppt)                  |
+   |   10 | Network Layer Protocols (Project Given in Class)                |
+   |   11 | Data Link Layer Protocols (Chapter_5_V6.01)                     |
+   |   12 | Data Link Layer Protocols                                       |
+   |   13 | Wireless and Mobile Networks                                    |
+   |   14 | Wireless and Mobile Networks                                    |
+
 ** Projects
    - [[file:projects/traceroute][Traceroute]]
 ** Textbook
@@ -193,7 +212,7 @@
      - P3: |8|9|
      - P4: |10|
      - P5: |2|3|4|
-     - P6: |1|9|10|       
+     - P6: |1|9|10|
      - Chunk 1 has two copies, 10 has two copies
      - Rarest available chunks are downloaded as fast as possible, because peers can leave
      - Rarest-first algorithm
@@ -304,7 +323,7 @@
        + Divide and conquer reference
        + Understand the philosophy!
 **** Transport layer actions
-     - Message given to the transport layer, which appends a transport layer segment 
+     - Message given to the transport layer, which appends a transport layer segment
 **** Two protocols: TCP, UDP
 **** Multiplexing and demultiplexing skipped
 **** Summary of the transport layer
@@ -356,19 +375,19 @@
 ****  rdt2.0. introduce errors.
       - add bit errors after channel transmission, no packet loss
       - to recover from errors (stop and wait protocols category):
-	1. acknowledgements (ACKs). Message that packet received without error. Tell to procceed to other packets.
-	2. negative acknowledgement (NAKs). Message that there has been an error. Resend.
+	1. acknowledgments (ACKs). Message that packet received without error. Tell to procceed to other packets.
+	2. negative acknowledgment (NAKs). Message that there has been an error. Resend.
       - FSM specification - Sender
-	1. wait for call from above state. 
+	1. wait for call from above state.
 	2. wait for ACK or NAK
       - FSM - Receiver
 	- wait for call ??
-      - Does not count for the corruption of acknowledgement/nacknowledgment
+      - Does not count for the corruption of acknowledgment/nacknowledgment
       - Solution: count the id numbers of the packet and track duplicated
 **** rdt2.1.
      - Introduce a parity bit.
      - Sender:
-       + Wait for call 0 from above. 
+       + Wait for call 0 from above.
        + Wait for ACK 0. If bit not matched.
        + Wait for call 1 from above.
        + Wait for ACK 1.
@@ -376,8 +395,8 @@
        + Wait for 0 from below
        + Wait for 1 from below
 **** rdt2.2 a NAK-free protocol
-     - Sending positive and negative acknowledgement is harming performance
-     - Send only the positive acknowledgement
+     - Sending positive and negative acknowledgment is harming performance
+     - Send only the positive acknowledgment
      - Same functionality as rdt2.1
      - Receiver must include
      - Sender
@@ -388,4 +407,91 @@
        + If the message has right sequence number and is not corrupt,
        + Wait 0 from below
 **** rdt3.0 next week
-
+*** Week 5
+**** Reliable data trasfer - rdt3.0
+	 - Move towards TCP protocol
+	 - Channel can also lose packets (data, ACKs)
+	 - In order to recover, new information is added (checksum, sequence, ACKs retransmission mechanisms)
+	 - Sender wait a time before retransmitting a packet, if no ACK is received.
+	 - There can be duplicates, but they have a sequence numbers
+	 - "Reasonable amount of time", assumption
+	 - Two sequnce numbers are enough because the system is stop-and-wait
+	 - Sliding window if multiple packets are transmitted without waiting acknowledgments, more sequence numbers are introduced
+	 - start_timer, stop_timer, timeout (triggers resend) in the FSM.
+	 - Wrong sequence number acknowledgments are ignored
+	 - If acknowledgment was not received, due to packet loss or acknowledgmentloss, either way the packet is resent.
+	 - Premature timeout / delayed ACK. Nothing scary if acknowledgment sequence are coming wrong, because the out of sequence acknowledgments are ignored.
+	 - t = RTT + L/R seconds for round-trip time and redistribution period. RTT = round-trip-time. L/R = file transfer time.
+	 - U_sender = L/R / (RTT + L/R). Utilization of the system: actively used amount of time, fraction of time sender busy sending.
+	 - Only L/R is the active tranmission time, (RTT + L/R) is the propagation time.
+	 - rdt 3.0 protocol performance *stinks*, performance limited.
+**** rdt3.0: sliding window protocol operation (pipelining)
+	 - Push packets without waiting the acknowledgments
+	 - U_sender = x*(L/R) / (RTT + L/R), send x packets one after the other
+	 - X is up to 16, 30, depending on the congestion level
+**** Go-Back-N in action
+	 - Automatic Repeat reQuest protocols (ARQ)
+	 - TCP is ARQ, using Go-Back-N, defacto flow control mechanism
+	 - The sliding window size (buffer) is agreed before communication
+	 - No more than window size amount of packets are sent before getting an acknowledgment
+	 - Whenever acknowledgment is received, window slides
+	 - Cummulative ACK. Acknowledgments for packets with higher order are not sent before the acknowledgments of lower packets.
+	 - N is the erroneous packet number.
+	 - When duplicate ACK is received, there is an error. All packets in the window, starting from the first erroneous packet are resent.
+	 - Receiving out of order packet or timeout causes duplicate acknowledgment to be sent.
+**** Connection-oriented transport: TCP
+	 - Three-way handshake was: welcome setup, acknowledgement, setup
+	 - Two-army problem. B W B. Total forces of blue armies are enough to defeat white army. But when separate, not enough. The only way of communicating between two armies is to send someone. How many soldiers are needed? /That's a good exam question/.
+	 - We just hope 3 are enough. Not guarantee, but prevents from losing time.
+	 - Point-to-point
+	 - Reliable
+	 - Cumulative ACKs
+	 - Full duplex data
+	 - Pipelining
+	 - Connection-oriented
+	 - Flow controlled
+	 - Segment structure
+	   + Source port #, destination port # (gateway numbers)
+	   + Sequence number (byte-count). Acknowledgment becomes the sequence number.
+	   + Acknowledgment number are sequence numbers summed with the number of byte after each transmission.
+	   + Length (of TCP header)
+	   + Receive window
+	   + Checksum
+	   + Congestion notifications
+	   + Acknowledgment bit (if using or not)
+	   + Connection management bits for handshaking
+	   + Application data
+	 - Performance modeling is the focus of exam
+	 - Exam is 1 hour, 3 questions
+	 - Triple (duplicate) ACK. If the same ACK is received three times, the sender understands that a packet is lost.
+**** Principles of congestion control
+	 - Too many senders sending too fast
+	 - Manifestations
+	   + Long delays
+	   + Packet losses
+	 - TCP solves the congestions at the end devices
+	 - Routeres can provide direct feedback about congestion, send explicit congestion info.
+	 - TCP Additive Increase Multiplicative Decrease (AIMD)
+	   + Sender can increase sending rate until there is packet loss
+	   + Increase sending rate by 1
+	   + Cut sending rate in half at each loss. Detected by triple duplicate ACK (TCP Reno).
+	   + If due to timout, slow start phase. Cut to 1 MMS (maximum segment size). (TCP Tahoe).
+**** TCP slow start
+	 - Congestion window size (cwnd) = 1 MSS
+	 - Double cwnd every RTT
+	 - Done by incrementing cwnd for every ACK received
+	 - From slow start to congestion avoidance. When should the exponential increase switch to linear. Answer: when cwnd gets to 1/2 of its value before timeout. There is a threshold value, after which we should be aware that the network can congest. After the threshold value, we go to congestion avoidance linear phase, instead of doubling the window. Even with Tahoe, the threshold goes to half, but slow start is still applied.
+	   #+begin_quote
+	   Bu soruyu SORACAM size.
+	   #+end_quote
+**** Triple ACK
+	 - Reno - cwnd = 1/2 value, sshthreshold = cwnd (congestion avoidance)
+	 - Tahoe - cwnd = 1mss,  sshthreshold = 1/2 current value (congestion avoidance)
+	 - In case of timeout, both are like Tahoe.
+	 - On a router, it is impossible to use application-layer protocols. Routers work on the third layer. There are router programs on the application-level, but they are not compliant with TCP/IP, and they shouldn't at all.
+**** Appocalipse of two elephants
+	 - Investements come before technology. If the gap between technology and investments increases, standards cannot be adopted.
+	 - De-facto standard (TCP/IP), created by investers.
+	 - De jure standard OSI, but not used.
+	 - Technology came behind investments in computer communications.
+	 - We use IPv4 routers due to large investments, although we have IPv6 for 20 years.
