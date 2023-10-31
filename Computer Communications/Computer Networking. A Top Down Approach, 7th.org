@@ -2995,6 +2995,15 @@ including the 0 or 1 argument in isACK() in the sender FSM).
 #+DOWNLOADED: screenshot @ 2023-10-28 19:46:38
 [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_19-46-38_screenshot.png]]
 
+*** Figure 3.15 rdt3.0 sender
+	:PROPERTIES:
+	:NOTER_PAGE: 255
+	:HIGHLIGHT: #s(pdf-highlight 255 ((0.08428093645484949 0.5070993914807302 0.325752508361204 0.5101419878296146)))
+	:END:
+
+#+DOWNLOADED: screenshot @ 2023-10-31 13:01:27
+[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-31_13-01-27_screenshot.png]]
+
 *** 3.5 Connection-Oriented Transport: TCP
     :PROPERTIES:
     :NOTER_PAGE: 272

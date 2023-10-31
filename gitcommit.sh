@@ -1,4 +1,4 @@
-git add "index.org"
+git add "./index.org"
 git add "Computer Communications/cc_notes.org"
 git add "Computer Communications/Computer Networking. A Top Down Approach, 7th.org"
 git add "Computer Communications/images/*"

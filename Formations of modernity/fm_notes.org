@@ -8,61 +8,47 @@
    - Final 50%
    - Attendance 10%
 ** Reading by weeks
-*** Week 1. Introduction: What is Modern ? 
-
-*** Week 2. The Rise of Europe: Renaissance, Reform and Reconnaissance 
-**** Norman Davies, Europe: A History, pp. 469-503 (Chapter VII Renatio)
-**** Niccolo Machiavelli, “The Prince”
-**** Martin Luther, “The Freedom of a Christian”
-**** John Calvin, “The Institutes of the Christian Religion”
-
-*** Week 3. The Development of the Modern State
-**** Stuart Hall, Bram Gieben (ed.), Formations of Modernity, David Held, “The Development of the Modern State”, pp. 71-125
-     
-*** Week 4. Enlightenment and the French Revolution
-**** Norman Davies, Europe: A History, pp. 596-614, 675-733 (Chapters Lumen and Revolutio)
-**** Thomas Hobbes, “Leviathan”
-**** John Locke, “Second Treatise of Government”
-**** Jean Jacques Rousseau, “The Social Contract”
-**** Thomas Jefferson, “The Declaration of Independence”
-
-*** Week 5. Liberalism and Nationalism; the Best of the Times
-**** Norman Davies, Europe: A History, pp. 782-835 (Chapter X, Dynamo)
-
-*** Week 6. The Rise of Socialism and Communism 
-**** Norman Davies, Europe: A History, pp. 835-865 (Chapter X Dynamo)
-**** Karl Marx, Friedrich Engels, The Communist Manifesto 
-**** Charles Darwin, “The Descent of Man”
-**** Friedrich Nietzsche, “Beyond Good and Evil”
-**** Sigmund Freud, “The Interpretation of Dreams”
-**** George Orwell, “Shooting an Elephant”
-
-*** Week 7. Imperialism, Fascism and World Wars
-**** Eric Hobsbawm, The Age of Extremes, pp. 21-53
-**** Mark Mazower, The Dark Continent, pp. 77-105 
-
-*** Week 8. Midterm
-
-*** Week 9. Cold War and the Age of Intellectuals
-**** Tony Judt, Reappraisals, pp. 95-146
-**** Nikita Kruschev, “Report to the Communist Party Congress”
-**** Winston Churchill, “The Iron Curtain”
-
-*** Week 10. The Rise of the Modern Economy 
-**** Stuart Hall, Bram Gieben (ed.), Formations of Modernity, Vivienne Brown,    
-**** “The Emergence of the Economy”, pp. 127-175
-
-*** Week 11. 1968 and Beyond: The Rise of Identity Politics 
-**** Tony Judt, Postwar, London: The Penguin Press, 2005, pp. 390-421
-
-*** Week 12. The End of History or Clash of Civilizations ?
-**** Francis Fukuyama, “The End of History ?”, National Interest, Spring 1989
-
-*** Week 13. The Age of Populism
-**** Jan-Werner Müller, What is Populism, Philadelphia: University of Pennsylvania Press, 2016, pp. 1-40
-
-*** Week 14. Conclusions
-    
+   1. . Introduction: What is Modern ? 
+   2. . The Rise of Europe: Renaissance, Reform and Reconnaissance 
+	  - Norman Davies, Europe: A History, pp. 469-503 (Chapter VII Renatio)
+	  - Niccolo Machiavelli, “The Prince”
+	  - Martin Luther, “The Freedom of a Christian”
+	  - John Calvin, “The Institutes of the Christian Religion”
+   3. . The Development of the Modern State
+	  - Stuart Hall, Bram Gieben (ed.), Formations of Modernity, David Held, “The Development of the Modern State”, pp. 71-125
+   4. . Enlightenment and the French Revolution
+	  - Norman Davies, Europe: A History, pp. 596-614, 675-733 (Chapters Lumen and Revolutio)
+	  - Thomas Hobbes, “Leviathan”
+	  - John Locke, “Second Treatise of Government”
+	  - Jean Jacques Rousseau, “The Social Contract”
+	  - Thomas Jefferson, “The Declaration of Independence”
+   5. . Liberalism and Nationalism; the Best of the Times
+	  - Norman Davies, Europe: A History, pp. 782-835 (Chapter X, Dynamo)
+   6. . The Rise of Socialism and Communism 
+	  - Norman Davies, Europe: A History, pp. 835-865 (Chapter X Dynamo)
+	  - Karl Marx, Friedrich Engels, The Communist Manifesto 
+	  - Charles Darwin, “The Descent of Man”
+	  - Friedrich Nietzsche, “Beyond Good and Evil”
+	  - Sigmund Freud, “The Interpretation of Dreams”
+	  - George Orwell, “Shooting an Elephant”
+   7. . Imperialism, Fascism and World Wars
+	  - Eric Hobsbawm, The Age of Extremes, pp. 21-53
+	  - Mark Mazower, The Dark Continent, pp. 77-105 
+   8. . Midterm
+   9. . Cold War and the Age of Intellectuals
+	  - Tony Judt, Reappraisals, pp. 95-146
+	  - Nikita Kruschev, “Report to the Communist Party Congress”
+	  - Winston Churchill, “The Iron Curtain”
+   10. The Rise of the Modern Economy 
+	   - Stuart Hall, Bram Gieben (ed.), Formations of Modernity, Vivienne Brown,    
+	   - “The Emergence of the Economy”, pp. 127-175
+   11. 1968 and Beyond: The Rise of Identity Politics 
+	   - Tony Judt, Postwar, London: The Penguin Press, 2005, pp. 390-421
+   12. The End of History or Clash of Civilizations ?
+	   - Francis Fukuyama, “The End of History ?”, National Interest, Spring 1989
+   13. The Age of Populism
+	   - Jan-Werner Müller, What is Populism, Philadelphia: University of Pennsylvania Press, 2016, pp. 1-40
+   14. Conclusions
 ** Textbooks
 *** [[file:docs/Norman Davies - Europe_ A History-Harper Perennial (1998).epub][Norman Davies. Europe, a History. (1998)]]
     :PROPERTIES:
@@ -355,4 +341,42 @@ We hold these truths to be self-evident, that all men are created equal, that th
      - Karl Marx says: History repeats twice: first time is tragedy, the second time is farce
      - 1883 the last royal family member died
      - White is the symbol of conservatism. Bourbon flag of France.
-
+*** Week 5
+**** Anachronism
+	 - A misplacing or error in the order of time; an error in chronology by which events are misplaced in regard to each other, esp. one by which an event is placed too early; falsification of chronological relation.
+	 - In movies, people are made to think like modern people
+	 - It is misleading to think about China, Ottomans as states. They were called "polity".
+	 - In a state, there is a law, there are citizenships, sovereignty.
+**** Premodern states
+	 - Weak states
+	 - No means of imposing taxes
+	 - There was feudalism all over the world. Local dynasties, churches.
+	 - States are military machines
+	 - Taxes: from 1% in medieval ages to 20-30% in modern ages
+	 - States didn't care about proving their legitimacy for local people, only for elite
+	 - Peasants were not German, French, Turks, they were just peasants.
+	 - Public lynching, killing of criminals
+**** Birth and rise of the modern state
+	 - 19th century
+	 - Max Webel, socialist, studied the state. Defined the state as a legal monopoly to use violence. Criminals are caught by police.
+	 - State is not something to be obeyed, but it should provide social services. 
+	 - Taxes, laws, infrastructure
+	 - Centralized
+	 - The emergence of strong armies lead to modern states
+	 - Free education, using the human capital
+	   + 1890's, France and Germany introduces compulsory education
+	   + In United States, there was no education, but migrants were literate and the country was more developed.
+	   + Universities in USA were private, established by people, charity. Late 19th century.
+	   + Oxford, Cambridge were originally religious schools.
+	 - Free healthcare
+	 - People can be certain about their future
+	 - Hidden costs
+**** Military campaigns
+	 - Military campaigns were sophisticated organizations. Local people were responsible for the organization.
+	 - According to Islamic law, if the state surrender, you cannot plunder. If you win, you can plunder for three days. Kill, rape, rob.
+	 - Victories were desirable for the soldiers.
+	 - Albanians were the gangsters of Balkans, who joined Ottomans in the Vienna campaign.
+	 - In modern age, soldiers have no right to plunder, because they are paid by the state.
+	 - Ottomans could not afford a strong army, they should be paid in gold coins
+	 - Britain took loans to finance a 4-year long war. Britain's Bank issued money, legal tenders. Banknotes are the debts of a state. 17th century.
+ 
