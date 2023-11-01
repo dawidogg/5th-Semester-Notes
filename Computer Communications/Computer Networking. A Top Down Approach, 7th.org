@@ -1978,515 +1978,515 @@ S: 221 hamburger.edu closing connection
     :PROPERTIES:
     :NOTER_PAGE: 175
     :END:
-*** File distribution time for client-server architecture
-	:PROPERTIES:
-	:NOTER_PAGE: 176
-	:HIGHLIGHT: #s(pdf-highlight 176 ((0.0748148148148148 0.6455056179775281 0.3125925925925926 0.9359550561797754)))
-	:END:
-#+BEGIN_QUOTE
-Let’s first determine the distribution time for the client-server architecture, which we denote by Dcs. In the
-client-server architecture, none of the peers aids in distributing the file. We make the following
-observations:
-The server must transmit one copy of the file to each of the N peers. Thus the server must transmit
-NF bits. Since the server’s upload rate is us, the time to distribute the file must be at least NF/us.
-Let dmin denote the download rate of the peer with the lowest download rate, that is,
-dmin=min{d1,dp,. . .,dN}. The peer with the lowest download rate cannot obtain all F bits of the file in
-less than F/dmin seconds. Thus the minimum distribution time is at least F/dmin.
-Putting these two observations together, we obtain
-Dcs≥max{NFus,Fdmin}.
-#+END_QUOTE
-*** File distribution time for peer-to-peer architecture
-	:PROPERTIES:
-	:NOTER_PAGE: 177
-	:HIGHLIGHT: #s(pdf-highlight 177 ((0.06939281288723669 0.5023496240601504 0.41263940520446096 0.8571428571428571)))
-	:END:
-#+BEGIN_QUOTE
-At the beginning of the distribution, only the server has the file. To get this file into the community of
-peers, the server must send each bit of the file at least once into its access link. Thus, the minimum
-distribution time is at least F/us. (Unlike the client-server scheme, a bit sent once by the server may
-not have to be sent by the server again, as the peers may redistribute the bit among themselves.)
-As with the client-server architecture, the peer with the lowest download rate cannot obtain all F bits
-of the file in less than F/dmin seconds. Thus the minimum distribution time is at least F/dmin.
-Finally, observe that the total upload capacity of the system as a whole is equal to the upload rate of
-the server plus the upload rates of each of the individual peers, that is, utotal=us+u1+⋯+uN. The
-system must deliver (upload) F bits to each of the N peers, thus delivering a total of NF bits. This
-cannot be done at a rate faster than utotal. Thus, the minimum distribution time is also at least
-NF/(us+u1+⋯+uN).
-Putting these three observations together, we obtain the minimum distribution time for P2P, denoted by
-DP2P.
-DP2P≥max{Fus,Fdmin,NFus+∑i=1Nui}
-#+END_QUOTE
-*** torrent
-	:PROPERTIES:
-	:NOTER_PAGE: 179
-	:HIGHLIGHT: #s(pdf-highlight 179 ((0.6864931846344485 0.06203007518796992 0.09107806691449814 0.05592105263157894)))
-	:END:
-#+BEGIN_QUOTE
-the collection of all peers participating in the distribution of a particular file is called a torrent.
-#+END_QUOTE
-*** chunk
-	:PROPERTIES:
-	:NOTER_PAGE: 179
-	:HIGHLIGHT: #s(pdf-highlight 179 ((0.6939281288723668 0.06109022556390977 0.7453531598513011 0.08176691729323307)))
-	:END:
-#+BEGIN_QUOTE
-Peers in a torrent download
-equal-size chunks of the file from one another, with a typical chunk size of 256 KBytes.
-#+END_QUOTE
-*** Each torrent has an infrastructure node called a tracker.
-	:PROPERTIES:
-	:NOTER_PAGE: 179
-	:HIGHLIGHT: #s(pdf-highlight 179 ((0.6146220570012392 0.28430451127819545 0.25960346964064435 0.31109022556390975)))
-	:END:
-*** Rarest first technique
-	:PROPERTIES:
-	:NOTER_PAGE: 180
-	:HIGHLIGHT: #s(pdf-highlight 180 ((0.08736059479553904 0.47791353383458646 0.8110285006195787 0.5460526315789473)))
-	:END:
-#+BEGIN_QUOTE
-The idea is to determine, from among the chunks she does not have, the chunks that are the rarest
-among her neighbors (that is, the chunks that have the fewest repeated copies among her neighbors)
-and then request those rarest chunks first. In this manner, the rarest chunks get more quickly
-redistributed, aiming to (roughly) equalize the numbers of copies of each chunk in the torrent.
-#+END_QUOTE
-*** Unchoked - active
-	:PROPERTIES:
-	:NOTER_PAGE: 180
-	:HIGHLIGHT: #s(pdf-highlight 180 ((0.4188351920693928 0.6790413533834586 0.8116480793060719 0.7015977443609022)))
-	:END:
-#+BEGIN_QUOTE
-Every 10 seconds, she recalculates the rates and possibly
-modifies the set of four peers. In BitTorrent lingo, these four peers are said to be unchoked.
-#+END_QUOTE
-*** Top partners
-	:PROPERTIES:
-	:NOTER_PAGE: 180
-	:HIGHLIGHT: #s(pdf-highlight 180 ((0.4083023543990087 0.9069548872180451 0.7242874845105328 0.8359962406015037)))
-	:END:
-#+BEGIN_QUOTE
-If the two peers are
-satisfied with the trading, they will put each other in their top four lists and continue trading with each
-other until one of the peers finds a better partner. The effect is that peers capable of uploading at
-compatible rates tend to find each other.
-#+END_QUOTE
-*** tit-for-tat, unmerciful trading
-	:PROPERTIES:
-	:NOTER_PAGE: 181
-	:HIGHLIGHT: #s(pdf-highlight 181 ((0.46964064436183395 0.25798872180451127 0.8649318463444857 0.14332706766917291)))
-	:END:
-#+BEGIN_QUOTE
-It has
-been shown that this incentive scheme can be circumvented [Liogkas 2006; Locher 2006; Piatek
-2007]. Nevertheless, the BitTorrent ecosystem is wildly successful, with millions of simultaneous peers
-actively sharing files in hundreds of thousands of torrents. If BitTorrent had been designed without tit-for-
-tat (or a variant), but otherwise exactly the same, BitTorrent would likely not even exist now, as the
-majority of the users would have been freeriders
-#+END_QUOTE
-*** distributed hash table
-	:PROPERTIES:
-	:NOTER_PAGE: 181
-	:HIGHLIGHT: #s(pdf-highlight 181 ((0.24101610904584883 0.32612781954887216 0.419454770755886 0.34962406015037595)))
-	:END:
-#+BEGIN_QUOTE
-A distributed hash table is a simple database, with the database records being
-distributed over the peers in a P2P system.
-#+END_QUOTE
+**** File distribution time for client-server architecture
+	 :PROPERTIES:
+	 :NOTER_PAGE: 176
+	 :HIGHLIGHT: #s(pdf-highlight 176 ((0.0748148148148148 0.6455056179775281 0.3125925925925926 0.9359550561797754)))
+	 :END:
+ #+BEGIN_QUOTE
+ Let’s first determine the distribution time for the client-server architecture, which we denote by Dcs. In the
+ client-server architecture, none of the peers aids in distributing the file. We make the following
+ observations:
+ The server must transmit one copy of the file to each of the N peers. Thus the server must transmit
+ NF bits. Since the server’s upload rate is us, the time to distribute the file must be at least NF/us.
+ Let dmin denote the download rate of the peer with the lowest download rate, that is,
+ dmin=min{d1,dp,. . .,dN}. The peer with the lowest download rate cannot obtain all F bits of the file in
+ less than F/dmin seconds. Thus the minimum distribution time is at least F/dmin.
+ Putting these two observations together, we obtain
+ Dcs≥max{NFus,Fdmin}.
+ #+END_QUOTE
+**** File distribution time for peer-to-peer architecture
+	 :PROPERTIES:
+	 :NOTER_PAGE: 177
+	 :HIGHLIGHT: #s(pdf-highlight 177 ((0.06939281288723669 0.5023496240601504 0.41263940520446096 0.8571428571428571)))
+	 :END:
+ #+BEGIN_QUOTE
+ At the beginning of the distribution, only the server has the file. To get this file into the community of
+ peers, the server must send each bit of the file at least once into its access link. Thus, the minimum
+ distribution time is at least F/us. (Unlike the client-server scheme, a bit sent once by the server may
+ not have to be sent by the server again, as the peers may redistribute the bit among themselves.)
+ As with the client-server architecture, the peer with the lowest download rate cannot obtain all F bits
+ of the file in less than F/dmin seconds. Thus the minimum distribution time is at least F/dmin.
+ Finally, observe that the total upload capacity of the system as a whole is equal to the upload rate of
+ the server plus the upload rates of each of the individual peers, that is, utotal=us+u1+⋯+uN. The
+ system must deliver (upload) F bits to each of the N peers, thus delivering a total of NF bits. This
+ cannot be done at a rate faster than utotal. Thus, the minimum distribution time is also at least
+ NF/(us+u1+⋯+uN).
+ Putting these three observations together, we obtain the minimum distribution time for P2P, denoted by
+ DP2P.
+ DP2P≥max{Fus,Fdmin,NFus+∑i=1Nui}
+ #+END_QUOTE
+**** torrent
+	 :PROPERTIES:
+	 :NOTER_PAGE: 179
+	 :HIGHLIGHT: #s(pdf-highlight 179 ((0.6864931846344485 0.06203007518796992 0.09107806691449814 0.05592105263157894)))
+	 :END:
+ #+BEGIN_QUOTE
+ the collection of all peers participating in the distribution of a particular file is called a torrent.
+ #+END_QUOTE
+**** chunk
+	 :PROPERTIES:
+	 :NOTER_PAGE: 179
+	 :HIGHLIGHT: #s(pdf-highlight 179 ((0.6939281288723668 0.06109022556390977 0.7453531598513011 0.08176691729323307)))
+	 :END:
+ #+BEGIN_QUOTE
+ Peers in a torrent download
+ equal-size chunks of the file from one another, with a typical chunk size of 256 KBytes.
+ #+END_QUOTE
+**** Each torrent has an infrastructure node called a tracker.
+	 :PROPERTIES:
+	 :NOTER_PAGE: 179
+	 :HIGHLIGHT: #s(pdf-highlight 179 ((0.6146220570012392 0.28430451127819545 0.25960346964064435 0.31109022556390975)))
+	 :END:
+**** Rarest first technique
+	 :PROPERTIES:
+	 :NOTER_PAGE: 180
+	 :HIGHLIGHT: #s(pdf-highlight 180 ((0.08736059479553904 0.47791353383458646 0.8110285006195787 0.5460526315789473)))
+	 :END:
+ #+BEGIN_QUOTE
+ The idea is to determine, from among the chunks she does not have, the chunks that are the rarest
+ among her neighbors (that is, the chunks that have the fewest repeated copies among her neighbors)
+ and then request those rarest chunks first. In this manner, the rarest chunks get more quickly
+ redistributed, aiming to (roughly) equalize the numbers of copies of each chunk in the torrent.
+ #+END_QUOTE
+**** Unchoked - active
+	 :PROPERTIES:
+	 :NOTER_PAGE: 180
+	 :HIGHLIGHT: #s(pdf-highlight 180 ((0.4188351920693928 0.6790413533834586 0.8116480793060719 0.7015977443609022)))
+	 :END:
+ #+BEGIN_QUOTE
+ Every 10 seconds, she recalculates the rates and possibly
+ modifies the set of four peers. In BitTorrent lingo, these four peers are said to be unchoked.
+ #+END_QUOTE
+**** Top partners
+	 :PROPERTIES:
+	 :NOTER_PAGE: 180
+	 :HIGHLIGHT: #s(pdf-highlight 180 ((0.4083023543990087 0.9069548872180451 0.7242874845105328 0.8359962406015037)))
+	 :END:
+ #+BEGIN_QUOTE
+ If the two peers are
+ satisfied with the trading, they will put each other in their top four lists and continue trading with each
+ other until one of the peers finds a better partner. The effect is that peers capable of uploading at
+ compatible rates tend to find each other.
+ #+END_QUOTE
+**** tit-for-tat, unmerciful trading
+	 :PROPERTIES:
+	 :NOTER_PAGE: 181
+	 :HIGHLIGHT: #s(pdf-highlight 181 ((0.46964064436183395 0.25798872180451127 0.8649318463444857 0.14332706766917291)))
+	 :END:
+ #+BEGIN_QUOTE
+ It has
+ been shown that this incentive scheme can be circumvented [Liogkas 2006; Locher 2006; Piatek
+ 2007]. Nevertheless, the BitTorrent ecosystem is wildly successful, with millions of simultaneous peers
+ actively sharing files in hundreds of thousands of torrents. If BitTorrent had been designed without tit-for-
+ tat (or a variant), but otherwise exactly the same, BitTorrent would likely not even exist now, as the
+ majority of the users would have been freeriders
+ #+END_QUOTE
+**** distributed hash table
+	 :PROPERTIES:
+	 :NOTER_PAGE: 181
+	 :HIGHLIGHT: #s(pdf-highlight 181 ((0.24101610904584883 0.32612781954887216 0.419454770755886 0.34962406015037595)))
+	 :END:
+ #+BEGIN_QUOTE
+ A distributed hash table is a simple database, with the database records being
+ distributed over the peers in a P2P system.
+ #+END_QUOTE
 *** 2.6 Video Streaming and Content Distribution Networks
     :PROPERTIES:
     :NOTER_PAGE: 182
     :END:
-*** end-to-end throughput
-	:PROPERTIES:
-	:NOTER_PAGE: 182
-	:HIGHLIGHT: #s(pdf-highlight 182 ((0.7850061957868649 0.8660714285714285 0.6858736059479554 0.9412593984962405)))
-	:END:
-#+BEGIN_QUOTE
-By far, the most
-important performance measure for streaming video is average end-to-end throughput. In order to
-provide continuous playout, the network must provide an average throughput to the streaming
-application that is at least as large as the bit rate of the compressed video.
-#+END_QUOTE
-*** HTTP streaming
-	:PROPERTIES:
-	:NOTER_PAGE: 183
-	:HIGHLIGHT: #s(pdf-highlight 183 ((0.0868804664723032 0.2745358090185676 0.7597667638483965 0.34880636604774534)))
-	:END:
-#+BEGIN_QUOTE
-In HTTP streaming, the video is simply stored at an HTTP server as an ordinary file with a specific URL.
-When a user wants to see the video, the client establishes a TCP connection with the server and issues
-an HTTP GET request for that URL. The server then sends the video file...
-the streaming
-video application periodically grabs video frames from the client application buffer, decompresses the
-frames, and displays them on the user’s screen.
-#+END_QUOTE
-*** DASH
-	:PROPERTIES:
-	:NOTER_PAGE: 183
-	:HIGHLIGHT: #s(pdf-highlight 183 ((0.4209912536443149 0.6640141467727674 0.5504373177842565 0.6025641025641025)))
-	:END:
-#+BEGIN_QUOTE
-Dynamic Adaptive Streaming over HTTP
-(DASH). In DASH, the video is encoded into several different versions, with each version having a
-different bit rate and, correspondingly, a different quality level. The client dynamically requests chunks of
-video segments of a few seconds in length.
-#+END_QUOTE
-*** Manifest file
-	:PROPERTIES:
-	:NOTER_PAGE: 184
-	:HIGHLIGHT: #s(pdf-highlight 184 ((0.07230320699708455 0.04288240495137047 0.6239067055393586 0.07382847038019451)))
-	:END:
-#+BEGIN_QUOTE
-The HTTP server also has a manifest file, which provides a URL for each version along with its bit rate. The client
-first requests the manifest file and learns about the various versions.
-#+END_QUOTE
-*** Problems of streaming from one big data center
-	:PROPERTIES:
-	:NOTER_PAGE: 184
-	:HIGHLIGHT: #s(pdf-highlight 184 ((0.23556851311953353 0.6503094606542882 0.18658892128279883 0.5587975243147657)))
-	:END:
-	- If one of communcation ISP links provides a throughput that is less than the video consumption rate, the end-to-end throughput will also be below the consumption rate, resulting in annoying freezing delays for the user.
-	- Popular video will likely be sent many times over the same communication links.
-	- With this solution is that a single data center represents a single point of failure
-*** CDNs
-	:PROPERTIES:
-	:NOTER_PAGE: 184
-	:HIGHLIGHT: #s(pdf-highlight 184 ((0.6303206997084548 0.8731211317418214 0.8431486880466472 0.9345711759504862)))
-	:END:
-#+BEGIN_QUOTE
-Content Distribution Networks
-(CDNs). A CDN manages servers in multiple geographically distributed locations, stores copies of the
-videos (and other types of Web content, including documents, images, and audio) in its servers, and
-attempts to direct each user request to a CDN location that will provide the best user experience.
-#+END_QUOTE
-*** Private and third-party CDNs
-	:PROPERTIES:
-	:NOTER_PAGE: 185
-	:HIGHLIGHT: #s(pdf-highlight 185 ((0.08629737609329446 0.05305039787798408 0.6034985422740524 0.09725906277630415)))
-	:END:
-#+BEGIN_QUOTE
-CDN may be a private CDN, that is, owned by the content provider itself; for example, Google’s CDN
-distributes YouTube videos and other types of content. The CDN may alternatively be a third-party
-CDN that distributes content on behalf of multiple content providers;
-#+END_QUOTE
-*** CDN server placement philosophies
-	:PROPERTIES:
-	:NOTER_PAGE: 185
-	:HIGHLIGHT: #s(pdf-highlight 185 ((0.11137026239067055 0.20822281167108753 0.8046647230320699 0.23474801061007958)))
-	:END:
-#+BEGIN_QUOTE
-Enter Deep. One philosophy, pioneered by Akamai, is to enter deep into the access networks of
-Internet Service Providers, by deploying server clusters in access ISPs all over the world.
-#+END_QUOTE
+**** end-to-end throughput
+	 :PROPERTIES:
+	 :NOTER_PAGE: 182
+	 :HIGHLIGHT: #s(pdf-highlight 182 ((0.7850061957868649 0.8660714285714285 0.6858736059479554 0.9412593984962405)))
+	 :END:
+ #+BEGIN_QUOTE
+ By far, the most
+ important performance measure for streaming video is average end-to-end throughput. In order to
+ provide continuous playout, the network must provide an average throughput to the streaming
+ application that is at least as large as the bit rate of the compressed video.
+ #+END_QUOTE
+**** HTTP streaming
+	 :PROPERTIES:
+	 :NOTER_PAGE: 183
+	 :HIGHLIGHT: #s(pdf-highlight 183 ((0.0868804664723032 0.2745358090185676 0.7597667638483965 0.34880636604774534)))
+	 :END:
+ #+BEGIN_QUOTE
+ In HTTP streaming, the video is simply stored at an HTTP server as an ordinary file with a specific URL.
+ When a user wants to see the video, the client establishes a TCP connection with the server and issues
+ an HTTP GET request for that URL. The server then sends the video file...
+ the streaming
+ video application periodically grabs video frames from the client application buffer, decompresses the
+ frames, and displays them on the user’s screen.
+ #+END_QUOTE
+**** DASH
+	 :PROPERTIES:
+	 :NOTER_PAGE: 183
+	 :HIGHLIGHT: #s(pdf-highlight 183 ((0.4209912536443149 0.6640141467727674 0.5504373177842565 0.6025641025641025)))
+	 :END:
+ #+BEGIN_QUOTE
+ Dynamic Adaptive Streaming over HTTP
+ (DASH). In DASH, the video is encoded into several different versions, with each version having a
+ different bit rate and, correspondingly, a different quality level. The client dynamically requests chunks of
+ video segments of a few seconds in length.
+ #+END_QUOTE
+**** Manifest file
+	 :PROPERTIES:
+	 :NOTER_PAGE: 184
+	 :HIGHLIGHT: #s(pdf-highlight 184 ((0.07230320699708455 0.04288240495137047 0.6239067055393586 0.07382847038019451)))
+	 :END:
+ #+BEGIN_QUOTE
+ The HTTP server also has a manifest file, which provides a URL for each version along with its bit rate. The client
+ first requests the manifest file and learns about the various versions.
+ #+END_QUOTE
+**** Problems of streaming from one big data center
+	 :PROPERTIES:
+	 :NOTER_PAGE: 184
+	 :HIGHLIGHT: #s(pdf-highlight 184 ((0.23556851311953353 0.6503094606542882 0.18658892128279883 0.5587975243147657)))
+	 :END:
+	 - If one of communcation ISP links provides a throughput that is less than the video consumption rate, the end-to-end throughput will also be below the consumption rate, resulting in annoying freezing delays for the user.
+	 - Popular video will likely be sent many times over the same communication links.
+	 - With this solution is that a single data center represents a single point of failure
+**** CDNs
+	 :PROPERTIES:
+	 :NOTER_PAGE: 184
+	 :HIGHLIGHT: #s(pdf-highlight 184 ((0.6303206997084548 0.8731211317418214 0.8431486880466472 0.9345711759504862)))
+	 :END:
+ #+BEGIN_QUOTE
+ Content Distribution Networks
+ (CDNs). A CDN manages servers in multiple geographically distributed locations, stores copies of the
+ videos (and other types of Web content, including documents, images, and audio) in its servers, and
+ attempts to direct each user request to a CDN location that will provide the best user experience.
+ #+END_QUOTE
+**** Private and third-party CDNs
+	 :PROPERTIES:
+	 :NOTER_PAGE: 185
+	 :HIGHLIGHT: #s(pdf-highlight 185 ((0.08629737609329446 0.05305039787798408 0.6034985422740524 0.09725906277630415)))
+	 :END:
+ #+BEGIN_QUOTE
+ CDN may be a private CDN, that is, owned by the content provider itself; for example, Google’s CDN
+ distributes YouTube videos and other types of content. The CDN may alternatively be a third-party
+ CDN that distributes content on behalf of multiple content providers;
+ #+END_QUOTE
+**** CDN server placement philosophies
+	 :PROPERTIES:
+	 :NOTER_PAGE: 185
+	 :HIGHLIGHT: #s(pdf-highlight 185 ((0.11137026239067055 0.20822281167108753 0.8046647230320699 0.23474801061007958)))
+	 :END:
+ #+BEGIN_QUOTE
+ Enter Deep. One philosophy, pioneered by Akamai, is to enter deep into the access networks of
+ Internet Service Providers, by deploying server clusters in access ISPs all over the world.
+ #+END_QUOTE
 
-#+BEGIN_QUOTE
-bring the ISPs home by building large clusters at a smaller number (for example, tens) of sites.
-Instead of getting inside the access ISPs, these CDNs typically place their clusters in Internet
-Exchange Points (IXPs)
-#+END_QUOTE
-*** CDN must intercept the request so that it can
-	:PROPERTIES:
-	:NOTER_PAGE: 186
-	:HIGHLIGHT: #s(pdf-highlight 186 ((0.6443148688046647 0.5875331564986737 0.39825072886297375 0.6396993810786914)))
-	:END:
-	1) determine a suitable CDN server cluster for that client at that time, 
-	2) redirect the client’s request to a server in that cluster.
-*** When CDN server is found
-	:PROPERTIES:
-	:NOTER_PAGE: 187
-	:HIGHLIGHT: #s(pdf-highlight 187 ((0.11895043731778425 0.7320954907161803 0.2075801749271137 0.8156498673740052)))
-	:END:
-#+BEGIN_QUOTE
-6. Once the client receives the IP address for a KingCDN content server, it establishes a direct
-TCP connection with the server at that IP address and issues an HTTP GET request for the
-video. If DASH is used, the server will first send to the client a manifest file with a list of URLs,
-one for each version of the video, and the client will dynamically select chunks from the different
-versions.
-#+END_QUOTE
-*** Figure 2.25 DNS redirects a user’s request to a CDN server
-	:PROPERTIES:
-	:NOTER_PAGE: 187
-	:HIGHLIGHT: #s(pdf-highlight 187 ((0.14752186588921282 0.6427939876215738 0.6256559766763848 0.6556145004420866)))
-	:END:
+ #+BEGIN_QUOTE
+ bring the ISPs home by building large clusters at a smaller number (for example, tens) of sites.
+ Instead of getting inside the access ISPs, these CDNs typically place their clusters in Internet
+ Exchange Points (IXPs)
+ #+END_QUOTE
+**** CDN must intercept the request so that it can
+	 :PROPERTIES:
+	 :NOTER_PAGE: 186
+	 :HIGHLIGHT: #s(pdf-highlight 186 ((0.6443148688046647 0.5875331564986737 0.39825072886297375 0.6396993810786914)))
+	 :END:
+	 1) determine a suitable CDN server cluster for that client at that time, 
+	 2) redirect the client’s request to a server in that cluster.
+**** When CDN server is found
+	 :PROPERTIES:
+	 :NOTER_PAGE: 187
+	 :HIGHLIGHT: #s(pdf-highlight 187 ((0.11895043731778425 0.7320954907161803 0.2075801749271137 0.8156498673740052)))
+	 :END:
+ #+BEGIN_QUOTE
+ 6. Once the client receives the IP address for a KingCDN content server, it establishes a direct
+ TCP connection with the server at that IP address and issues an HTTP GET request for the
+ video. If DASH is used, the server will first send to the client a manifest file with a list of URLs,
+ one for each version of the video, and the client will dynamically select chunks from the different
+ versions.
+ #+END_QUOTE
+**** Figure 2.25 DNS redirects a user’s request to a CDN server
+	 :PROPERTIES:
+	 :NOTER_PAGE: 187
+	 :HIGHLIGHT: #s(pdf-highlight 187 ((0.14752186588921282 0.6427939876215738 0.6256559766763848 0.6556145004420866)))
+	 :END:
 
-#+DOWNLOADED: screenshot @ 2023-10-28 12:52:40
-[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_12-52-40_screenshot.png]]
-*** CDNs employ proprietary cluster selection strategies.
-	:PROPERTIES:
-	:NOTER_PAGE: 188
-	:HIGHLIGHT: #s(pdf-highlight 188 ((0.7486880466472303 0.07692307692307691 0.4425655976676385 0.10212201591511935)))
-	:END:
-	- Assign the client to the cluster that is geographically closest.
-#+BEGIN_QUOTE
-the solution may perform poorly, since
-the geographically closest cluster may not be the closest cluster in terms of the length or number of
-hops of the network path.
-#+END_QUOTE
+ #+DOWNLOADED: screenshot @ 2023-10-28 12:52:40
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_12-52-40_screenshot.png]]
+**** CDNs employ proprietary cluster selection strategies.
+	 :PROPERTIES:
+	 :NOTER_PAGE: 188
+	 :HIGHLIGHT: #s(pdf-highlight 188 ((0.7486880466472303 0.07692307692307691 0.4425655976676385 0.10212201591511935)))
+	 :END:
+	 - Assign the client to the cluster that is geographically closest.
+ #+BEGIN_QUOTE
+ the solution may perform poorly, since
+ the geographically closest cluster may not be the closest cluster in terms of the length or number of
+ hops of the network path.
+ #+END_QUOTE
 
-#+BEGIN_QUOTE
-ignores the variation
-in delay and available bandwidth over time of Internet paths, always assigning the same cluster to a
-particular client.
-#+END_QUOTE
-	- Perform periodic real-time measurements of delay and loss performance between their clusters and clients.
-#+BEGIN_QUOTE
-periodically send probes (for
-example, ping messages or DNS queries) to all of the LDNSs around the world. One drawback of this
-approach is that many LDNSs are configured to not respond to such probes.
-#+END_QUOTE
-*** Netflix example
-	:PROPERTIES:
-	:NOTER_PAGE: 189
-	:HIGHLIGHT: #s(pdf-highlight 189 ((0.09504373177842565 0.12157382847038019 0.517201166180758 0.30813439434129086)))
-	:END:
-	- Content ingestion. Before Netflix can distribute a movie to its customers, it must first ingest and process the movie. Netflix receives studio master versions of movies and uploads them to hosts in the Amazon cloud.
-	- Content processing. The machines in the Amazon cloud create many different formats for each movie, suitable for a diverse array of client video players running on desktop computers, smartphones, and game consoles connected to televisions. A different version is created for each of these formats and at multiple bit rates, allowing for adaptive streaming over HTTP using DASH.
-	- Uploading versions to its CDN. Once all of the versions of a movie have been created, the hosts in the Amazon cloud upload the versions to its CDN.
+ #+BEGIN_QUOTE
+ ignores the variation
+ in delay and available bandwidth over time of Internet paths, always assigning the same cluster to a
+ particular client.
+ #+END_QUOTE
+	 - Perform periodic real-time measurements of delay and loss performance between their clusters and clients.
+ #+BEGIN_QUOTE
+ periodically send probes (for
+ example, ping messages or DNS queries) to all of the LDNSs around the world. One drawback of this
+ approach is that many LDNSs are configured to not respond to such probes.
+ #+END_QUOTE
+**** Netflix example
+	 :PROPERTIES:
+	 :NOTER_PAGE: 189
+	 :HIGHLIGHT: #s(pdf-highlight 189 ((0.09504373177842565 0.12157382847038019 0.517201166180758 0.30813439434129086)))
+	 :END:
+	 - Content ingestion. Before Netflix can distribute a movie to its customers, it must first ingest and process the movie. Netflix receives studio master versions of movies and uploads them to hosts in the Amazon cloud.
+	 - Content processing. The machines in the Amazon cloud create many different formats for each movie, suitable for a diverse array of client video players running on desktop computers, smartphones, and game consoles connected to televisions. A different version is created for each of these formats and at multiple bit rates, allowing for adaptive streaming over HTTP using DASH.
+	 - Uploading versions to its CDN. Once all of the versions of a movie have been created, the hosts in the Amazon cloud upload the versions to its CDN.
 
-#+DOWNLOADED: screenshot @ 2023-10-28 13:02:45
-[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_13-02-45_screenshot.png]]
-*** Netflix video distribution strategy
-	:PROPERTIES:
-	:NOTER_PAGE: 190
-	:HIGHLIGHT: #s(pdf-highlight 190 ((0.5037900874635568 0.1865605658709107 0.2956268221574344 0.1295313881520778)))
-	:END:
-#+BEGIN_QUOTE
-Netflix does not use pull-caching (Section 2.2.5) to populate its CDN servers
-in the IXPs and ISPs. Instead, Netflix distributes by pushing the videos to its CDN servers during off-
-peak hours. For those locations that cannot hold the entire library, Netflix pushes only the most popular
-videos, which are determined on a day-to-day basis.
-#+END_QUOTE
-*** YouTube does not use DASH
-	:PROPERTIES:
-	:NOTER_PAGE: 191
-	:HIGHLIGHT: #s(pdf-highlight 191 ((0.6174927113702624 0.34659593280282935 0.7597667638483965 0.37179487179487175)))
-	:END:
-#+BEGIN_QUOTE
-YouTube does not employ adaptive
-streaming (such as DASH), but instead requires the user to manually select a version.
-#+END_QUOTE
+ #+DOWNLOADED: screenshot @ 2023-10-28 13:02:45
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_13-02-45_screenshot.png]]
+**** Netflix video distribution strategy
+	 :PROPERTIES:
+	 :NOTER_PAGE: 190
+	 :HIGHLIGHT: #s(pdf-highlight 190 ((0.5037900874635568 0.1865605658709107 0.2956268221574344 0.1295313881520778)))
+	 :END:
+ #+BEGIN_QUOTE
+ Netflix does not use pull-caching (Section 2.2.5) to populate its CDN servers
+ in the IXPs and ISPs. Instead, Netflix distributes by pushing the videos to its CDN servers during off-
+ peak hours. For those locations that cannot hold the entire library, Netflix pushes only the most popular
+ videos, which are determined on a day-to-day basis.
+ #+END_QUOTE
+**** YouTube does not use DASH
+	 :PROPERTIES:
+	 :NOTER_PAGE: 191
+	 :HIGHLIGHT: #s(pdf-highlight 191 ((0.6174927113702624 0.34659593280282935 0.7597667638483965 0.37179487179487175)))
+	 :END:
+ #+BEGIN_QUOTE
+ YouTube does not employ adaptive
+ streaming (such as DASH), but instead requires the user to manually select a version.
+ #+END_QUOTE
 *** 2.7 Socket Programming: Creating Network Applications
     :PROPERTIES:
     :NOTER_PAGE: 193
     :END:
-*** UDP
-**** Sending process
-	 :PROPERTIES:
-	 :NOTER_PAGE: 195
-	 :HIGHLIGHT: #s(pdf-highlight 195 ((0.1924198250728863 0.1958443854995579 0.6174927113702624 0.21706454465075153)))
-	 :END:
- #+BEGIN_QUOTE
- the sending process attaches to the packet a destination address, which consists of the
- destination host’s IP address and the destination socket’s port number.
- sender’s source address—consisting of the IP address of the source host and the port number of the
- source socket—are also attached to the packet. However, attaching the source address to the packet is
- typically not done by the UDP application code; instead it is automatically done by the underlying
- operating system.
- #+END_QUOTE
-**** When a socket is created, an identifier, called a port number, is assigned
+**** UDP
+***** Sending process
+	  :PROPERTIES:
+	  :NOTER_PAGE: 195
+	  :HIGHLIGHT: #s(pdf-highlight 195 ((0.1924198250728863 0.1958443854995579 0.6174927113702624 0.21706454465075153)))
+	  :END:
+  #+BEGIN_QUOTE
+  the sending process attaches to the packet a destination address, which consists of the
+  destination host’s IP address and the destination socket’s port number.
+  sender’s source address—consisting of the IP address of the source host and the port number of the
+  source socket—are also attached to the packet. However, attaching the source address to the packet is
+  typically not done by the UDP application code; instead it is automatically done by the underlying
+  operating system.
+  #+END_QUOTE
+***** When a socket is created, an identifier, called a port number, is assigned
 
-**** UDPClient.py
-	 :PROPERTIES:
-	 :NOTER_PAGE: 196
-	 :HIGHLIGHT: #s(pdf-highlight 196 ((0.08221574344023323 0.773209549071618 0.16909620991253643 0.7763041556145004)))
-	 :END:
- #+BEGIN_QUOTE
- from socket import *
+***** UDPClient.py
+	  :PROPERTIES:
+	  :NOTER_PAGE: 196
+	  :HIGHLIGHT: #s(pdf-highlight 196 ((0.08221574344023323 0.773209549071618 0.16909620991253643 0.7763041556145004)))
+	  :END:
+  #+BEGIN_QUOTE
+  from socket import *
 
- serverName = ’hostname’
+  serverName = ’hostname’
 
- serverPort = 12000
+  serverPort = 12000
 
- clientSocket = socket(AF_INET, SOCK_DGRAM)
+  clientSocket = socket(AF_INET, SOCK_DGRAM)
 
- message = raw_input(’Input lowercase sentence:’)
+  message = raw_input(’Input lowercase sentence:’)
 
- clientSocket.sendto(message.encode(),(serverName, serverPort))
+  clientSocket.sendto(message.encode(),(serverName, serverPort))
 
- modifiedMessage, serverAddress = clientSocket.recvfrom(2048)
+  modifiedMessage, serverAddress = clientSocket.recvfrom(2048)
 
- print(modifiedMessage.decode())
+  print(modifiedMessage.decode())
 
- clientSocket.close()
- #+END_QUOTE
-	 - AF_INET indicates that the underlying network is using IPv4.
-	 - SOCK_DGRAM , which means it is a UDP socket
- #+BEGIN_QUOTE
- Note that we are not
- specifying the port number of the client socket when we create it; we are instead letting the operating
- system do this for us.
- #+END_QUOTE
+  clientSocket.close()
+  #+END_QUOTE
+	  - AF_INET indicates that the underlying network is using IPv4.
+	  - SOCK_DGRAM , which means it is a UDP socket
+  #+BEGIN_QUOTE
+  Note that we are not
+  specifying the port number of the client socket when we create it; we are instead letting the operating
+  system do this for us.
+  #+END_QUOTE
 
- #+BEGIN_QUOTE
- first convert the message from string type to byte type, as we need to send bytes
- into a socket; this is done with the encode() method.
- #+END_QUOTE
+  #+BEGIN_QUOTE
+  first convert the message from string type to byte type, as we need to send bytes
+  into a socket; this is done with the encode() method.
+  #+END_QUOTE
 
- #+BEGIN_QUOTE
- The method recvfrom also takes the buffer size 2048 as input. (This buffer size
- works for most purposes.)
- #+END_QUOTE
+  #+BEGIN_QUOTE
+  The method recvfrom also takes the buffer size 2048 as input. (This buffer size
+  works for most purposes.)
+  #+END_QUOTE
 
-**** Figure 2.27 The client-server application using UDP
-	 :PROPERTIES:
-	 :NOTER_PAGE: 196
-	 :HIGHLIGHT: #s(pdf-highlight 196 ((0.07055393586005831 0.5366931918656056 0.5620991253644315 0.5358090185676392)))
-	 :END:
+***** Figure 2.27 The client-server application using UDP
+	  :PROPERTIES:
+	  :NOTER_PAGE: 196
+	  :HIGHLIGHT: #s(pdf-highlight 196 ((0.07055393586005831 0.5366931918656056 0.5620991253644315 0.5358090185676392)))
+	  :END:
 
- #+DOWNLOADED: screenshot @ 2023-10-28 13:39:26
- [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_13-39-26_screenshot.png]]
+  #+DOWNLOADED: screenshot @ 2023-10-28 13:39:26
+  [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_13-39-26_screenshot.png]]
 
-**** UDPServer.py
-	 :PROPERTIES:
-	 :NOTER_PAGE: 199
-	 :HIGHLIGHT: #s(pdf-highlight 199 ((0.08746355685131195 0.09549071618037135 0.18833819241982508 0.09946949602122016)))
-	 :END:
- #+BEGIN_QUOTE
- from socket import *
- serverPort = 12000
- serverSocket = socket(AF_INET, SOCK_DGRAM)
- serverSocket.bind((’’, serverPort))
- print(”The server is ready to receive”)
- while True:
- message, clientAddress = serverSocket.recvfrom(2048)
- modifiedMessage = message.decode().upper()
- serverSocket.sendto(modifiedMessage.encode(), clientAddress)
- #+END_QUOTE
+***** UDPServer.py
+	  :PROPERTIES:
+	  :NOTER_PAGE: 199
+	  :HIGHLIGHT: #s(pdf-highlight 199 ((0.08746355685131195 0.09549071618037135 0.18833819241982508 0.09946949602122016)))
+	  :END:
+  #+BEGIN_QUOTE
+  from socket import *
+  serverPort = 12000
+  serverSocket = socket(AF_INET, SOCK_DGRAM)
+  serverSocket.bind((’’, serverPort))
+  print(”The server is ready to receive”)
+  while True:
+  message, clientAddress = serverSocket.recvfrom(2048)
+  modifiedMessage = message.decode().upper()
+  serverSocket.sendto(modifiedMessage.encode(), clientAddress)
+  #+END_QUOTE
 
- #+BEGIN_QUOTE
- The first line of code that is significantly different from UDPClient is:
- serverSocket.bind((’’, serverPort))
- #+END_QUOTE
+  #+BEGIN_QUOTE
+  The first line of code that is significantly different from UDPClient is:
+  serverSocket.bind((’’, serverPort))
+  #+END_QUOTE
 
-*** TCP
-**** welcoming socket
-	 :PROPERTIES:
-	 :NOTER_PAGE: 201
-	 :HIGHLIGHT: #s(pdf-highlight 201 ((0.5154518950437318 0.36870026525198935 0.4198250728862974 0.43987621573828467)))
-	 :END:
- #+BEGIN_QUOTE
- When the client creates its TCP socket, it specifies
- the address of the welcoming socket in the server, namely, the IP address of the server host and the
- port number of the socket. After creating its socket, the client initiates a three-way handshake and
- establishes a TCP connection with the server.
- #+END_QUOTE
+**** TCP
+***** welcoming socket
+	  :PROPERTIES:
+	  :NOTER_PAGE: 201
+	  :HIGHLIGHT: #s(pdf-highlight 201 ((0.5154518950437318 0.36870026525198935 0.4198250728862974 0.43987621573828467)))
+	  :END:
+  #+BEGIN_QUOTE
+  When the client creates its TCP socket, it specifies
+  the address of the welcoming socket in the server, namely, the IP address of the server host and the
+  port number of the socket. After creating its socket, the client initiates a three-way handshake and
+  establishes a TCP connection with the server.
+  #+END_QUOTE
 
-**** Dedicated socket
-	 :PROPERTIES:
-	 :NOTER_PAGE: 201
-	 :HIGHLIGHT: #s(pdf-highlight 201 ((0.1597667638483965 0.5234305923961096 0.39999999999999997 0.5517241379310345)))
-	 :END:
- #+BEGIN_QUOTE
- When the server “hears” the knocking, it creates a new door—more precisely, a new socket
- that is dedicated to that particular ­client.
- #+END_QUOTE
+***** Dedicated socket
+	  :PROPERTIES:
+	  :NOTER_PAGE: 201
+	  :HIGHLIGHT: #s(pdf-highlight 201 ((0.1597667638483965 0.5234305923961096 0.39999999999999997 0.5517241379310345)))
+	  :END:
+  #+BEGIN_QUOTE
+  When the server “hears” the knocking, it creates a new door—more precisely, a new socket
+  that is dedicated to that particular ­client.
+  #+END_QUOTE
 
-**** Figure 2.28 The TCPServer process has two sockets
-	 :PROPERTIES:
-	 :NOTER_PAGE: 202
-	 :HIGHLIGHT: #s(pdf-highlight 202 ((0.08221574344023323 0.4588859416445623 0.5568513119533528 0.4513704686118479)))
-	 :END:
+***** Figure 2.28 The TCPServer process has two sockets
+	  :PROPERTIES:
+	  :NOTER_PAGE: 202
+	  :HIGHLIGHT: #s(pdf-highlight 202 ((0.08221574344023323 0.4588859416445623 0.5568513119533528 0.4513704686118479)))
+	  :END:
 
- #+DOWNLOADED: screenshot @ 2023-10-28 13:37:40
- [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_13-37-40_screenshot.png]]
+  #+DOWNLOADED: screenshot @ 2023-10-28 13:37:40
+  [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_13-37-40_screenshot.png]]
 
-**** Figure 2.29 The client-server application using TCP
-	 :PROPERTIES:
-	 :NOTER_PAGE: 203
-	 :HIGHLIGHT: #s(pdf-highlight 203 ((0.08571428571428572 0.7798408488063661 0.5329446064139942 0.77763041556145)))
-	 :END:
+***** Figure 2.29 The client-server application using TCP
+	  :PROPERTIES:
+	  :NOTER_PAGE: 203
+	  :HIGHLIGHT: #s(pdf-highlight 203 ((0.08571428571428572 0.7798408488063661 0.5329446064139942 0.77763041556145)))
+	  :END:
 
- #+DOWNLOADED: screenshot @ 2023-10-28 13:40:04
- [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_13-40-04_screenshot.png]]
+  #+DOWNLOADED: screenshot @ 2023-10-28 13:40:04
+  [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_13-40-04_screenshot.png]]
 
-**** TCPClient.py
-	 :PROPERTIES:
-	 :NOTER_PAGE: 202
-	 :HIGHLIGHT: #s(pdf-highlight 202 ((0.08746355685131195 0.5167992926613616 0.21574344023323616 0.5216622458001768)))
-	 :END:
- #+BEGIN_QUOTE
- from socket import *
+***** TCPClient.py
+	  :PROPERTIES:
+	  :NOTER_PAGE: 202
+	  :HIGHLIGHT: #s(pdf-highlight 202 ((0.08746355685131195 0.5167992926613616 0.21574344023323616 0.5216622458001768)))
+	  :END:
+  #+BEGIN_QUOTE
+  from socket import *
 
- serverName = ’servername’
+  serverName = ’servername’
 
- serverPort = 12000
+  serverPort = 12000
 
- clientSocket = socket(AF_INET, SOCK_STREAM)
+  clientSocket = socket(AF_INET, SOCK_STREAM)
 
- clientSocket.connect((serverName, serverPort))
+  clientSocket.connect((serverName, serverPort))
 
- sentence = raw_input(’Input lowercase sentence:’)
+  sentence = raw_input(’Input lowercase sentence:’)
 
- clientSocket.send(sentence.encode())
+  clientSocket.send(sentence.encode())
 
- modifiedSentence = clientSocket.recv(1024)
+  modifiedSentence = clientSocket.recv(1024)
 
- print(’From Server: ’, modifiedSentence.decode())
+  print(’From Server: ’, modifiedSentence.decode())
 
- clientSocket.close()
- #+END_QUOTE
+  clientSocket.close()
+  #+END_QUOTE
 
-**** Lines different from UDP
-	 :PROPERTIES:
-	 :NOTER_PAGE: 204
-	 :HIGHLIGHT: #s(pdf-highlight 204 ((0.12011661807580175 0.07824933687002653 0.6256559766763848 0.09416445623342175)))
-	 :END:
- #+BEGIN_QUOTE
- SOCK_STREAM , which means it is a TCP socket
+***** Lines different from UDP
+	  :PROPERTIES:
+	  :NOTER_PAGE: 204
+	  :HIGHLIGHT: #s(pdf-highlight 204 ((0.12011661807580175 0.07824933687002653 0.6256559766763848 0.09416445623342175)))
+	  :END:
+  #+BEGIN_QUOTE
+  SOCK_STREAM , which means it is a TCP socket
 
- clientSocket.connect((serverName, serverPort))
+  clientSocket.connect((serverName, serverPort))
 
- The parameter of the connect() method is the address of
- the server side of the connection. After this line of code is executed, the three-way handshake is
- performed and a TCP connection is established between the client and server.
+  The parameter of the connect() method is the address of
+  the server side of the connection. After this line of code is executed, the three-way handshake is
+  performed and a TCP connection is established between the client and server.
 
- clientSocket.send(sentence.encode())
+  clientSocket.send(sentence.encode())
 
- The above line sends the sentence through the client’s socket and into the TCP connection. Note that
- the program does not explicitly create a packet and attach the destination address to the packet, as was
- the case with UDP sockets. Instead the client program simply drops the bytes in the string sentence
- into the TCP connection.
- #+END_QUOTE
+  The above line sends the sentence through the client’s socket and into the TCP connection. Note that
+  the program does not explicitly create a packet and attach the destination address to the packet, as was
+  the case with UDP sockets. Instead the client program simply drops the bytes in the string sentence
+  into the TCP connection.
+  #+END_QUOTE
 
-**** TCPServer.py
-	 :PROPERTIES:
-	 :NOTER_PAGE: 205
-	 :HIGHLIGHT: #s(pdf-highlight 205 ((0.06763848396501458 0.05791335101679929 0.2314868804664723 0.0627763041556145)))
-	 :END:
- #+BEGIN_QUOTE
- from socket import *
+***** TCPServer.py
+	  :PROPERTIES:
+	  :NOTER_PAGE: 205
+	  :HIGHLIGHT: #s(pdf-highlight 205 ((0.06763848396501458 0.05791335101679929 0.2314868804664723 0.0627763041556145)))
+	  :END:
+  #+BEGIN_QUOTE
+  from socket import *
 
- serverPort = 12000
+  serverPort = 12000
 
- serverSocket = socket(AF_INET, SOCK_STREAM)
+  serverSocket = socket(AF_INET, SOCK_STREAM)
 
- serverSocket.bind((’’, serverPort))
+  serverSocket.bind((’’, serverPort))
 
- serverSocket.listen(1)
+  serverSocket.listen(1)
 
- print(’The server is ready to receive’)
+  print(’The server is ready to receive’)
 
- while True:
+  while True:
 
-     connectionSocket, addr = serverSocket.accept()
+      connectionSocket, addr = serverSocket.accept()
     
-     sentence = connectionSocket.recv(1024).decode()
+      sentence = connectionSocket.recv(1024).decode()
     
-     capitalizedSentence = sentence.upper()
+      capitalizedSentence = sentence.upper()
     
-     connectionSocket.send(capitalizedSentence.encode())
+      connectionSocket.send(capitalizedSentence.encode())
     
-     connectionSocket.close()
- #+END_QUOTE
+      connectionSocket.close()
+  #+END_QUOTE
 
- #+BEGIN_QUOTE
- After establishing this welcoming door, we
- will wait and listen for some client to knock on the door:
+  #+BEGIN_QUOTE
+  After establishing this welcoming door, we
+  will wait and listen for some client to knock on the door:
 
- serverSocket.listen(1)
+  serverSocket.listen(1)
 
- This line has the server listen for TCP connection requests from the client. The parameter specifies the
- maximum number of queued connections (at least 1).
- #+END_QUOTE
+  This line has the server listen for TCP connection requests from the client. The parameter specifies the
+  maximum number of queued connections (at least 1).
+  #+END_QUOTE
 ** Chapter 3 Transport Layer
    :PROPERTIES:
    :NOTER_PAGE: 223
@@ -2495,523 +2495,1036 @@ streaming (such as DASH), but instead requires the user to manually select a ver
     :PROPERTIES:
     :NOTER_PAGE: 224
     :END:
-*** Transport-layer definition
-	:PROPERTIES:
-	:NOTER_PAGE: 224
-	:HIGHLIGHT: #s(pdf-highlight 224 ((0.08569667077681874 0.24777933613838243 0.6658446362515413 0.3071528751753156)))
-	:END:
-#+BEGIN_QUOTE
-A transport-layer protocol provides for logical communication between application processes running
-on different hosts. By logical communication, we mean that from an application’s perspective, it is as if
-the hosts running the processes were directly connected; in reality, the hosts may be on opposite sides
-of the planet, connected via numerous routers and a wide range of link types.
-#+END_QUOTE
-*** Routers look only at network-layer
-	:PROPERTIES:
-	:NOTER_PAGE: 224
-	:HIGHLIGHT: #s(pdf-highlight 224 ((0.1781750924784217 0.581580177653109 0.15721331689272502 0.6227208976157083)))
-	:END:
-#+BEGIN_QUOTE
-It’s important to note that network routers act only on the network-layer fields of the
-datagram; that is, they do not examine the fields of the transport-layer segment encapsulated with the
-datagram.
-#+END_QUOTE
-*** Difference between network-layer and transport-layer
-	:PROPERTIES:
-	:NOTER_PAGE: 225
-	:HIGHLIGHT: #s(pdf-highlight 225 ((0.08199753390875462 0.8246844319775597 0.12638717632552404 0.8513323983169706)))
-	:END:
-#+BEGIN_QUOTE
-Whereas a transport-layer protocol provides logical communication between processes running on different hosts, a network-layer protocol provides logical-communication between
-hosts.
-#+END_QUOTE
-*** UDP and TCP
-	:PROPERTIES:
-	:NOTER_PAGE: 227
-	:HIGHLIGHT: #s(pdf-highlight 227 ((0.07829839704069051 0.643291257597008 0.7700369913686806 0.6914446002805049)))
-	:END:
-#+BEGIN_QUOTE
-One of these protocols is UDP (User Datagram Protocol), which provides an unreliable, connectionless
-service to the invoking application. The second of these protocols is TCP (Transmission Control
-Protocol), which provides a reliable, connection-oriented service to the invoking application.
-#+END_QUOTE
-*** we refer to the transport-layer packet as a segment.
-	:PROPERTIES:
-	:NOTER_PAGE: 227
-	:HIGHLIGHT: #s(pdf-highlight 227 ((0.27743526510480887 0.8078541374474054 0.6689272503082614 0.7994389901823282)))
-	:END:
-*** IP, network protocol
-	:PROPERTIES:
-	:NOTER_PAGE: 228
-	:HIGHLIGHT: #s(pdf-highlight 228 ((0.840937114673243 0.08087891538101917 0.7256473489519112 0.19027582982702199)))
-	:END:
-#+BEGIN_QUOTE
-The
-Internet’s network-layer protocol has a name—IP, for Internet Protocol. IP provides logical
-communication between hosts. The IP service model is a best-effort delivery service. This means that
-IP makes its “best effort” to deliver segments between communicating hosts, but it makes no
-guarantees. In particular, it does not guarantee segment delivery, it does not guarantee orderly delivery
-of segments, and it does not guarantee the integrity of the data in the segments.
-#+END_QUOTE
-*** Transport-layer multiplexing and demultiplexing
-	:PROPERTIES:
-	:NOTER_PAGE: 228
-	:HIGHLIGHT: #s(pdf-highlight 228 ((0.21023427866831074 0.321645628798504 0.25092478421701603 0.39878447872837774)))
-	:END:
-#+BEGIN_QUOTE
-The most fundamental responsibility of UDP and TCP is to extend IP’s delivery service
-between two end systems to a delivery service between two processes running on the end systems.
-Extending host-to-host delivery to process-to-process delivery is called transport-layer multiplexing
-and demultiplexing.
-#+END_QUOTE
+**** Transport-layer definition
+	 :PROPERTIES:
+	 :NOTER_PAGE: 224
+	 :HIGHLIGHT: #s(pdf-highlight 224 ((0.08569667077681874 0.24777933613838243 0.6658446362515413 0.3071528751753156)))
+	 :END:
+ #+BEGIN_QUOTE
+ A transport-layer protocol provides for logical communication between application processes running
+ on different hosts. By logical communication, we mean that from an application’s perspective, it is as if
+ the hosts running the processes were directly connected; in reality, the hosts may be on opposite sides
+ of the planet, connected via numerous routers and a wide range of link types.
+ #+END_QUOTE
+**** Routers look only at network-layer
+	 :PROPERTIES:
+	 :NOTER_PAGE: 224
+	 :HIGHLIGHT: #s(pdf-highlight 224 ((0.1781750924784217 0.581580177653109 0.15721331689272502 0.6227208976157083)))
+	 :END:
+ #+BEGIN_QUOTE
+ It’s important to note that network routers act only on the network-layer fields of the
+ datagram; that is, they do not examine the fields of the transport-layer segment encapsulated with the
+ datagram.
+ #+END_QUOTE
+**** Difference between network-layer and transport-layer
+	 :PROPERTIES:
+	 :NOTER_PAGE: 225
+	 :HIGHLIGHT: #s(pdf-highlight 225 ((0.08199753390875462 0.8246844319775597 0.12638717632552404 0.8513323983169706)))
+	 :END:
+ #+BEGIN_QUOTE
+ Whereas a transport-layer protocol provides logical communication between processes running on different hosts, a network-layer protocol provides logical-communication between
+ hosts.
+ #+END_QUOTE
+**** UDP and TCP
+	 :PROPERTIES:
+	 :NOTER_PAGE: 227
+	 :HIGHLIGHT: #s(pdf-highlight 227 ((0.07829839704069051 0.643291257597008 0.7700369913686806 0.6914446002805049)))
+	 :END:
+ #+BEGIN_QUOTE
+ One of these protocols is UDP (User Datagram Protocol), which provides an unreliable, connectionless
+ service to the invoking application. The second of these protocols is TCP (Transmission Control
+ Protocol), which provides a reliable, connection-oriented service to the invoking application.
+ #+END_QUOTE
+**** we refer to the transport-layer packet as a segment.
+	 :PROPERTIES:
+	 :NOTER_PAGE: 227
+	 :HIGHLIGHT: #s(pdf-highlight 227 ((0.27743526510480887 0.8078541374474054 0.6689272503082614 0.7994389901823282)))
+	 :END:
+**** IP, network protocol
+	 :PROPERTIES:
+	 :NOTER_PAGE: 228
+	 :HIGHLIGHT: #s(pdf-highlight 228 ((0.840937114673243 0.08087891538101917 0.7256473489519112 0.19027582982702199)))
+	 :END:
+ #+BEGIN_QUOTE
+ The
+ Internet’s network-layer protocol has a name—IP, for Internet Protocol. IP provides logical
+ communication between hosts. The IP service model is a best-effort delivery service. This means that
+ IP makes its “best effort” to deliver segments between communicating hosts, but it makes no
+ guarantees. In particular, it does not guarantee segment delivery, it does not guarantee orderly delivery
+ of segments, and it does not guarantee the integrity of the data in the segments.
+ #+END_QUOTE
+**** Transport-layer multiplexing and demultiplexing
+	 :PROPERTIES:
+	 :NOTER_PAGE: 228
+	 :HIGHLIGHT: #s(pdf-highlight 228 ((0.21023427866831074 0.321645628798504 0.25092478421701603 0.39878447872837774)))
+	 :END:
+ #+BEGIN_QUOTE
+ The most fundamental responsibility of UDP and TCP is to extend IP’s delivery service
+ between two end systems to a delivery service between two processes running on the end systems.
+ Extending host-to-host delivery to process-to-process delivery is called transport-layer multiplexing
+ and demultiplexing.
+ #+END_QUOTE
 *** 3.2 Multiplexing and Demultiplexing
     :PROPERTIES:
     :NOTER_PAGE: 230
     :END:
-*** Demultiplexing
-	:PROPERTIES:
-	:NOTER_PAGE: 230
-	:HIGHLIGHT: #s(pdf-highlight 230 ((0.08816276202219482 0.6951846657316504 0.2638717632552404 0.7858812529219261)))
-	:END:
-#+BEGIN_QUOTE
-Now let’s consider how a receiving host directs an incoming transport-layer segment to the appropriate
-socket. Each transport-layer segment has a set of fields in the segment for this purpose. At the receiving
-end, the transport layer examines these fields to identify the receiving socket and then directs the
-segment to that socket. This job of delivering the data in a transport-layer segment to the correct socket
-is called demultiplexing.
-#+END_QUOTE
-*** Multiplexing
-	:PROPERTIES:
-	:NOTER_PAGE: 230
-	:HIGHLIGHT: #s(pdf-highlight 230 ((0.2934648581997534 0.7849462365591399 0.7854500616522812 0.8345021037868163)))
-	:END:
-#+BEGIN_QUOTE
-The job of gathering data chunks at the source host from different sockets,
-encapsulating each data chunk with header information (that will later be used in demultiplexing) to
-create segments, and passing the segments to the network layer is called multiplexing.
-#+END_QUOTE
-*** Figure 3.2 Transport-layer multiplexing and demultiplexing
-	:PROPERTIES:
-	:NOTER_PAGE: 231
-	:HIGHLIGHT: #s(pdf-highlight 231 ((0.093711467324291 0.35577372604020574 0.5752157829839705 0.3576437587657784)))
-	:END:
+**** Demultiplexing
+	 :PROPERTIES:
+	 :NOTER_PAGE: 230
+	 :HIGHLIGHT: #s(pdf-highlight 230 ((0.08816276202219482 0.6951846657316504 0.2638717632552404 0.7858812529219261)))
+	 :END:
+ #+BEGIN_QUOTE
+ Now let’s consider how a receiving host directs an incoming transport-layer segment to the appropriate
+ socket. Each transport-layer segment has a set of fields in the segment for this purpose. At the receiving
+ end, the transport layer examines these fields to identify the receiving socket and then directs the
+ segment to that socket. This job of delivering the data in a transport-layer segment to the correct socket
+ is called demultiplexing.
+ #+END_QUOTE
+**** Multiplexing
+	 :PROPERTIES:
+	 :NOTER_PAGE: 230
+	 :HIGHLIGHT: #s(pdf-highlight 230 ((0.2934648581997534 0.7849462365591399 0.7854500616522812 0.8345021037868163)))
+	 :END:
+ #+BEGIN_QUOTE
+ The job of gathering data chunks at the source host from different sockets,
+ encapsulating each data chunk with header information (that will later be used in demultiplexing) to
+ create segments, and passing the segments to the network layer is called multiplexing.
+ #+END_QUOTE
+**** Figure 3.2 Transport-layer multiplexing and demultiplexing
+	 :PROPERTIES:
+	 :NOTER_PAGE: 231
+	 :HIGHLIGHT: #s(pdf-highlight 231 ((0.093711467324291 0.35577372604020574 0.5752157829839705 0.3576437587657784)))
+	 :END:
 
-#+DOWNLOADED: screenshot @ 2023-10-28 17:57:43
-[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_17-57-43_screenshot.png]]
-*** Transport-layer mutliplexing requirements
-	:PROPERTIES:
-	:NOTER_PAGE: 231
-	:HIGHLIGHT: #s(pdf-highlight 231 ((0.6405672009864365 0.758765778401122 0.5456226880394575 0.8129967274427303)))
-	:END:
-	- sockets have unique identifiers (source port number field)
-	- each segment have special fields that indicate the socket to which the segment is to be delivered (destination port number field)
-*** Port numbers
-	:PROPERTIES:
-	:NOTER_PAGE: 231
-	:HIGHLIGHT: #s(pdf-highlight 231 ((0.8273736128236745 0.8461898083216457 0.17755856966707767 0.916783543712015)))
-	:END:
-#+BEGIN_QUOTE
-Each port
-number is a 16-bit number, ranging from 0 to 65535. The port numbers ranging from 0 to 1023 are
-called well-known port numbers and are restricted, which means that they are reserved for use by
-well-known application protocols such as HTTP (which uses port number 80) and FTP (which uses port number 21).
-#+END_QUOTE
-*** Figure 3.3 Source and destination port-number fields in a transport-layer segment
-	:PROPERTIES:
-	:NOTER_PAGE: 232
-	:HIGHLIGHT: #s(pdf-highlight 232 ((0.07151664611590629 0.25853202431042543 0.8341553637484587 0.2632071061243572)))
-	:END:
+ #+DOWNLOADED: screenshot @ 2023-10-28 17:57:43
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_17-57-43_screenshot.png]]
+**** Transport-layer mutliplexing requirements
+	 :PROPERTIES:
+	 :NOTER_PAGE: 231
+	 :HIGHLIGHT: #s(pdf-highlight 231 ((0.6405672009864365 0.758765778401122 0.5456226880394575 0.8129967274427303)))
+	 :END:
+	 - sockets have unique identifiers (source port number field)
+	 - each segment have special fields that indicate the socket to which the segment is to be delivered (destination port number field)
+**** Port numbers
+	 :PROPERTIES:
+	 :NOTER_PAGE: 231
+	 :HIGHLIGHT: #s(pdf-highlight 231 ((0.8273736128236745 0.8461898083216457 0.17755856966707767 0.916783543712015)))
+	 :END:
+ #+BEGIN_QUOTE
+ Each port
+ number is a 16-bit number, ranging from 0 to 65535. The port numbers ranging from 0 to 1023 are
+ called well-known port numbers and are restricted, which means that they are reserved for use by
+ well-known application protocols such as HTTP (which uses port number 80) and FTP (which uses port number 21).
+ #+END_QUOTE
+**** Figure 3.3 Source and destination port-number fields in a transport-layer segment
+	 :PROPERTIES:
+	 :NOTER_PAGE: 232
+	 :HIGHLIGHT: #s(pdf-highlight 232 ((0.07151664611590629 0.25853202431042543 0.8341553637484587 0.2632071061243572)))
+	 :END:
 
-#+DOWNLOADED: screenshot @ 2023-10-28 18:01:35
-[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_18-01-35_screenshot.png]]
-*** Difference between a TCP socket and a UDP socket
-	:PROPERTIES:
-	:NOTER_PAGE: 233
-	:HIGHLIGHT: #s(pdf-highlight 233 ((0.2990135635018496 0.9326788218793829 0.8958076448828607 0.9219261337073399)))
-	:END:
-#+BEGIN_QUOTE
-TCP socket is identified by a four-tuple: (source IP address, source port number, destination IP address,
-destination port number). Thus, when a TCP segment arrives from the network to a host, the host uses
-all four values to direct (demultiplex) the segment to the appropriate socket.
-#+END_QUOTE
-*** TCP demultiplexing
-	:PROPERTIES:
-	:NOTER_PAGE: 235
-	:HIGHLIGHT: #s(pdf-highlight 235 ((0.596177558569667 0.3796166432912576 0.5382244143033292 0.41888733052828425)))
-	:END:
-#+BEGIN_QUOTE
-When a TCP segment arrives at the
-host, all four fields (source IP address, source port, destination IP address, destination port) are used to
-direct (demultiplex) the segment to the appropriate socket.
-#+END_QUOTE
-*** nmap program
-	:PROPERTIES:
-	:NOTER_PAGE: 235
-	:HIGHLIGHT: #s(pdf-highlight 235 ((0.4217016029593095 0.8546049555867228 0.1276202219482121 0.8003740065451146)))
-	:END:
-#+BEGIN_QUOTE
-Determining which applications are listening on which ports is a relatively easy task. Indeed
-there are a number of public domain programs, called port scanners, that do just that. Perhaps
-the most widely used of these is nmap.
-nmap returns a list of open, closed, or unreachable ports.
-#+END_QUOTE
-*** Figure 3.5 Two clients, using the same destination port number (80) to communicate with the same Web server application
-	:PROPERTIES:
-	:NOTER_PAGE: 236
-	:HIGHLIGHT: #s(pdf-highlight 236 ((0.08261405672009864 0.5123889668069191 0.3353884093711467 0.5343618513323983)))
-	:END:
+ #+DOWNLOADED: screenshot @ 2023-10-28 18:01:35
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_18-01-35_screenshot.png]]
+**** Difference between a TCP socket and a UDP socket
+	 :PROPERTIES:
+	 :NOTER_PAGE: 233
+	 :HIGHLIGHT: #s(pdf-highlight 233 ((0.2990135635018496 0.9326788218793829 0.8958076448828607 0.9219261337073399)))
+	 :END:
+ #+BEGIN_QUOTE
+ TCP socket is identified by a four-tuple: (source IP address, source port number, destination IP address,
+ destination port number). Thus, when a TCP segment arrives from the network to a host, the host uses
+ all four values to direct (demultiplex) the segment to the appropriate socket.
+ #+END_QUOTE
+**** TCP demultiplexing
+	 :PROPERTIES:
+	 :NOTER_PAGE: 235
+	 :HIGHLIGHT: #s(pdf-highlight 235 ((0.596177558569667 0.3796166432912576 0.5382244143033292 0.41888733052828425)))
+	 :END:
+ #+BEGIN_QUOTE
+ When a TCP segment arrives at the
+ host, all four fields (source IP address, source port, destination IP address, destination port) are used to
+ direct (demultiplex) the segment to the appropriate socket.
+ #+END_QUOTE
+**** nmap program
+	 :PROPERTIES:
+	 :NOTER_PAGE: 235
+	 :HIGHLIGHT: #s(pdf-highlight 235 ((0.4217016029593095 0.8546049555867228 0.1276202219482121 0.8003740065451146)))
+	 :END:
+ #+BEGIN_QUOTE
+ Determining which applications are listening on which ports is a relatively easy task. Indeed
+ there are a number of public domain programs, called port scanners, that do just that. Perhaps
+ the most widely used of these is nmap.
+ nmap returns a list of open, closed, or unreachable ports.
+ #+END_QUOTE
+**** Figure 3.5 Two clients, using the same destination port number (80) to communicate with the same Web server application
+	 :PROPERTIES:
+	 :NOTER_PAGE: 236
+	 :HIGHLIGHT: #s(pdf-highlight 236 ((0.08261405672009864 0.5123889668069191 0.3353884093711467 0.5343618513323983)))
+	 :END:
 
-#+DOWNLOADED: screenshot @ 2023-10-28 18:15:45
-[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_18-15-45_screenshot.png]]
-*** Separate sockets for each client
-	:PROPERTIES:
-	:NOTER_PAGE: 237
-	:HIGHLIGHT: #s(pdf-highlight 237 ((0.8822441430332922 0.1898083216456288 0.30517879161528977 0.15194015895278168)))
-	:END:
-#+BEGIN_QUOTE
-We mention, however, that there is not always a one-to-one correspondence
-between connection sockets and processes. In fact, today’s high-performing Web servers often use only
-one process, and create a new thread with a new connection socket for each new client connection.
-#+END_QUOTE
+ #+DOWNLOADED: screenshot @ 2023-10-28 18:15:45
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_18-15-45_screenshot.png]]
+**** Separate sockets for each client
+	 :PROPERTIES:
+	 :NOTER_PAGE: 237
+	 :HIGHLIGHT: #s(pdf-highlight 237 ((0.8822441430332922 0.1898083216456288 0.30517879161528977 0.15194015895278168)))
+	 :END:
+ #+BEGIN_QUOTE
+ We mention, however, that there is not always a one-to-one correspondence
+ between connection sockets and processes. In fact, today’s high-performing Web servers often use only
+ one process, and create a new thread with a new connection socket for each new client connection.
+ #+END_QUOTE
 *** 3.3 Connectionless Transport: UDP
     :PROPERTIES:
     :NOTER_PAGE: 238
     :END:
-*** some applications are better suited for UDP for the following reasons:
-	:PROPERTIES:
-	:NOTER_PAGE: 239
-	:HIGHLIGHT: #s(pdf-highlight 239 ((0.5591861898890259 0.10612435717625059 0.30209617755856966 0.13370733987844788)))
-	:END:
-	- Finer application-level control over what data is sent, and when. Under UDP, as soon as an application process passes data to UDP, UDP will package the data inside a UDP segment and immediately pass the segment to the network layer. TCP, on the other hand, has a congestion-control mechanism that throttles the transport-layer TCP sender when one or more links between the source and destination hosts become excessively congested. TCP will also continue to resend a segment until the receipt of the segment has been acknowledged by the destination, regardless of how long reliable delivery takes.
-	- No connection establishment. As we’ll discuss later, TCP uses a three-way handshake before it starts to transfer data. UDP just blasts away without any formal preliminaries. Thus UDP does not introduce any delay to establish a connection.
-	- a server devoted to a particular application can typically support many more active clients when the application runs over UDP rather than TCP.
-	- Small packet header overhead. The TCP segment has 20 bytes of header overhead in every segment, whereas UDP has only 8 bytes of overhead.
-	- No connection state.
-	:PROPERTIES:
-	:NOTER_PAGE: 239
-	:HIGHLIGHT: #s(pdf-highlight 239 ((0.11652281134401973 0.6250584385226742 0.26202219482120837 0.6227208976157083)))
-	:END:
-*** Lack of congestion control in UDP
-	:PROPERTIES:
-	:NOTER_PAGE: 240
-	:HIGHLIGHT: #s(pdf-highlight 240 ((0.30209617755856966 0.9069658719027583 0.840937114673243 0.9223936418887331)))
-	:END:
-#+BEGIN_QUOTE
- can result in high loss rates between a
-UDP sender and receiver, and the crowding out of TCP sessions—a potentially serious problem
-#+END_QUOTE
-*** The UDP header has only four fields, each consisting of two bytes.
-	:PROPERTIES:
-	:NOTER_PAGE: 241
-	:HIGHLIGHT: #s(pdf-highlight 241 ((0.0906288532675709 0.4838709677419355 0.5881627620221949 0.4777933613838242)))
-	:END:
+**** some applications are better suited for UDP for the following reasons:
+	 :PROPERTIES:
+	 :NOTER_PAGE: 239
+	 :HIGHLIGHT: #s(pdf-highlight 239 ((0.5591861898890259 0.10612435717625059 0.30209617755856966 0.13370733987844788)))
+	 :END:
+	 - Finer application-level control over what data is sent, and when. Under UDP, as soon as an application process passes data to UDP, UDP will package the data inside a UDP segment and immediately pass the segment to the network layer. TCP, on the other hand, has a congestion-control mechanism that throttles the transport-layer TCP sender when one or more links between the source and destination hosts become excessively congested. TCP will also continue to resend a segment until the receipt of the segment has been acknowledged by the destination, regardless of how long reliable delivery takes.
+	 - No connection establishment. As we’ll discuss later, TCP uses a three-way handshake before it starts to transfer data. UDP just blasts away without any formal preliminaries. Thus UDP does not introduce any delay to establish a connection.
+	 - a server devoted to a particular application can typically support many more active clients when the application runs over UDP rather than TCP.
+	 - Small packet header overhead. The TCP segment has 20 bytes of header overhead in every segment, whereas UDP has only 8 bytes of overhead.
+	 - No connection state.
+	 :PROPERTIES:
+	 :NOTER_PAGE: 239
+	 :HIGHLIGHT: #s(pdf-highlight 239 ((0.11652281134401973 0.6250584385226742 0.26202219482120837 0.6227208976157083)))
+	 :END:
+**** Lack of congestion control in UDP
+	 :PROPERTIES:
+	 :NOTER_PAGE: 240
+	 :HIGHLIGHT: #s(pdf-highlight 240 ((0.30209617755856966 0.9069658719027583 0.840937114673243 0.9223936418887331)))
+	 :END:
+ #+BEGIN_QUOTE
+  can result in high loss rates between a
+ UDP sender and receiver, and the crowding out of TCP sessions—a potentially serious problem
+ #+END_QUOTE
+**** The UDP header has only four fields, each consisting of two bytes.
+	 :PROPERTIES:
+	 :NOTER_PAGE: 241
+	 :HIGHLIGHT: #s(pdf-highlight 241 ((0.0906288532675709 0.4838709677419355 0.5881627620221949 0.4777933613838242)))
+	 :END:
 
-*** Figure 3.7 UDP segment structure
-	:PROPERTIES:
-	:NOTER_PAGE: 242
-	:HIGHLIGHT: #s(pdf-highlight 242 ((0.07151664611590629 0.25245441795231416 0.35141800246609123 0.2575970079476391)))
-	:END:
+**** Figure 3.7 UDP segment structure
+	 :PROPERTIES:
+	 :NOTER_PAGE: 242
+	 :HIGHLIGHT: #s(pdf-highlight 242 ((0.07151664611590629 0.25245441795231416 0.35141800246609123 0.2575970079476391)))
+	 :END:
 
-#+DOWNLOADED: screenshot @ 2023-10-28 18:40:45
-[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_18-40-45_screenshot.png]]
+ #+DOWNLOADED: screenshot @ 2023-10-28 18:40:45
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_18-40-45_screenshot.png]]
 
-*** Checksum calculation
-	:PROPERTIES:
-	:NOTER_PAGE: 242
-	:HIGHLIGHT: #s(pdf-highlight 242 ((0.07829839704069051 0.32071061243571763 0.28298397040690504 0.36652641421224874)))
-	:END:
-#+BEGIN_QUOTE
-UDP at the sender side performs the 1s complement of the sum of all the 16-bit words in the segment,
-with any overflow encountered during the sum being wrapped around. This result is put in the checksum
-field of the UDP segment.
-#+END_QUOTE
+**** Checksum calculation
+	 :PROPERTIES:
+	 :NOTER_PAGE: 242
+	 :HIGHLIGHT: #s(pdf-highlight 242 ((0.07829839704069051 0.32071061243571763 0.28298397040690504 0.36652641421224874)))
+	 :END:
+ #+BEGIN_QUOTE
+ UDP at the sender side performs the 1s complement of the sum of all the 16-bit words in the segment,
+ with any overflow encountered during the sum being wrapped around. This result is put in the checksum
+ field of the UDP segment.
+ #+END_QUOTE
 
-*** Checksum verification
-	:PROPERTIES:
-	:NOTER_PAGE: 242
-	:HIGHLIGHT: #s(pdf-highlight 242 ((0.9180024660912454 0.9303412809724171 0.688039457459926 0.9303412809724171)))
-	:END:
-#+BEGIN_QUOTE
-At the receiver, all 16-bit words are added, including the checksum. If no errors are introduced into the packet, then clearly the
-sum at the receiver will be 1111111111111111. If one of the bits is a 0, then we know that errors have
-been introduced into the packet.
-#+END_QUOTE
+**** Checksum verification
+	 :PROPERTIES:
+	 :NOTER_PAGE: 242
+	 :HIGHLIGHT: #s(pdf-highlight 242 ((0.9180024660912454 0.9303412809724171 0.688039457459926 0.9303412809724171)))
+	 :END:
+ #+BEGIN_QUOTE
+ At the receiver, all 16-bit words are added, including the checksum. If no errors are introduced into the packet, then clearly the
+ sum at the receiver will be 1111111111111111. If one of the bits is a 0, then we know that errors have
+ been introduced into the packet.
+ #+END_QUOTE
 
-*** No recovery from error
-	:PROPERTIES:
-	:NOTER_PAGE: 243
-	:HIGHLIGHT: #s(pdf-highlight 243 ((0.4432799013563502 0.43525011687704535 0.5869297163995068 0.48106591865357645)))
-	:END:
-#+BEGIN_QUOTE
-Although UDP provides error checking, it does not do
-anything to recover from an error. Some implementations of UDP simply discard the damaged segment;
-others pass the damaged segment to the application with a warning.
-#+END_QUOTE
-*** End-to-end principle 
-#+BEGIN_QUOTE
-In networks designed according to this principle, guaranteeing certain application-specific features, such as reliability and security, requires that they reside in the communicating end nodes of the network. Intermediary nodes, such as gateways and routers, that exist to establish the network, may implement these to improve efficiency but cannot guarantee end-to-end correctness.
-#+END_QUOTE
+**** No recovery from error
+	 :PROPERTIES:
+	 :NOTER_PAGE: 243
+	 :HIGHLIGHT: #s(pdf-highlight 243 ((0.4432799013563502 0.43525011687704535 0.5869297163995068 0.48106591865357645)))
+	 :END:
+ #+BEGIN_QUOTE
+ Although UDP provides error checking, it does not do
+ anything to recover from an error. Some implementations of UDP simply discard the damaged segment;
+ others pass the damaged segment to the application with a warning.
+ #+END_QUOTE
+**** End-to-end principle 
+ #+BEGIN_QUOTE
+ In networks designed according to this principle, guaranteeing certain application-specific features, such as reliability and security, requires that they reside in the communicating end nodes of the network. Intermediary nodes, such as gateways and routers, that exist to establish the network, may implement these to improve efficiency but cannot guarantee end-to-end correctness.
+ #+END_QUOTE
 *** 3.4 Principles of Reliable Data Transfer
     :PROPERTIES:
     :NOTER_PAGE: 244
     :END:
-*** Build a reliable protocol on top of an unreliable protocol
-	:PROPERTIES:
-	:NOTER_PAGE: 244
-	:HIGHLIGHT: #s(pdf-highlight 244 ((0.07336621454993834 0.46657316503038804 0.3625154130702836 0.5310892940626462)))
-	:END:
-#+BEGIN_QUOTE
-It is the responsibility of a reliable data transfer protocol to implement this service abstraction. This
-task is made difficult by the fact that the layer below the reliable data transfer protocol may be
-unreliable. For example, TCP is a reliable data transfer protocol that is implemented on top of an
-unreliable (IP) end-to-end network layer.
-#+END_QUOTE
-*** Figure 3.8 Reliable data transfer: Service model and service implementation
-	:PROPERTIES:
-	:NOTER_PAGE: 245
-	:HIGHLIGHT: #s(pdf-highlight 245 ((0.08014796547472257 0.48059841047218327 0.7583230579531443 0.48620850864890136)))
-	:END:
+**** Build a reliable protocol on top of an unreliable protocol
+	 :PROPERTIES:
+	 :NOTER_PAGE: 244
+	 :HIGHLIGHT: #s(pdf-highlight 244 ((0.07336621454993834 0.46657316503038804 0.3625154130702836 0.5310892940626462)))
+	 :END:
+ #+BEGIN_QUOTE
+ It is the responsibility of a reliable data transfer protocol to implement this service abstraction. This
+ task is made difficult by the fact that the layer below the reliable data transfer protocol may be
+ unreliable. For example, TCP is a reliable data transfer protocol that is implemented on top of an
+ unreliable (IP) end-to-end network layer.
+ #+END_QUOTE
+**** Figure 3.8 Reliable data transfer: Service model and service implementation
+	 :PROPERTIES:
+	 :NOTER_PAGE: 245
+	 :HIGHLIGHT: #s(pdf-highlight 245 ((0.08014796547472257 0.48059841047218327 0.7583230579531443 0.48620850864890136)))
+	 :END:
 
-#+DOWNLOADED: screenshot @ 2023-10-28 18:55:24
-[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_18-55-24_screenshot.png]]
-#+DOWNLOADED: screenshot @ 2023-10-28 18:55:34
-[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_18-55-34_screenshot.png]]
-*** Reliable Data Transfer over a Perfectly Reliable Channel: rdt1.0
-	:PROPERTIES:
-	:NOTER_PAGE: 246
-	:HIGHLIGHT: #s(pdf-highlight 246 ((0.07768187422934648 0.74520804114072 0.5789149198520346 0.7424029920523609)))
-	:END:
-*** It is important to note that there are separate FSMs for the sender and for the receiver.
-	:PROPERTIES:
-	:NOTER_PAGE: 246
-	:HIGHLIGHT: #s(pdf-highlight 246 ((0.6966707768187423 0.8527349228611502 0.5493218249075216 0.8742402992052362)))
-	:END:
-*** Figure 3.9 rdt1.0 – A protocol for a completely reliable channel
-	:PROPERTIES:
-	:NOTER_PAGE: 247
-	:HIGHLIGHT: #s(pdf-highlight 247 ((0.08692971639950678 0.6764843384759234 0.6294697903822442 0.6816269284712483)))
-	:END:
+ #+DOWNLOADED: screenshot @ 2023-10-28 18:55:24
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_18-55-24_screenshot.png]]
+ #+DOWNLOADED: screenshot @ 2023-10-28 18:55:34
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_18-55-34_screenshot.png]]
+**** Reliable Data Transfer over a Perfectly Reliable Channel: rdt1.0
+	 :PROPERTIES:
+	 :NOTER_PAGE: 246
+	 :HIGHLIGHT: #s(pdf-highlight 246 ((0.07768187422934648 0.74520804114072 0.5789149198520346 0.7424029920523609)))
+	 :END:
+**** It is important to note that there are separate FSMs for the sender and for the receiver.
+	 :PROPERTIES:
+	 :NOTER_PAGE: 246
+	 :HIGHLIGHT: #s(pdf-highlight 246 ((0.6966707768187423 0.8527349228611502 0.5493218249075216 0.8742402992052362)))
+	 :END:
+**** Figure 3.9 rdt1.0 – A protocol for a completely reliable channel
+	 :PROPERTIES:
+	 :NOTER_PAGE: 247
+	 :HIGHLIGHT: #s(pdf-highlight 247 ((0.08692971639950678 0.6764843384759234 0.6294697903822442 0.6816269284712483)))
+	 :END:
 
-#+DOWNLOADED: screenshot @ 2023-10-28 18:59:26
-[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_18-59-26_screenshot.png]]
+ #+DOWNLOADED: screenshot @ 2023-10-28 18:59:26
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_18-59-26_screenshot.png]]
 
-*** FSM symbols' meaning
-	:PROPERTIES:
-	:NOTER_PAGE: 247
-	:HIGHLIGHT: #s(pdf-highlight 247 ((0.07953144266337854 0.05189340813464236 0.46609124537607893 0.08508648901355774)))
-	:END:
-#+BEGIN_QUOTE
-The event causing the transition is shown above the horizontal line labeling the transition, and the actions taken when the
-event occurs are shown below the horizontal line. The initial state of the FSM is indicated by the dashed arrow.
-#+END_QUOTE
+**** FSM symbols' meaning
+	 :PROPERTIES:
+	 :NOTER_PAGE: 247
+	 :HIGHLIGHT: #s(pdf-highlight 247 ((0.07953144266337854 0.05189340813464236 0.46609124537607893 0.08508648901355774)))
+	 :END:
+ #+BEGIN_QUOTE
+ The event causing the transition is shown above the horizontal line labeling the transition, and the actions taken when the
+ event occurs are shown below the horizontal line. The initial state of the FSM is indicated by the dashed arrow.
+ #+END_QUOTE
 
-*** Everything is too perfect
-	:PROPERTIES:
-	:NOTER_PAGE: 247
-	:HIGHLIGHT: #s(pdf-highlight 247 ((0.07521578298397041 0.8859280037400655 0.5776818742293465 0.9256661991584854)))
-	:END:
-#+BEGIN_QUOTE
-In this simple protocol, there is no difference between a unit of data and a packet. Also, all packet flow is
-from the sender to receiver; with a perfectly reliable channel there is no need for the receiver side to
-provide any feedback to the sender since nothing can go wrong!
-#+END_QUOTE
+**** Everything is too perfect
+	 :PROPERTIES:
+	 :NOTER_PAGE: 247
+	 :HIGHLIGHT: #s(pdf-highlight 247 ((0.07521578298397041 0.8859280037400655 0.5776818742293465 0.9256661991584854)))
+	 :END:
+ #+BEGIN_QUOTE
+ In this simple protocol, there is no difference between a unit of data and a packet. Also, all packet flow is
+ from the sender to receiver; with a perfectly reliable channel there is no need for the receiver side to
+ provide any feedback to the sender since nothing can go wrong!
+ #+END_QUOTE
 
-*** Reliable Data Transfer over a Channel with Bit Errors: rdt2.0
-	:PROPERTIES:
-	:NOTER_PAGE: 248
-	:HIGHLIGHT: #s(pdf-highlight 248 ((0.07274969173859433 0.12669471715755026 0.5530209617755857 0.1482000935016363)))
-	:END:
+**** Reliable Data Transfer over a Channel with Bit Errors: rdt2.0
+	 :PROPERTIES:
+	 :NOTER_PAGE: 248
+	 :HIGHLIGHT: #s(pdf-highlight 248 ((0.07274969173859433 0.12669471715755026 0.5530209617755857 0.1482000935016363)))
+	 :END:
 
-*** Positive acknowledgements and negative acknowledgements
-	:PROPERTIES:
-	:NOTER_PAGE: 248
-	:HIGHLIGHT: #s(pdf-highlight 248 ((0.344019728729963 0.30247779336138386 0.47718865598027127 0.3899018232819075)))
-	:END:
-#+BEGIN_QUOTE
-Consider how you yourself might dictate a long message over the
-phone. In a typical scenario, the message taker might say “OK” after each sentence has been heard,
-understood, and recorded. If the message taker hears a garbled sentence, you’re asked to repeat the
-garbled sentence. This message-dictation protocol uses both positive acknowledgments (“OK”) and
-negative acknowledgments (“Please repeat that.”).
-#+END_QUOTE
+**** Positive acknowledgements and negative acknowledgements
+	 :PROPERTIES:
+	 :NOTER_PAGE: 248
+	 :HIGHLIGHT: #s(pdf-highlight 248 ((0.344019728729963 0.30247779336138386 0.47718865598027127 0.3899018232819075)))
+	 :END:
+ #+BEGIN_QUOTE
+ Consider how you yourself might dictate a long message over the
+ phone. In a typical scenario, the message taker might say “OK” after each sentence has been heard,
+ understood, and recorded. If the message taker hears a garbled sentence, you’re asked to repeat the
+ garbled sentence. This message-dictation protocol uses both positive acknowledgments (“OK”) and
+ negative acknowledgments (“Please repeat that.”).
+ #+END_QUOTE
 
-*** Automatic Repeat reQuest (ARQ)
-	:PROPERTIES:
-	:NOTER_PAGE: 248
-	:HIGHLIGHT: #s(pdf-highlight 248 ((0.23921085080147966 0.4403927068723703 0.6664611590628854 0.45909303412809727)))
-	:END:
-#+BEGIN_QUOTE
-In a computer network setting, reliable data transfer protocols based on such
-retransmission are known as ARQ (Automatic Repeat reQuest) protocols.
-#+END_QUOTE
+**** Automatic Repeat reQuest (ARQ)
+	 :PROPERTIES:
+	 :NOTER_PAGE: 248
+	 :HIGHLIGHT: #s(pdf-highlight 248 ((0.23921085080147966 0.4403927068723703 0.6664611590628854 0.45909303412809727)))
+	 :END:
+ #+BEGIN_QUOTE
+ In a computer network setting, reliable data transfer protocols based on such
+ retransmission are known as ARQ (Automatic Repeat reQuest) protocols.
+ #+END_QUOTE
 
-*** three additional protocol capabilities are required in ARQ protocols to handle the presence of bit errors:
-	- Error detection, checksum field
-	- Receiver feedback. The positive (ACK) and negative (NAK) acknowledgment
-	- Retransmission.
-*** Figure 3.10 rdt2.0 – A protocol for a channel with bit errors
-	:PROPERTIES:
-	:NOTER_PAGE: 249
-	:HIGHLIGHT: #s(pdf-highlight 249 ((0.08384710234278668 0.541374474053296 0.5758323057953144 0.5507246376811594)))
-	:END:
+**** three additional protocol capabilities are required in ARQ protocols to handle the presence of bit errors:
+	 - Error detection, checksum field
+	 - Receiver feedback. The positive (ACK) and negative (NAK) acknowledgment
+	 - Retransmission.
+**** Figure 3.10 rdt2.0 – A protocol for a channel with bit errors
+	 :PROPERTIES:
+	 :NOTER_PAGE: 249
+	 :HIGHLIGHT: #s(pdf-highlight 249 ((0.08384710234278668 0.541374474053296 0.5758323057953144 0.5507246376811594)))
+	 :END:
 
-#+DOWNLOADED: screenshot @ 2023-10-28 19:11:51
-[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_19-11-51_screenshot.png]]
+ #+DOWNLOADED: screenshot @ 2023-10-28 19:11:51
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_19-11-51_screenshot.png]]
 
-#+DOWNLOADED: screenshot @ 2023-10-28 19:12:01
-[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_19-12-01_screenshot.png]]
+ #+DOWNLOADED: screenshot @ 2023-10-28 19:12:01
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_19-12-01_screenshot.png]]
 
-*** wait-for-ACK-or-NAK blocks
-	:PROPERTIES:
-	:NOTER_PAGE: 250
-	:HIGHLIGHT: #s(pdf-highlight 250 ((0.3273736128236745 0.05469845722300141 0.6442663378545006 0.09724170172978028)))
-	:END:
-#+BEGIN_QUOTE
-It is important to note that when the sender is in the wait-for-ACK-or-NAK
-state, it cannot get more data from the upper layer; that is, the rdt_send() event can not occur; that
-will happen only after the sender receives an ACK and leaves this state. Because of
-this behavior, protocols such as rdt2.0 are known as stop-and-wait protocols.
-#+END_QUOTE
+**** wait-for-ACK-or-NAK blocks
+	 :PROPERTIES:
+	 :NOTER_PAGE: 250
+	 :HIGHLIGHT: #s(pdf-highlight 250 ((0.3273736128236745 0.05469845722300141 0.6442663378545006 0.09724170172978028)))
+	 :END:
+ #+BEGIN_QUOTE
+ It is important to note that when the sender is in the wait-for-ACK-or-NAK
+ state, it cannot get more data from the upper layer; that is, the rdt_send() event can not occur; that
+ will happen only after the sender receives an ACK and leaves this state. Because of
+ this behavior, protocols such as rdt2.0 are known as stop-and-wait protocols.
+ #+END_QUOTE
 
-*** Flaw of rdt2.0
-	:PROPERTIES:
-	:NOTER_PAGE: 250
-	:HIGHLIGHT: #s(pdf-highlight 250 ((0.08138101109741061 0.31369798971482005 0.6763255240443896 0.3398784478728378)))
-	:END:
-#+BEGIN_QUOTE
-Protocol rdt2.0 may look as if it works but, unfortunately, it has a fatal flaw. In particular, we haven’t
-accounted for the possibility that the ACK or NAK packet could be corrupted! Minimally, we will need to add checksum bits to ACK/NAK packets in order
-to detect such errors.
-#+END_QUOTE
+**** Flaw of rdt2.0
+	 :PROPERTIES:
+	 :NOTER_PAGE: 250
+	 :HIGHLIGHT: #s(pdf-highlight 250 ((0.08138101109741061 0.31369798971482005 0.6763255240443896 0.3398784478728378)))
+	 :END:
+ #+BEGIN_QUOTE
+ Protocol rdt2.0 may look as if it works but, unfortunately, it has a fatal flaw. In particular, we haven’t
+ accounted for the possibility that the ACK or NAK packet could be corrupted! Minimally, we will need to add checksum bits to ACK/NAK packets in order
+ to detect such errors.
+ #+END_QUOTE
 
-#+BEGIN_QUOTE
-The more difficult question is how the protocol should recover from errors in ACK
-or NAK packets. The difficulty here is that if an ACK or NAK is corrupted, the sender has no way of
-knowing whether or not the receiver has correctly received the last piece of transmitted data.
-#+END_QUOTE
+ #+BEGIN_QUOTE
+ The more difficult question is how the protocol should recover from errors in ACK
+ or NAK packets. The difficulty here is that if an ACK or NAK is corrupted, the sender has no way of
+ knowing whether or not the receiver has correctly received the last piece of transmitted data.
+ #+END_QUOTE
 
-*** possibilities for handling corrupted ACKs or NAKs:
-	:PROPERTIES:
-	:NOTER_PAGE: 250
-	:HIGHLIGHT: #s(pdf-highlight 250 ((0.20530209617755857 0.4927536231884058 0.5887792848335388 0.49976624590930346)))
-	:END:
+**** possibilities for handling corrupted ACKs or NAKs:
+	 :PROPERTIES:
+	 :NOTER_PAGE: 250
+	 :HIGHLIGHT: #s(pdf-highlight 250 ((0.20530209617755857 0.4927536231884058 0.5887792848335388 0.49976624590930346)))
+	 :END:
 
-*** Notes for page 250
-	:PROPERTIES:
-	:NOTER_PAGE: 250
-	:HIGHLIGHT: #s(pdf-highlight 250 ((0.11282367447595561 0.6989247311827957 0.25400739827373614 0.7466105656848995)))
-	:END:
-#+BEGIN_QUOTE
-Add enough checksum bits to allow the sender not only to detect, but also
-to recover from, bit errors. This solves the immediate problem for a channel that can corrupt packets
-but not lose them.
-#+END_QUOTE
+**** Notes for page 250
+	 :PROPERTIES:
+	 :NOTER_PAGE: 250
+	 :HIGHLIGHT: #s(pdf-highlight 250 ((0.11282367447595561 0.6989247311827957 0.25400739827373614 0.7466105656848995)))
+	 :END:
+ #+BEGIN_QUOTE
+ Add enough checksum bits to allow the sender not only to detect, but also
+ to recover from, bit errors. This solves the immediate problem for a channel that can corrupt packets
+ but not lose them.
+ #+END_QUOTE
 
-#+BEGIN_QUOTE
-for the sender simply to resend the current data packet when it receives a
-garbled ACK or NAK packet. This approach, however, introduces duplicate packets into the
-sender-to-receiver channel. The fundamental difficulty with duplicate packets is that the receiver
-doesn’t know whether the ACK or NAK it last sent was received correctly at the sender. Thus, it
-cannot know a priori whether an arriving packet contains new data or is a retransmission!
-#+END_QUOTE
+ #+BEGIN_QUOTE
+ for the sender simply to resend the current data packet when it receives a
+ garbled ACK or NAK packet. This approach, however, introduces duplicate packets into the
+ sender-to-receiver channel. The fundamental difficulty with duplicate packets is that the receiver
+ doesn’t know whether the ACK or NAK it last sent was received correctly at the sender. Thus, it
+ cannot know a priori whether an arriving packet contains new data or is a retransmission!
+ #+END_QUOTE
 
-*** Sequence number
-	:PROPERTIES:
-	:NOTER_PAGE: 250
-	:HIGHLIGHT: #s(pdf-highlight 250 ((0.08014796547472257 0.8934081346423562 0.3964241676942047 0.9438990182328191)))
-	:END:
-#+BEGIN_QUOTE
-A simple solution to this new problem (and one adopted in almost all existing data transfer protocols,
-including TCP) is to add a new field to the data packet and have the sender number its data packets by
-putting a sequence number into this field.
-#+END_QUOTE
-#+BEGIN_QUOTE
-For this simple case of a stop-and-
-wait protocol, a 1-bit sequence number will suffice, since it will allow the receiver to know whether the
-sender is resending the previously transmitted packet (the sequence number of the received packet has
-the same sequence number as the most recently received packet) or a new packet (the sequence
-number changes, moving “forward” in modulo-2 arithmetic).
-#+END_QUOTE
+**** Sequence number
+	 :PROPERTIES:
+	 :NOTER_PAGE: 250
+	 :HIGHLIGHT: #s(pdf-highlight 250 ((0.08014796547472257 0.8934081346423562 0.3964241676942047 0.9438990182328191)))
+	 :END:
+ #+BEGIN_QUOTE
+ A simple solution to this new problem (and one adopted in almost all existing data transfer protocols,
+ including TCP) is to add a new field to the data packet and have the sender number its data packets by
+ putting a sequence number into this field.
+ #+END_QUOTE
+ #+BEGIN_QUOTE
+ For this simple case of a stop-and-
+ wait protocol, a 1-bit sequence number will suffice, since it will allow the receiver to know whether the
+ sender is resending the previously transmitted packet (the sequence number of the received packet has
+ the same sequence number as the most recently received packet) or a new packet (the sequence
+ number changes, moving “forward” in modulo-2 arithmetic).
+ #+END_QUOTE
 
-*** Figure 3.11 rdt2.1 sender
-	:PROPERTIES:
-	:NOTER_PAGE: 251
-	:HIGHLIGHT: #s(pdf-highlight 251 ((0.07953144266337854 0.9336138382421693 0.37422934648581996 0.9270687237026648)))
-	:END:
+**** Figure 3.11 rdt2.1 sender
+	 :PROPERTIES:
+	 :NOTER_PAGE: 251
+	 :HIGHLIGHT: #s(pdf-highlight 251 ((0.07953144266337854 0.9336138382421693 0.37422934648581996 0.9270687237026648)))
+	 :END:
 
-#+DOWNLOADED: screenshot @ 2023-10-28 19:26:08
-[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_19-26-08_screenshot.png]]
+ #+DOWNLOADED: screenshot @ 2023-10-28 19:26:08
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_19-26-08_screenshot.png]]
 
-*** Figure 3.12 rdt2.1 receiver
-	:PROPERTIES:
-	:NOTER_PAGE: 252
-	:HIGHLIGHT: #s(pdf-highlight 252 ((0.34155363748458695 0.44086021505376344 0.09124537607891492 0.4324450677886863)))
-	:END:
+**** Figure 3.12 rdt2.1 receiver
+	 :PROPERTIES:
+	 :NOTER_PAGE: 252
+	 :HIGHLIGHT: #s(pdf-highlight 252 ((0.34155363748458695 0.44086021505376344 0.09124537607891492 0.4324450677886863)))
+	 :END:
 
-#+DOWNLOADED: screenshot @ 2023-10-28 19:27:11
-[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_19-27-11_screenshot.png]]
+ #+DOWNLOADED: screenshot @ 2023-10-28 19:27:11
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_19-27-11_screenshot.png]]
 
-*** NAK-free reliable data transfer protocol rdt2.2
-	:PROPERTIES:
-	:NOTER_PAGE: 252
-	:HIGHLIGHT: #s(pdf-highlight 252 ((0.5635018495684341 0.5035063113604489 0.8249075215782984 0.5857877512856475)))
-	:END:
-#+BEGIN_QUOTE
-We can accomplish the same effect as a
-NAK if, instead of sending a NAK, we send an ACK for the last correctly received packet. A sender that
-receives two ACKs for the same packet (that is, receives duplicate ACKs) knows that the receiver did
-not correctly receive the packet following the packet that is being ACKed twice. Our NAK-free reliable
-data transfer protocol for a channel with bit errors is rdt2.2 , shown in Figures 3.13 and 3.14.
-#+END_QUOTE
+**** NAK-free reliable data transfer protocol rdt2.2
+	 :PROPERTIES:
+	 :NOTER_PAGE: 252
+	 :HIGHLIGHT: #s(pdf-highlight 252 ((0.5635018495684341 0.5035063113604489 0.8249075215782984 0.5857877512856475)))
+	 :END:
+ #+BEGIN_QUOTE
+ We can accomplish the same effect as a
+ NAK if, instead of sending a NAK, we send an ACK for the last correctly received packet. A sender that
+ receives two ACKs for the same packet (that is, receives duplicate ACKs) knows that the receiver did
+ not correctly receive the packet following the packet that is being ACKed twice. Our NAK-free reliable
+ data transfer protocol for a channel with bit errors is rdt2.2 , shown in Figures 3.13 and 3.14.
+ #+END_QUOTE
 
-*** rdt2.1 vs rdt2.2
-	:PROPERTIES:
-	:NOTER_PAGE: 252
-	:HIGHLIGHT: #s(pdf-highlight 252 ((0.6017262638717633 0.7227676484338477 0.845252774352651 0.5881252921926134)))
-	:END:
-#+BEGIN_QUOTE
-One
-subtle change between rtdt2.1 and rdt2.2 is that the receiver must now include the sequence
-number of the packet being acknowledged by an ACK message (this is done by including the ACK , 0
-or ACK , 1 argument in make_pkt() in the receiver FSM), and the sender must now check the
-sequence number of the packet being acknowledged by a received ACK message (this is done by
-including the 0 or 1 argument in isACK() in the sender FSM).
-#+END_QUOTE
-*** Figure 3.13 rdt2.2 sender
-	:PROPERTIES:
-	:NOTER_PAGE: 253
-	:HIGHLIGHT: #s(pdf-highlight 253 ((0.05363748458692972 0.4787283777466106 0.28175092478421704 0.5039738195418421)))
-	:END:
+**** rdt2.1 vs rdt2.2
+	 :PROPERTIES:
+	 :NOTER_PAGE: 252
+	 :HIGHLIGHT: #s(pdf-highlight 252 ((0.6017262638717633 0.7227676484338477 0.845252774352651 0.5881252921926134)))
+	 :END:
+ #+BEGIN_QUOTE
+ One
+ subtle change between rtdt2.1 and rdt2.2 is that the receiver must now include the sequence
+ number of the packet being acknowledged by an ACK message (this is done by including the ACK , 0
+ or ACK , 1 argument in make_pkt() in the receiver FSM), and the sender must now check the
+ sequence number of the packet being acknowledged by a received ACK message (this is done by
+ including the 0 or 1 argument in isACK() in the sender FSM).
+ #+END_QUOTE
+**** Figure 3.13 rdt2.2 sender
+	 :PROPERTIES:
+	 :NOTER_PAGE: 253
+	 :HIGHLIGHT: #s(pdf-highlight 253 ((0.05363748458692972 0.4787283777466106 0.28175092478421704 0.5039738195418421)))
+	 :END:
 
-#+DOWNLOADED: screenshot @ 2023-10-28 19:39:15
-[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_19-39-15_screenshot.png]]
+ #+DOWNLOADED: screenshot @ 2023-10-28 19:39:15
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_19-39-15_screenshot.png]]
  
-*** Figure 3.14 rdt2.2 receiver
-	:PROPERTIES:
-	:NOTER_PAGE: 254
-	:HIGHLIGHT: #s(pdf-highlight 254 ((0.08199753390875462 0.37587657784011225 0.3064118372379778 0.38803179055633474)))
-	:END:
+**** Figure 3.14 rdt2.2 receiver
+	 :PROPERTIES:
+	 :NOTER_PAGE: 254
+	 :HIGHLIGHT: #s(pdf-highlight 254 ((0.08199753390875462 0.37587657784011225 0.3064118372379778 0.38803179055633474)))
+	 :END:
 
-#+DOWNLOADED: screenshot @ 2023-10-28 19:46:38
-[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_19-46-38_screenshot.png]]
+ #+DOWNLOADED: screenshot @ 2023-10-28 19:46:38
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-28_19-46-38_screenshot.png]]
 
-*** Figure 3.15 rdt3.0 sender
-	:PROPERTIES:
-	:NOTER_PAGE: 255
-	:HIGHLIGHT: #s(pdf-highlight 255 ((0.08428093645484949 0.5070993914807302 0.325752508361204 0.5101419878296146)))
-	:END:
+**** rdt3.0, a protocol that reliably transfers data over a channel that can corrupt or lose packets;
+	 :PROPERTIES:
+	 :NOTER_PAGE: 254
+	 :HIGHLIGHT: #s(pdf-highlight 254 ((0.4030395136778116 0.8086675887505763 0.33981762917933134 0.8358690640848317)))
+	 :END:
+**** Figure 3.15 rdt3.0 sender
+	 :PROPERTIES:
+	 :NOTER_PAGE: 255
+	 :HIGHLIGHT: #s(pdf-highlight 255 ((0.08428093645484949 0.5070993914807302 0.325752508361204 0.5101419878296146)))
+	 :END:
 
-#+DOWNLOADED: screenshot @ 2023-10-31 13:01:27
-[[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-31_13-01-27_screenshot.png]]
+ #+DOWNLOADED: screenshot @ 2023-10-31 13:01:27
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-10-31_13-01-27_screenshot.png]]
+**** Alternating-bit protocol
+	 :PROPERTIES:
+	 :NOTER_PAGE: 255
+	 :HIGHLIGHT: #s(pdf-highlight 255 ((0.5294832826747721 0.6449976947902258 0.7793313069908815 0.665283540802213)))
+	 :END:
+ #+BEGIN_QUOTE
+ Because packet sequence numbers alternate
+ between 0 and 1, protocol rdt3.0 is sometimes known as the alternating-bit protocol
+ #+END_QUOTE
+**** Figure 3.16 Operation of rdt3.0 , the alternating-bit protocol
+	 :PROPERTIES:
+	 :NOTER_PAGE: 256
+	 :HIGHLIGHT: #s(pdf-highlight 256 ((0.08024316109422493 0.545412632549562 0.6212765957446809 0.5606270170585523)))
+	 :END:
 
+ #+DOWNLOADED: screenshot @ 2023-11-01 20:55:42
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-11-01_20-55-42_screenshot.png]]
+
+ #+DOWNLOADED: screenshot @ 2023-11-01 20:55:58
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-11-01_20-55-58_screenshot.png]]
+
+ #+DOWNLOADED: screenshot @ 2023-11-01 20:57:34
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-11-01_20-57-34_screenshot.png]]
+
+ #+DOWNLOADED: screenshot @ 2023-11-01 20:57:43
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-11-01_20-57-43_screenshot.png]]
+**** Utilization of the channel
+	 :PROPERTIES:
+	 :NOTER_PAGE: 258
+	 :HIGHLIGHT: #s(pdf-highlight 258 ((0.1872340425531915 0.7242969110189027 0.2632218844984803 0.8280313508529276)))
+	 :END:
+ #+BEGIN_QUOTE
+ If we define the utilization of the sender (or the channel) as the fraction of time the sender
+ is actually busy sending bits into the channel, the analysis in Figure 3.18(a) shows that the stop-and-
+ wait protocol has a rather dismal sender utilization, Usender, of
+ Usender= (L/R) / (RTT+L/R)
+ #+END_QUOTE
+**** Figure 3.18 Stop-and-wait and pipelined sending
+	 :PROPERTIES:
+	 :NOTER_PAGE: 259
+	 :HIGHLIGHT: #s(pdf-highlight 259 ((0.07294832826747721 0.3706777316735823 0.5270516717325229 0.3946519133241125)))
+	 :END:
+
+ #+DOWNLOADED: screenshot @ 2023-11-01 21:05:02
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-11-01_21-05-02_screenshot.png]]
+**** Go-Back-N (GBN)
+	 :PROPERTIES:
+	 :NOTER_PAGE: 260
+	 :HIGHLIGHT: #s(pdf-highlight 260 ((0.08145896656534955 0.5846011987090826 0.5848024316109423 0.6366989396035039)))
+	 :END:
+ #+BEGIN_QUOTE
+ In a Go-Back-N (GBN) protocol, the sender is allowed to transmit multiple packets (when available)
+ without waiting for an acknowledgment, but is constrained to have no more than some maximum
+ allowable number, N, of unacknowledged packets in the pipeline.
+ #+END_QUOTE
+**** Figure 3.19 Sender’s view of sequence numbers in Go-Back-N
+	 :PROPERTIES:
+	 :NOTER_PAGE: 260
+	 :HIGHLIGHT: #s(pdf-highlight 260 ((0.08145896656534955 0.9294605809128631 0.5829787234042554 0.9345320424158599)))
+	 :END:
+
+ #+DOWNLOADED: screenshot @ 2023-11-01 21:09:12
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-11-01_21-09-12_screenshot.png]]
+**** Sequence numbers
+	 :PROPERTIES:
+	 :NOTER_PAGE: 261
+	 :HIGHLIGHT: #s(pdf-highlight 261 ((0.8316109422492401 0.5191332411249423 0.7112462006079028 0.6131857999077915)))
+	 :END:
+ #+BEGIN_QUOTE
+ If k is the
+ number of bits in the packet sequence number field, the range of sequence numbers is thus [0, 2^k − 1].
+ With a finite range of sequence numbers, all arithmetic involving sequence numbers must then be done
+ using modulo 2^k arithmetic. (That is, the sequence number space can be thought of as a ring of size 2k,
+ where sequence number 2^k−1 is immediately followed by sequence number 0.)
+ #+END_QUOTE
+**** Figure 3.20 Extended FSM description of the GBN sender
+	 :PROPERTIES:
+	 :NOTER_PAGE: 262
+	 :HIGHLIGHT: #s(pdf-highlight 262 ((0.5811550151975684 0.4656523743660673 0.1142857142857143 0.4730290456431535)))
+	 :END:
+
+ #+DOWNLOADED: screenshot @ 2023-11-01 21:14:19
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-11-01_21-14-19_screenshot.png]]
+**** Figure 3.21 Extended FSM description of the GBN receiver
+	 :PROPERTIES:
+	 :NOTER_PAGE: 262
+	 :HIGHLIGHT: #s(pdf-highlight 262 ((0.5975683890577508 0.7976025818349469 0.08145896656534955 0.7962194559704933)))
+	 :END:
+
+ #+DOWNLOADED: screenshot @ 2023-11-01 21:14:32
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-11-01_21-14-32_screenshot.png]]
+**** Why discard out of order packets?
+	 :PROPERTIES:
+	 :NOTER_PAGE: 263
+	 :HIGHLIGHT: #s(pdf-highlight 263 ((0.08571428571428572 0.8197325956662056 0.8316109422492401 0.8464730290456431)))
+	 :END:
+ #+BEGIN_QUOTE
+ In our GBN protocol, the receiver discards out-of-order packets. Although it may seem silly and wasteful
+ to discard a correctly received (but out-of-order) packet, there is some justification for doing so.
+ The advantage of this approach is the simplicity of receiver buffering—the receiver need not buffer any out-
+ of-order packets.
+ #+END_QUOTE
+**** Figure 3.22 Go-Back-N in operation
+	 :PROPERTIES:
+	 :NOTER_PAGE: 265
+	 :HIGHLIGHT: #s(pdf-highlight 265 ((0.08145896656534955 0.6399262332872291 0.40060790273556235 0.6537574919317658)))
+	 :END:
+
+ #+DOWNLOADED: screenshot @ 2023-11-01 21:21:38
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-11-01_21-21-38_screenshot.png]]
+**** Figure 3.23 Selective-repeat (SR) sender and receiver views of sequence-number space
+	 :PROPERTIES:
+	 :NOTER_PAGE: 266
+	 :HIGHLIGHT: #s(pdf-highlight 266 ((0.07416413373860183 0.8317196864914707 0.9167173252279636 0.875979714153988)))
+	 :END:
+
+ #+DOWNLOADED: screenshot @ 2023-11-01 21:25:02
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-11-01_21-25-02_screenshot.png]]
+**** packets are buffered
+	 :PROPERTIES:
+	 :NOTER_PAGE: 266
+	 :HIGHLIGHT: #s(pdf-highlight 266 ((0.08145896656534955 0.28769017980636236 0.7641337386018238 0.33609958506224064)))
+	 :END:
+ #+BEGIN_QUOTE
+ The SR receiver will acknowledge a correctly received packet whether or not it is in order. Out-of-order
+ packets are buffered until any missing packets (that is, packets with lower sequence numbers) are
+ received, at which point a batch of packets can be delivered in order to the upper layer.
+ #+END_QUOTE
+**** In SR protocols, sender and receiver windows will not always coincide.
+	 :PROPERTIES:
+	 :NOTER_PAGE: 268
+	 :HIGHLIGHT: #s(pdf-highlight 268 ((0.23890577507598787 0.8423236514522822 0.6437689969604864 0.8515444905486399)))
+	 :END:
+**** Window size to avoid confusion
+	 :PROPERTIES:
+	 :NOTER_PAGE: 269
+	 :HIGHLIGHT: #s(pdf-highlight 269 ((0.6668693009118541 0.46473029045643155 0.6510638297872341 0.43107422775472565)))
+	 :END:
+ #+BEGIN_QUOTE
+ window size must be less than
+ or equal to half the size of the sequence number space for SR protocols.
+ #+END_QUOTE
+**** Figure 3.27 SR receiver dilemma with too-large windows: A new packet or a retransmission?
+	 :PROPERTIES:
+	 :NOTER_PAGE: 270
+	 :HIGHLIGHT: #s(pdf-highlight 270 ((0.08693009118541034 0.3545412632549562 0.8613981762917934 0.3656062701705855)))
+	 :END:
+
+ #+DOWNLOADED: screenshot @ 2023-11-01 21:35:09
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-11-01_21-35-09_screenshot.png]]
+
+**** each packet has its own logic timer
 *** 3.5 Connection-Oriented Transport: TCP
     :PROPERTIES:
     :NOTER_PAGE: 272
     :END:
+**** TCP is point-to-point
+	 :PROPERTIES:
+	 :NOTER_PAGE: 272
+	 :HIGHLIGHT: #s(pdf-highlight 272 ((0.7896656534954408 0.7777777777777778 0.3331306990881459 0.8662978331028124)))
+	 :END:
+ #+BEGIN_QUOTE
+ A. A TCP
+ connection is also always point-to-point, that is, between a single sender and a single receiver. So-
+ called “multicasting” (see the online supplementary materials for this text)—the transfer of data from one
+ sender to many receivers in a single send operation—is not possible with TCP. With TCP, two hosts are
+ company and three are a crowd!
+ #+END_QUOTE
+**** MSS and MTU
+	 :PROPERTIES:
+	 :NOTER_PAGE: 274
+	 :HIGHLIGHT: #s(pdf-highlight 274 ((0.3860182370820669 0.30059935454126324 0.25045592705167175 0.4167819271553711)))
+	 :END:
+ #+BEGIN_QUOTE
+ The maximum amount of data that can be grabbed and placed in
+ a segment is limited by the maximum segment size (MSS). The MSS is typically set by first
+ determining the length of the largest link-layer frame that can be sent by the local sending host (the so-
+ called maximum transmission unit, MTU), and then setting the MSS to ensure that a TCP segment
+ (when encapsulated in an IP datagram) plus the TCP/IP header length (typically 40 bytes) will fit into a
+ single link-layer frame.
+ Note that the MSS is the maximum amount of
+ application-layer data in the segment, not the maximum size of the TCP segment including headers.
+ #+END_QUOTE
+**** TCP segments
+	 :PROPERTIES:
+	 :NOTER_PAGE: 274
+	 :HIGHLIGHT: #s(pdf-highlight 274 ((0.07416413373860183 0.5615491009681881 0.7951367781155015 0.5693868142000922)))
+	 :END:
+ #+BEGIN_QUOTE
+ TCP pairs each chunk of client data with a TCP header, thereby forming TCP segments.
+ #+END_QUOTE
+**** TCP components
+	 :PROPERTIES:
+	 :NOTER_PAGE: 275
+	 :HIGHLIGHT: #s(pdf-highlight 275 ((0.3617021276595745 0.14246196403872752 0.6753799392097265 0.21392346703550022)))
+	 :END:
+ #+BEGIN_QUOTE
+ TCP connection consists of buffers, variables, and a socket
+ connection to a process in one host, and another set of buffers, variables, and a socket connection to a
+ process in another host. As mentioned earlier, no buffers or variables are allocated to the connection in
+ the network elements (routers, switches, and repeaters) between the hosts.
+ #+END_QUOTE
+**** Header length field
+	 :PROPERTIES:
+	 :NOTER_PAGE: 275
+	 :HIGHLIGHT: #s(pdf-highlight 275 ((0.11671732522796353 0.7574919317657907 0.558662613981763 0.8063623789764869)))
+	 :END:
+ #+BEGIN_QUOTE
+ The 4-bit header length field specifies the length of the TCP header in 32-bit words. The TCP
+ header can be of variable length due to the TCP options field. (Typically, the options field is empty,
+ so that the length of the typical TCP header is 20 bytes.)
+ #+END_QUOTE
+**** Options field
+	 :PROPERTIES:
+	 :NOTER_PAGE: 275
+	 :HIGHLIGHT: #s(pdf-highlight 275 ((0.11550151975683891 0.8275703088981097 0.8267477203647416 0.8584601198709082)))
+	 :END:
+ #+BEGIN_QUOTE
+ The optional and variable-length options field is used when a sender and receiver negotiate the
+ maximum segment size (MSS) or as a window scaling factor for use in high-speed networks.
+ #+END_QUOTE
+**** Figure 3.29 TCP segment structure
+	 :PROPERTIES:
+	 :NOTER_PAGE: 276
+	 :HIGHLIGHT: #s(pdf-highlight 276 ((0.1082066869300912 0.44029506685108344 0.4109422492401216 0.45504840940525587)))
+	 :END:
+
+ #+DOWNLOADED: screenshot @ 2023-11-01 21:46:58
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-11-01_21-46-58_screenshot.png]]
+**** PSH flag
+	 :PROPERTIES:
+	 :NOTER_PAGE: 276
+	 :HIGHLIGHT: #s(pdf-highlight 276 ((0.16170212765957448 0.5587828492392808 0.2127659574468085 0.5726141078838174)))
+	 :END:
+ #+BEGIN_QUOTE
+ Setting the PSH bit indicates that the receiver should pass the data to the upper layer
+ immediately.
+ #+END_QUOTE
+**** URG flag
+	 :PROPERTIES:
+	 :NOTER_PAGE: 276
+	 :HIGHLIGHT: #s(pdf-highlight 276 ((0.22127659574468087 0.5795297372060857 0.5300911854103344 0.6053480866758875)))
+	 :END:
+ #+BEGIN_QUOTE
+ Finally, the URG bit is used to indicate that there is data in this segment that the
+ sending-side upper-layer entity has marked as “urgent.”
+ #+END_QUOTE
+**** Sequnce number for a segmnet
+	 :PROPERTIES:
+	 :NOTER_PAGE: 277
+	 :HIGHLIGHT: #s(pdf-highlight 277 ((0.4121580547112462 0.6366989396035039 0.6468085106382979 0.6560627017058552)))
+	 :END:
+ #+BEGIN_QUOTE
+ TCP’s use of sequence numbers
+ reflects this view in that sequence numbers are over the stream of transmitted bytes and not over the
+ series of transmitted segments. The sequence number for a segment is therefore the byte-stream
+ number of the first byte in the segment.
+ The acknowledgment number that Host A puts in its segment is
+ the sequence number of the next byte Host A is expecting from Host B.
+ #+END_QUOTE
+**** TCP is said to provide cumulative acknowledgments.
+	 :PROPERTIES:
+	 :NOTER_PAGE: 277
+	 :HIGHLIGHT: #s(pdf-highlight 277 ((0.843161094224924 0.8879668049792531 0.46990881458966566 0.909174734900876)))
+	 :END:
+**** What does a host do when it receives out-of-order segments in a TCP connection?
+	 :PROPERTIES:
+	 :NOTER_PAGE: 278
+	 :HIGHLIGHT: #s(pdf-highlight 278 ((0.4772036474164134 0.09866297833102812 0.6164133738601825 0.14430613185799906)))
+	 :END:
+ #+BEGIN_QUOTE
+  Interestingly, the TCP RFCs do not impose any rules here and leave
+ the decision up to the programmers implementing a TCP implementation.
+ #+END_QUOTE
+**** Figure 3.31 Sequence and acknowledgment numbers for a simple Telnet application over TCP
+	 :PROPERTIES:
+	 :NOTER_PAGE: 279
+	 :HIGHLIGHT: #s(pdf-highlight 279 ((0.08389057750759879 0.4762563393268787 0.8644376899696049 0.4891655140617796)))
+	 :END:
+
+ #+DOWNLOADED: screenshot @ 2023-11-01 21:59:25
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-11-01_21-59-25_screenshot.png]]
+**** Client and server know what to expect
+	 :PROPERTIES:
+	 :NOTER_PAGE: 279
+	 :HIGHLIGHT: #s(pdf-highlight 279 ((0.5531914893617021 0.5431074227754725 0.793920972644377 0.5656984785615491)))
+	 :END:
+ #+BEGIN_QUOTE
+ After the TCP connection is established but
+ before any data is sent, the client is waiting for byte 79 and the server is waiting for byte 42.
+ #+END_QUOTE
+**** Estimated RTT
+	 :PROPERTIES:
+	 :NOTER_PAGE: 281
+	 :HIGHLIGHT: #s(pdf-highlight 281 ((0.11975683890577508 0.14615029967727064 0.5963525835866261 0.13416320885200553)))
+	 :END:
+ #+begin_quote
+ EstimatedRTT=(1−α)⋅EstimatedRTT+α⋅SampleRTT
+ The recommended value of α is α = 0.125 (that is, 1/8)
+ In statistics, such an average is called an exponential weighted moving average (EWMA).
+ #+END_QUOTE
+**** Variability of RTT
+	 :PROPERTIES:
+	 :NOTER_PAGE: 281
+	 :HIGHLIGHT: #s(pdf-highlight 281 ((0.11306990881458967 0.8151221761180267 0.5866261398176292 0.8105117565698479)))
+	 :END:
+ #+BEGIN_QUOTE
+ DevRTT=(1−β)⋅DevRTT+β⋅|SampleRTT−EstimatedRTT|
+ Note that DevRTT is an EWMA of the difference between SampleRTT and EstimatedRTT . If the
+ SampleRTT values have little fluctuation, then DevRTT will be small; on the other hand, if there is a lot
+ of fluctuation, DevRTT will be large. The recommended value of β is 0.25.
+ #+END_QUOTE
+**** TCP timeout interval
+	 :PROPERTIES:
+	 :NOTER_PAGE: 282
+	 :HIGHLIGHT: #s(pdf-highlight 282 ((0.08632218844984803 0.10880590133702167 0.9416413373860183 0.12079299216228677)))
+	 :END:
+ #+BEGIN_QUOTE
+ Given values of EstimatedRTT and DevRTT , what value should be used for TCP’s timeout interval?
+ It is desirable to set the timeout
+ equal to the EstimatedRTT plus some margin. The margin should be large when there is a lot of
+ fluctuation in the SampleRTT values; it should be small when there is little fluctuation.
+ TimeoutInterval=EstimatedRTT+4⋅DevRTT
+ #+END_QUOTE
+**** 
+	 :PROPERTIES:
+	 :NOTER_PAGE: 282
+	 :HIGHLIGHT: #s(pdf-highlight 282 ((0.5392097264437691 0.8556938681420009 0.23282674772036477 0.863531581373905)))
+	 :END:
+
+**** Figure 3.32 RTT samples and RTT estimates
+	 :PROPERTIES:
+	 :NOTER_PAGE: 283
+	 :HIGHLIGHT: #s(pdf-highlight 283 ((0.09179331306990882 0.5094513600737667 0.4650455927051672 0.5099124020285846)))
+	 :END:
+
+ #+DOWNLOADED: screenshot @ 2023-11-01 22:11:35
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-11-01_22-11-35_screenshot.png]]
+
+**** Fast retransmit
+	 :PROPERTIES:
+	 :NOTER_PAGE: 289
+	 :HIGHLIGHT: #s(pdf-highlight 289 ((0.07781155015197569 0.5712309820193637 0.5167173252279635 0.722913785154449)))
+	 :END:
+ #+BEGIN_QUOTE
+ Because a sender often sends a large number of segments back to back, if one segment is lost, there
+ will likely be many back-to-back duplicate ACKs. If the TCP sender receives three duplicate ACKs for
+ the same data, it takes this as an indication that the segment following the segment that has been
+ ACKed three times has been lost. In the case that three
+ duplicate ACKs are received, the TCP sender performs a fast retransmit [RFC 5681], retransmitting
+ the missing segment before that segment’s timer expires.
+ #+END_QUOTE
+
+**** Figure 3.37 Fast retransmit: retransmitting the missing segment before the segment’s timer expires
+	 :PROPERTIES:
+	 :NOTER_PAGE: 290
+	 :HIGHLIGHT: #s(pdf-highlight 290 ((0.07902735562310031 0.6016597510373444 0.1574468085106383 0.6214845550945136)))
+	 :END:
+
+ #+DOWNLOADED: screenshot @ 2023-11-01 22:28:08
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-11-01_22-28-08_screenshot.png]]
+
+**** TCP is both GBN and SR
+	 :PROPERTIES:
+	 :NOTER_PAGE: 291
+	 :HIGHLIGHT: #s(pdf-highlight 291 ((0.374468085106383 0.33609958506224064 0.3677811550151976 0.38312586445366525)))
+	 :END:
+ #+BEGIN_QUOTE
+ TCP looks a lot like a GBN-style protocol. But there are some
+ striking differences between TCP and Go-Back-N. Many TCP implementations will buffer correctly
+ received but out-of-order segments
+ #+END_QUOTE
+
+**** Flow-control
+	 :PROPERTIES:
+	 :NOTER_PAGE: 292
+	 :HIGHLIGHT: #s(pdf-highlight 292 ((0.08389057750759879 0.059474412171507604 0.3325227963525836 0.08990318118948824)))
+	 :END:
+ #+BEGIN_QUOTE
+ TCP provides a flow-control service to its applications to eliminate the possibility of the sender
+ overflowing the receiver’s buffer.
+ #+END_QUOTE
+
+**** Congestion control
+	 :PROPERTIES:
+	 :NOTER_PAGE: 292
+	 :HIGHLIGHT: #s(pdf-highlight 292 ((0.1452887537993921 0.13831258644536654 0.44316109422492406 0.16551406177962194)))
+	 :END:
+ #+BEGIN_QUOTE
+ a TCP sender can also be throttled due to congestion within the IP network; this form of sender
+ control is referred to as congestion control,
+ #+END_QUOTE
+
+**** Flow-control at receiver side
+	 :PROPERTIES:
+	 :NOTER_PAGE: 292
+	 :HIGHLIGHT: #s(pdf-highlight 292 ((0.11550151975683891 0.5232826187183034 0.4966565349544073 0.5915168280313509)))
+	 :END:
+ #+BEGIN_QUOTE
+ LastByteRead : the number of the last byte in the data stream read from the buffer by the
+ application process in B
+ LastByteRcvd : the number of the last byte in the data stream that has arrived from the network
+ and has been placed in the receive buffer at B.
+ Because TCP is not permitted to overflow the allocated buffer, we must have
+
+ LastByteRcvd−LastByteRead≤RcvBuffer
+
+ The receive window, denoted rwnd is set to the amount of spare room in the buffer:
+
+ rwnd=RcvBuffer−[LastByteRcvd−LastByteRead]
+ #+END_QUOTE
+
+**** Flow-control at sender side
+	 :PROPERTIES:
+	 :NOTER_PAGE: 293
+	 :HIGHLIGHT: #s(pdf-highlight 293 ((0.1033434650455927 0.16459197786998617 0.1264437689969605 0.2738589211618257)))
+	 :END:
+ #+BEGIN_QUOTE
+ Host A in turn keeps track of two variables, LastByteSent and LastByteAcked , which have
+ obvious meanings. Note that the difference between these two variables, LastByteSent –
+ LastByteAcked , is the amount of unacknowledged data that A has sent into the connection. By
+ keeping the amount of unacknowledged data less than the value of rwnd , Host A is assured that it is
+ not overflowing the receive buffer at Host B.
+ Thus, Host A makes sure throughout the connection’s life that
+
+ LastByteSent−LastByteAcked≤rwnd
+ #+END_QUOTE
+
+**** Figure 3.38 The receive window (rwnd) and the receive buffer (RcvBuffer)
+	 :PROPERTIES:
+	 :NOTER_PAGE: 293
+	 :HIGHLIGHT: #s(pdf-highlight 293 ((0.07355623100303951 0.5398801290917473 0.6620060790273556 0.53711387736284)))
+	 :END:
+
+ #+DOWNLOADED: screenshot @ 2023-11-01 22:38:40
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-11-01_22-38-40_screenshot.png]]
+
+**** Figure 3.39 TCP three-way handshake: segment exchange
+	 :PROPERTIES:
+	 :NOTER_PAGE: 296
+	 :HIGHLIGHT: #s(pdf-highlight 296 ((0.08814589665653497 0.46426924850161366 0.5762917933130699 0.4638082065467957)))
+	 :END:
+
+ #+DOWNLOADED: screenshot @ 2023-11-01 22:46:16
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-11-01_22-46-16_screenshot.png]]
+
+**** Figure 3.40 Closing a TCP connection
+	 :PROPERTIES:
+	 :NOTER_PAGE: 297
+	 :HIGHLIGHT: #s(pdf-highlight 297 ((0.07537993920972645 0.060396496081143385 0.3939209726443769 0.06685108344859382)))
+	 :END:
+
+ #+DOWNLOADED: screenshot @ 2023-11-01 22:46:38
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-11-01_22-46-38_screenshot.png]]
+
+**** Figure 3.41 A typical sequence of TCP states visited by a client TCP
+	 :PROPERTIES:
+	 :NOTER_PAGE: 297
+	 :HIGHLIGHT: #s(pdf-highlight 297 ((0.08389057750759879 0.8847395112955279 0.6492401215805471 0.8690640848317197)))
+	 :END:
+
+ #+DOWNLOADED: screenshot @ 2023-11-01 22:50:03
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-11-01_22-50-03_screenshot.png]]
+
+**** payload = application-generated data.
+	 :PROPERTIES:
+	 :NOTER_PAGE: 298
+	 :HIGHLIGHT: #s(pdf-highlight 298 ((0.08267477203647416 0.09774089442139235 0.4243161094224924 0.11433840479483633)))
+	 :END:
+
+**** Figure 3.42 A typical sequence of TCP states visited by a server-side TCP
+	 :PROPERTIES:
+	 :NOTER_PAGE: 298
+	 :HIGHLIGHT: #s(pdf-highlight 298 ((0.06521739130434782 0.896960329726945 0.6942934782608695 0.899021123132406)))
+	 :END:
+
+ #+DOWNLOADED: screenshot @ 2023-11-01 22:51:42
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-11-01_22-51-42_screenshot.png]]
+ 
+**** RST flag bit
+	 :PROPERTIES:
+	 :NOTER_PAGE: 299
+	 :HIGHLIGHT: #s(pdf-highlight 299 ((0.8468872686483455 0.1471714164185453 0.4178351093662367 0.188855806039983)))
+	 :END:
+ #+BEGIN_QUOTE
+ What
+ happens when a host receives a TCP segment whose port numbers or source IP address do not match
+ with any of the ongoing sockets in the host.
+ Then the host will send a special reset segment to the source. This TCP
+ segment has the RST flag bit (see Section 3.5.2) set to 1. Thus, when a host sends a reset segment, it
+ is telling the source “I don’t have a socket for that segment. Please do not resend the segment.”
+ #+END_QUOTE
 *** 3.6 Principles of Congestion Control
     :PROPERTIES:
     :NOTER_PAGE: 302
     :END:
+**** Costs of a congested network
+	 - large queuing delays are experienced as the packet-arrival rate nears the link capacity.
+	 - the sender must perform retransmissions in order to compensate for dropped (lost) packets due to buffer overflow.
+	 - unneeded retransmissions by the sender in the face of large delays may cause a router to use its link bandwidth to forward unneeded copies of a packet.
+	 - when a packet is dropped along a path, the transmission capacity that was used at each of the upstream links to forward that packet to the point at which it is dropped ends up having been wasted.
+**** Congestion-control approaches
+	 :PROPERTIES:
+	 :NOTER_PAGE: 309
+	 :HIGHLIGHT: #s(pdf-highlight 309 ((0.12170499158721257 0.16928966397277756 0.5215928210880538 0.23436835389196087)))
+	 :END:
+ #+BEGIN_QUOTE
+ End-to-end congestion control. In an end-to-end approach to congestion control, the network
+ layer provides no explicit support to the transport layer for congestion-control purposes. Even the
+ presence of network congestion must be inferred by the end systems based only on observed
+ network behavior (for example, packet loss and delay).
+ #+END_QUOTE
+
+ #+BEGIN_QUOTE
+ Network-assisted congestion control. With network-assisted congestion control, routers provide
+ explicit feedback to the sender and/or receiver regarding the congestion state of the network.
+ #+END_QUOTE
 *** 3.7 TCP Congestion Control
     :PROPERTIES:
     :NOTER_PAGE: 311
