@@ -3509,7 +3509,7 @@ S: 221 hamburger.edu closing connection
 	 - the sender must perform retransmissions in order to compensate for dropped (lost) packets due to buffer overflow.
 	 - unneeded retransmissions by the sender in the face of large delays may cause a router to use its link bandwidth to forward unneeded copies of a packet.
 	 - when a packet is dropped along a path, the transmission capacity that was used at each of the upstream links to forward that packet to the point at which it is dropped ends up having been wasted.
-**** Congestion-control approaches
+**** Congesti on-control approaches
 	 :PROPERTIES:
 	 :NOTER_PAGE: 309
 	 :HIGHLIGHT: #s(pdf-highlight 309 ((0.12170499158721257 0.16928966397277756 0.5215928210880538 0.23436835389196087)))
@@ -3529,6 +3529,211 @@ S: 221 hamburger.edu closing connection
     :PROPERTIES:
     :NOTER_PAGE: 311
     :END:
+**** Constraint on the rate at which a TCP sender can send traffic into the network
+	 :PROPERTIES:
+	 :NOTER_PAGE: 311
+	 :HIGHLIGHT: #s(pdf-highlight 311 ((0.7757847533632287 0.5852103697407565 0.5672645739910314 0.7250318742031449)))
+	 :END:
+ #+BEGIN_QUOTE
+ The congestion
+ window, denoted cwnd , imposes a constraint on the rate at which a TCP sender can send traffic into
+ the network. Specifically, the amount of unacknowledged data at a sender may not exceed the minimum
+ of cwnd and rwnd , that is:
+ LastByteSent−LastByteAcked≤min{cwnd, rwnd}
+ #+END_QUOTE
+**** Varying congestion window size
+	 :PROPERTIES:
+	 :NOTER_PAGE: 312
+	 :HIGHLIGHT: #s(pdf-highlight 312 ((0.3076474022183304 0.600265604249668 0.6415645067133684 0.4944665781319168)))
+	 :END:
+ #+BEGIN_QUOTE
+ Note that if acknowledgments
+ arrive at a relatively slow rate (e.g., if the end-end path has high delay or contains a low-bandwidth link),
+ then the congestion window will be increased at a relatively slow rate. On the other hand, if
+ acknowledgments arrive at a high rate, then the congestion window will be increased more quickly.
+ Because TCP uses acknowledgments to trigger (or clock) its increase in congestion window size, TCP
+ is said to be self-clocking.
+ #+END_QUOTE
+**** TCP congestion-control algorithm
+	 :PROPERTIES:
+	 :NOTER_PAGE: 313
+	 :HIGHLIGHT: #s(pdf-highlight 313 ((0.1766805472932778 0.5493910690121786 0.46519928613920286 0.5453315290933695)))
+	 :END:
+	 1) Slow Start
+	 2) Congestion Avoidance
+	 3) Fast Recovery.
+**** TCP sending rate principles
+	 - A lost segment implies congestion, and hence, the TCP sender’s rate should be decreased when a segment is lost.
+	 - An acknowledged segment indicates that the network is delivering the sender’s segments to the receiver, and hence, the sender’s rate can be increased when an ACK arrives for a previously unacknowledged segment.
+	 - Bandwidth probing. The TCP sender thus increases its transmission rate to probe for the rate that at which congestion onset begins, backs off from that rate, and then to begins probing again to see if the congestion onset rate has changed.
+**** Slow Start
+	 - the value of cwnd begins at 1 MSS and increases by 1 MSS every time a transmitted segment is first acknowledged.
+     - This process results in a doubling of the sending rate every RTT. Thus, the TCP send rate starts slow but grows exponentially during the slow start phase.
+	 - when should this exponential growth end?
+	   1) if there is a loss event (i.e., congestion) indicated by a timeout, the TCP sender sets the value of cwnd to 1 and begins the slow start process anew. It also sets the value of a second state variable, ssthresh (shorthand for “slow start threshold”) to cwnd/2 —half of the value of the congestion window value when congestion was detected.
+	   2) Since ssthresh is half the value of cwnd when congestion was last detected, it might be a bit reckless to keep doubling cwnd when it reaches or surpasses the value of ssthresh . Thus, when the value of cwnd equals ssthresh , slow start ends and TCP transitions into congestion avoidance mode.
+	   3) if three duplicate ACKs are detected, in which case TCP performs a fast retransmit (see Section 3.5.4) and enters the fast recovery state.
+
+**** Congestion Avoidance
+	 :PROPERTIES:
+	 :NOTER_PAGE: 315
+	 :HIGHLIGHT: #s(pdf-highlight 315 ((0.08447352766210589 0.16959855660802886 0.29208804283164785 0.16328371673432565)))
+	 :END:
+	 - On entry to the congestion-avoidance state, the value of cwnd is approximately half its value when congestion was last encountered—congestion could be just around the corner!
+	 - increases the value of cwnd by just a single MSS every RTT
+
+**** Figure 3.51 FSM description of TCP congestion control
+	 :PROPERTIES:
+	 :NOTER_PAGE: 316
+	 :HIGHLIGHT: #s(pdf-highlight 316 ((0.07971445568114219 0.5448804691023906 0.5217132659131469 0.564276048714479)))
+	 :END:
+
+ #+DOWNLOADED: screenshot @ 2023-11-04 13:42:02
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-11-04_13-42-02_screenshot.png]]
+
+**** Fast Recovery
+	 :PROPERTIES:
+	 :NOTER_PAGE: 316
+	 :HIGHLIGHT: #s(pdf-highlight 316 ((0.08625817965496728 0.7577807848443843 0.19631171921475313 0.7595850248082995)))
+	 :END:
+	 - the value of cwnd is increased by 1 MSS for every duplicate ACK received for the
+ missing segment that caused TCP to enter the fast-recovery state.
+
+**** TCP Tahoe vs TCP Reno
+	 :PROPERTIES:
+	 :NOTER_PAGE: 318
+	 :HIGHLIGHT: #s(pdf-highlight 318 ((0.08587088915956151 0.19214780600461895 0.5901339829476249 0.23371824480369516)))
+	 :END:
+ #+BEGIN_QUOTE
+ an early version of TCP, known as TCP Tahoe, unconditionally cut its congestion window to 1 MSS and
+ entered the slow-start phase after either a timeout-indicated or triple-duplicate-ACK-indicated loss event.
+ The newer version of TCP, TCP Reno, incorporated fast recovery.
+ #+END_QUOTE
+
+**** Figure 3.52 Evolution of TCP’s congestion window (Tahoe and Reno)
+	 :PROPERTIES:
+	 :NOTER_PAGE: 319
+	 :HIGHLIGHT: #s(pdf-highlight 319 ((0.07429963459196103 0.31685912240184755 0.6376370280146163 0.3085450346420323)))
+	 :END:
+ #+DOWNLOADED: screenshot @ 2023-11-04 13:50:49
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-11-04_13-50-49_screenshot.png]]
+ #+BEGIN_QUOTE
+ Note that the congestion window is
+ 12⋅MSS when this loss event occurs. The value of ssthresh is then set to 0.5⋅ cwnd =6⋅MSS. Under
+ TCP Reno, the congestion window is set to cwnd = 9⋅MSS and then grows linearly. Under TCP Tahoe,
+ the congestion window is set to 1 MSS and grows exponentially until it reaches the value of ssthresh ,
+ at which point it grows linearly.
+ #+END_QUOTE
+
+**** Figure 3.53 Additive-increase, multiplicative-decrease congestion control
+	 :PROPERTIES:
+	 :NOTER_PAGE: 319
+	 :HIGHLIGHT: #s(pdf-highlight 319 ((0.07247259439707673 0.6420323325635103 0.6851400730816077 0.618013856812933)))
+	 :END:
+
+ #+DOWNLOADED: screenshot @ 2023-11-04 13:51:12
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-11-04_13-51-12_screenshot.png]]
+
+**** Macroscopic Description of TCP Throughput
+	 :PROPERTIES:
+	 :NOTER_PAGE: 320
+	 :HIGHLIGHT: #s(pdf-highlight 320 ((0.07610619469026549 0.4590604026845638 0.3787610619469026 0.4590604026845638)))
+	 :END:
+ #+BEGIN_QUOTE
+ When the window size is w bytes and the
+ current round-trip time is RTT seconds, then TCP’s transmission rate is roughly w/RTT. TCP then
+ probes for additional bandwidth by increasing w by 1 MSS each RTT until a loss event occurs. Denote
+ by W the value of w when a loss event occurs. Assuming that RTT and W are approximately constant
+ over the duration of the connection, the TCP transmission rate ranges from W/(2 · RTT) to W/RTT.
+ Because TCP’s throughput (that is, rate) increases linearly between the two
+ extreme values, we have
+
+ average throughput of a connection=0.75⋅WRTT
+ #+END_QUOTE
+
+**** Fairness
+	 :PROPERTIES:
+	 :NOTER_PAGE: 321
+	 :HIGHLIGHT: #s(pdf-highlight 321 ((0.08849557522123894 0.8326621923937361 0.3398230088495575 0.8604026845637585)))
+	 :END:
+ #+BEGIN_QUOTE
+ Consider K TCP connections, each with a different end-to-end path, but all passing through a bottleneck
+ link with transmission rate R bps.
+ #+END_QUOTE
+
+ #+BEGIN_QUOTE
+ A congestion-control
+ mechanism is said to be fair if the average transmission rate of each connection is approximately R/K;
+ #+END_QUOTE
+
+**** Figure 3.55 Throughput realized by TCP connections 1 and 2
+	 :PROPERTIES:
+	 :NOTER_PAGE: 323
+	 :HIGHLIGHT: #s(pdf-highlight 323 ((0.0831858407079646 0.647427293064877 0.6271386430678466 0.6608501118568233)))
+	 :END:
+
+ #+DOWNLOADED: screenshot @ 2023-11-04 14:39:50
+ [[file:images/Computer_Networking._A_Top_Down_Approach,_7th/2023-11-04_14-39-50_screenshot.png]]
+
+**** Fairness is impossible
+	 :PROPERTIES:
+	 :NOTER_PAGE: 323
+	 :HIGHLIGHT: #s(pdf-highlight 323 ((0.2908554572271386 0.8035794183445191 0.368141592920354 0.8232662192393736)))
+	 :END:
+ #+BEGIN_QUOTE
+ we assumed that only TCP connections traverse the bottleneck link, that the
+ connections have the same RTT value,
+ #+END_QUOTE
+
+ #+BEGIN_QUOTE
+ In practice, it has been shown that when multiple
+ connections share a common bottleneck, those sessions with a smaller RTT are able to grab the
+ available bandwidth at that link more quickly as it becomes free (that is, open their congestion windows
+ faster) and thus will enjoy higher throughput than those connections with larger RTTs
+ #+END_QUOTE
+**** 
+	 :PROPERTIES:
+	 :NOTER_PAGE: 323
+	 :HIGHLIGHT: #s(pdf-highlight 323 ((0.22064896755162242 0.851006711409396 0.2831858407079646 0.8514541387024609)))
+	 :END:
+**** Fairness and UDP
+	 :PROPERTIES:
+	 :NOTER_PAGE: 324
+	 :HIGHLIGHT: #s(pdf-highlight 324 ((0.08200589970501475 0.10022371364653244 0.23539823008849559 0.10425055928411633)))
+	 :END:
+ #+BEGIN_QUOTE
+ applications running over UDP are not being fair—they do not cooperate with the other
+ connections nor adjust their transmission rates appropriately. Because TCP congestion control will
+ decrease its transmission rate in the face of increasing congestion (loss), while UDP sources need not,
+ it is possible for UDP sources to crowd out TCP traffic.
+ #+END_QUOTE
+**** Fairness and Parallel TCP Connections
+	 :PROPERTIES:
+	 :NOTER_PAGE: 324
+	 :HIGHLIGHT: #s(pdf-highlight 324 ((0.08023598820058997 0.46935123042505594 0.3870206489675516 0.4742729306487696)))
+	 :END:
+ #+BEGIN_QUOTE
+ there is nothing to stop a TCP-based application from using multiple parallel
+ connections.
+ #+END_QUOTE
+
+ #+BEGIN_QUOTE
+ If a new application comes
+ along and also uses one TCP connection, then each application gets approximately the same
+ transmission rate of R/10. But if this new application instead uses 11 parallel TCP connections, then the
+ new application gets an unfair allocation of more than R/2.
+ #+END_QUOTE
+**** Limitation of transport-layer protocols
+	 :PROPERTIES:
+	 :NOTER_PAGE: 327
+	 :HIGHLIGHT: #s(pdf-highlight 327 ((0.8530973451327434 0.31364653243847873 0.2407079646017699 0.39418344519015663)))
+	 :END:
+ #+BEGIN_QUOTE
+ If the
+ network-layer protocol cannot provide delay or bandwidth guarantees to transport-layer segments, then
+ the transport-layer protocol cannot provide delay or bandwidth guarantees for the messages sent
+ between processes.
+ #+END_QUOTE
 ** Chapter 4 The Network Layer: Data Plane
    :PROPERTIES:
    :NOTER_PAGE: 348

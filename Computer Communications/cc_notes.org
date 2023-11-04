@@ -481,9 +481,10 @@
 	 - Double cwnd every RTT
 	 - Done by incrementing cwnd for every ACK received
 	 - From slow start to congestion avoidance. When should the exponential increase switch to linear. Answer: when cwnd gets to 1/2 of its value before timeout. There is a threshold value, after which we should be aware that the network can congest. After the threshold value, we go to congestion avoidance linear phase, instead of doubling the window. Even with Tahoe, the threshold goes to half, but slow start is still applied.
-	   #+begin_quote
-	   Bu soruyu SORACAM size.
-	   #+end_quote
+
+#+begin_quote
+Bu soruyu SORACAM size.
+#+end_quote
 **** Triple ACK
 	 - Reno - cwnd = 1/2 value, sshthreshold = cwnd (congestion avoidance)
 	 - Tahoe - cwnd = 1mss,  sshthreshold = 1/2 current value (congestion avoidance)
@@ -495,3 +496,4 @@
 	 - De jure standard OSI, but not used.
 	 - Technology came behind investments in computer communications.
 	 - We use IPv4 routers due to large investments, although we have IPv6 for 20 years.
+	   
