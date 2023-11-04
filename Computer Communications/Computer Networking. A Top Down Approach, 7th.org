@@ -2,30 +2,30 @@
 #+OPTIONS: H:3
 
 * Table of contents
-** [[*Chapter 1 Computer Networks and the Internet][Chapter 1 Computer Networks and the Internet]]
-*** [[11-what-is-the-internet][1.1 What Is the Internet?]]
-*** [[*1.2 The Network Edge][1.2 The Network Edge]]
-*** [[*1.3 The Network Core][1.3 The Network Core]]
-*** [[*1.4 Delay, Loss, and Throughput in Packet-Switched Networks][1.4 Delay, Loss, and Throughput in Packet-Switched Networks]]
-*** [[*1.5 Protocol Layers and Their Service Models][1.5 Protocol Layers and Their Service Models]]
-*** [[*1.6 Networks Under Attack][1.6 Networks Under Attack]]
-*** [[*1.7 History of Computer Networking and the Internet][1.7 History of Computer Networking and the Internet]]
-** Chapter 2 Application Layer
-*** 2.1 Principles of Network Applications
-*** 2.2 The Web and HTTP
-*** 2.3 Electronic Mail in the Internet
-*** 2.4 DNS—The Internet’s Directory Service
-*** 2.5 Peer-to-Peer File Distribution
-*** 2.6 Video Streaming and Content Distribution Networks
-*** 2.7 Socket Programming: Creating Network Applications
-** Chapter 3 Transport Layer
-*** 3.1 Introduction and Transport-Layer Services
-*** 3.2 Multiplexing and Demultiplexing
-*** 3.3 Connectionless Transport: UDP
-*** 3.4 Principles of Reliable Data Transfer
-*** 3.5 Connection-Oriented Transport: TCP
-*** 3.6 Principles of Congestion Control
-*** 3.7 TCP Congestion Control
+  - Chapter 1 Computer Networks and the Internet
+	+ 1.1 What Is the Internet?
+	+ 1.2 The Network Edge
+	+ 1.3 The Network Core
+	+ 1.4 Delay, Loss, and Throughput in Packet-Switched Networks
+	+ 1.5 Protocol Layers and Their Service Models
+	+ 1.6 Networks Under Attack
+	+ 1.7 History of Computer Networking and the Internet
+  - Chapter 2 Application Layer
+	+ 2.1 Principles of Network Applications
+	+ 2.2 The Web and HTTP
+	+ 2.3 Electronic Mail in the Internet
+	+ 2.4 DNS—The Internet’s Directory Service
+	+ 2.5 Peer-to-Peer File Distribution
+	+ 2.6 Video Streaming and Content Distribution Networks
+	+ 2.7 Socket Programming: Creating Network Applications
+  - Chapter 3 Transport Layer
+	+ 3.1 Introduction and Transport-Layer Services
+	+ 3.2 Multiplexing and Demultiplexing
+	+ 3.3 Connectionless Transport: UDP
+	+ 3.4 Principles of Reliable Data Transfer
+	+ 3.5 Connection-Oriented Transport: TCP
+	+ 3.6 Principles of Congestion Control
+	+ 3.7 TCP Congestion Control
 
 * Computer Networking. A Top Down Approach, 7th
   :PROPERTIES:
@@ -3762,6 +3762,7 @@ S: 221 hamburger.edu closing connection
  the transport-layer protocol cannot provide delay or bandwidth guarantees for the messages sent
  between processes.
  #+END_QUOTE
+ #+begin_comment
 ** Chapter 4 The Network Layer: Data Plane
    :PROPERTIES:
    :NOTER_PAGE: 348
@@ -3926,25 +3927,5 @@ S: 221 hamburger.edu closing connection
    :PROPERTIES:
    :NOTER_PAGE: 747
    :END:
-*** 9.1 Multimedia Networking Applications
-    :PROPERTIES:
-    :NOTER_PAGE: 748
-    :END:
-*** 9.2 Streaming Stored Video
-    :PROPERTIES:
-    :NOTER_PAGE: 754
-    :END:
-*** 9.3 Voice-over-IP
-    :PROPERTIES:
-    :NOTER_PAGE: 762
-    :END:
-*** 9.4 Protocols for Real-Time Conversational Applications
-    :PROPERTIES:
-    :NOTER_PAGE: 774
-    :END:
-*** 9.5 Network Support for Multimedia
-    :PROPERTIES:
-    :NOTER_PAGE: 784
-    :END:
-
-  
+ #+end_comment
+   
