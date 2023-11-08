@@ -3771,6 +3771,7 @@ S: 221 hamburger.edu closing connection
     :PROPERTIES:
     :NOTER_PAGE: 350
     :END:
+
 *** 4.2 What’s Inside a Router?
     :PROPERTIES:
     :NOTER_PAGE: 358
