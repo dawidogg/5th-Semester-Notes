@@ -388,4 +388,72 @@
 		* 1908 Austria Bosnia-Herzegovina
 		* Bulgaria proclaimed its independece
 		* Greece - Crete
-
+*** Week 6
+**** Recap
+	- Ataturk's name Kemal was given by his math teacher, inspired by Namik Kemal
+ #+DOWNLOADED: screenshot @ 2023-11-10 10:37:51
+ [[file:images/ATA_121_-_History_of_Modern_Turkey/2023-11-10_10-37-51_screenshot.png]]
+	- In Damascus was established by Mustafa Kemal
+	- Beginning from 1908 go to hills and go against Sultan, restore the constitution.
+	- Factory of Fes was established in Istabul. First Feshane.
+	- Crete was lost in 1897 and became Greece's
+	- Many believed that Ottoman Constitution would make peace between ethnicities. But Ottoman nationalism was embraced.
+**** Periods
+	 - 1876, first contitutional era. Official religion was Islam. But it was the end of Tanzimat era and beginning of panislamist era. It was done silently, not to offend other nations. Until 1908.
+	 - 1908. Mehmet Akif Ersoy, islamist who did not support republic.
+	 - 1902-1903 questioning of Ottoman nationalism and islamist. There were some territories where mainly Turks were living.
+	 - 1911-1913. Ottoman-Italian war, Balkan war. After big lossess of territories, it defacto became Ottoman-Arab state, not empire anymore.
+	 - 1914 jihad declaration. encouragement of muslims to fight for islam.
+	 - 1916 Arab uprising. After this, they realized that it were Turks who mainly lived in Anatolia. Misaki Milli.
+	 - 1917 Russian Revolution. Turkic people living in Russia. Promotion of Pan-Turkism, Turanism. Minorty were supporting this idea (Enver Pasha, fought against Russia). Lasted very short.
+	 - Ziya Gökhalp. Turkish nationalist, also Kurd🤨. Turkish sociologist. But later withdrew from Pan-Turksm, adopting more realistic Turkish nationalism. Atatürk was kinda following him.
+	 - Turkish nationalism
+	   + Selanic Branch, Ataturk nationalism. Realistic, not dependant on ethnicity, patriotic, no race. Citizenship. Ne mutlu Turkum diyene.
+	   + Istanbul Branch. Enver Pasha nationalism.
+**** Elections in 1908
+	 - Parliament was in a building in Sultanahmet. Some segments of society were unsatisfied with
+**** Reaction to the Revolution
+	 - 31 mart isyani
+	 - Conservatists. Against Young Turk. Reforms were irreligious and would be danger of Christian domination. Women became part of society, they began studying. They did not want to see women in social life.
+	 - Friction withing the army (trained vs untrained ones). Mektepli, alayli. Untrained ones were critical of Prussian order in army.
+	 - Liberals supported decentralization, and also the untrained soldiers.
+	 - Priveledges groups who rose during Abdulhamit era.
+	   + Large scale propaganda against CUP.
+	   + Rising tensions and the uprising in April 13th, 1909 to dismiss CUP.
+	   + A journalist and army leader was murdered in Galata Bridge. At their funerals, islamists united against CUP and there were rising tensions at funerals. In April 13th, in Taksim, Gezi Park, in Taskisla, Macka, Davut Pasa Barracks, the untrained military started uprising. (In 2013 Erdogan wanted to rebuilt the barrack, causing protests.)
+	   + Their demands: Replacement of CUP officers, deputies, restoration of a conservative order. Against constitution.
+**** The Counter Revolution (April 13, 1909)
+	 - Military campaign against the revels - Troops (The Action Army) moved from Selanico to Istanbul.
+	 - Suppression of the revolt. Defending constitution.
+	 - Declaration of matrial law and two martial courts were instituted.
+	 - Deposistion of Sultan Abdulhamid, succeeded by his brother Mehment Reşat.
+	 - Enver was hero of Ottoman Revolution.
+	 - Abdulhamit was dethroned by the Parliament decision, sent to Salonica.
+	 - Counter revoultiuon showed the fragility of the regime, so CUP became more oppresive and started to implement reforms.
+	 - Sisli Abide-i Hurriyet Monument
+	 - New Sultan: Mehmet V
+**** CUP Regime (1909-1918)
+	 - Changes in the constitution:
+	   + Sultan only had the reight to appoint the grand vizier and the head of the religious clergy
+	   + Became harder to dissoble the parliament (like British monarchy)
+	   + Strengthened central authority
+	   + Military service imposed on all Ottoman subjects regardless of religion
+	   + Diminishing the role of the Palace in politics.
+	 - Ataturk was appointed to Bulgaria, Sophia as military consulate (attache). Western diplomat: "As long as you wear this funny fez, nobody would pay attention to your mind." 
+**** Tripoli War (1911-1912)
+	 - 1900: France agreeded to allow Italy in compensation for Morocco.
+	 - 1902: Austria agreed in retrun of BiH
+	 - Britain also agreed
+	 - 1909 Russia approval in return for Italian support to force the Porte to open the Straits to its warships.
+	 - Germany did not want to engage in a new crisis, so she abstained.
+	 - Italy found safe to expand to Libya.
+	 - Ottoman state had limited reinforcement, no army to send in Libya. Territory was lost.
+**** Political Developments
+	 - Uchy Treaty: Tripoly and 12 Islands were lost to Italy.
+	 - May 1912: Albanian uprising
+	 - Distater ofor Ottomands: BUlgaria, Serbia, Greece, Montenegro. London Treaty 1913.
+**** Balkan War I
+	 - Ottomans lost nearly all European territory, inclusing Macedonia, Albania and Thrace with 4 million inhabitants
+	 - Muslim refugees coming to Anatolia.
+**** Balkan War II
+	 - Everyone against Bulgaria.

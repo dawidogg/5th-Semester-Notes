@@ -3,6 +3,9 @@
 * BLG 337E - Computer Communications
 ** Time & place
    - Monday 14:30-17:29, INB A205
+** Projects
+   - [[file:projects/traceroute][Traceroute]]
+   - [[file:projects/socket][Socket]]
 ** Contact
    - azaim@itu.edu.tr
 ** Course plan
@@ -22,9 +25,6 @@
    |   12 | Data Link Layer Protocols                                       |
    |   13 | Wireless and Mobile Networks                                    |
    |   14 | Wireless and Mobile Networks                                    |
-
-** Projects
-   - [[file:projects/traceroute][Traceroute]]
 ** Textbook
    - [[file:docs/Computer Networking. A Top Down Approach, 7th.pdf][Computer Networking. A Top Down Approach.]]
 ** Notes
@@ -496,4 +496,48 @@ Bu soruyu SORACAM size.
 	 - De jure standard OSI, but not used.
 	 - Technology came behind investments in computer communications.
 	 - We use IPv4 routers due to large investments, although we have IPv6 for 20 years.
-	   
+*** Week 7
+**** Network layer, where IP protocol runs
+	 - Data perspective.
+	   + Active equipment inside router, mainly IP protocol.
+	   + Chapter 4. Subnets. general network layers.
+	 - Control perspective.
+	   + Chapter 5, routing protocols
+**** Function of network layer
+	 1. Routing. Calculate the route. Create a forwarding table using an algorithm. Input is source-destination pairs.
+	 2. Forwarding. Transmit according to the route.
+	 3. Update mechanisms which reconfigure the forwarding table according to the changes in network topology.
+	 4. Best effort service
+	 *Actions are performed for each packet individually*.
+**** 
+	 - Accepting from transport layer
+	 - Not end-devices, but the infrastructure in the middle, the backbone network
+**** Router design
+	 - Input and output ports
+	   + Purpose of line termination is accepting physical signal and digitize.
+	   + Running link-layer protocol
+	   + Lookup forward queue
+	 - Processor
+	   - Algorithm
+	   - Put input into switching fabric
+	 - Switching fabric
+	 - Router can change the link-layer protocol. Ex: Ethernet-to-WiFi.
+**** Destination based forwarding
+	 Find an exact or approximate match. Longest prefix match algorithm. We are not trying to find an exact match.
+	 | Destination address range | Outgoing Link |
+	 |---------------------------+---------------|
+	 | x.y.z.00000000w           |             0 |
+	 | x.y.z.00001111            |               |
+	 |---------------------------+---------------|
+	 | x.y.z.00000000w           |             1 |
+	 | x.y.z.00001111            |               |
+	 |---------------------------+---------------|
+	 | Default                   |             6 |
+**** .
+	 - Divide packet into smaller packets and send independently
+**** IP addressing
+	 - For each IP interface there is an IP address. One router can have many addresses. Example: Multi-home device, laptop connected both via wifi and ethernet.
+**** Subnet
+	 - If connection is cut between two devices, and their interface can still communicate, it is called subnet.
+**** No more notes today
+	 - I am depressed
