@@ -8,34 +8,34 @@
    - Final 50%
    - Attendance 10%
 ** Reading by weeks
-   1. . Introduction: What is Modern ? 
-   2. . The Rise of Europe: Renaissance, Reform and Reconnaissance 
-	  - Norman Davies, Europe: A History, pp. 469-503 (Chapter VII Renatio)
+   1. Introduction: What is Modern ? 
+   2. The Rise of Europe: Renaissance, Reform and Reconnaissance 
+	  - Norman Davies, Europe: A History, pp 469-503 (Chapter VII Renatio)
 	  - Niccolo Machiavelli, “The Prince”
 	  - Martin Luther, “The Freedom of a Christian”
 	  - John Calvin, “The Institutes of the Christian Religion”
-   3. . The Development of the Modern State
-	  - Stuart Hall, Bram Gieben (ed.), Formations of Modernity, David Held, “The Development of the Modern State”, pp. 71-125
-   4. . Enlightenment and the French Revolution
-	  - Norman Davies, Europe: A History, pp. 596-614, 675-733 (Chapters Lumen and Revolutio)
+   3. The Development of the Modern State
+	  - Stuart Hall, Bram Gieben (ed), Formations of Modernity, David Held, “The Development of the Modern State”, pp 71-125
+   4. Enlightenment and the French Revolution
+	  - Norman Davies, Europe: A History, pp 596-614, 675-733 (Chapters Lumen and Revolutio)
 	  - Thomas Hobbes, “Leviathan”
 	  - John Locke, “Second Treatise of Government”
 	  - Jean Jacques Rousseau, “The Social Contract”
 	  - Thomas Jefferson, “The Declaration of Independence”
-   5. . Liberalism and Nationalism; the Best of the Times
-	  - Norman Davies, Europe: A History, pp. 782-835 (Chapter X, Dynamo)
-   6. . The Rise of Socialism and Communism 
-	  - Norman Davies, Europe: A History, pp. 835-865 (Chapter X Dynamo)
+   5. Liberalism and Nationalism; the Best of the Times
+	  - Norman Davies, Europe: A History, pp 782-835 (Chapter X, Dynamo)
+   6. The Rise of Socialism and Communism 
+	  - Norman Davies, Europe: A History, pp 835-865 (Chapter X Dynamo)
 	  - Karl Marx, Friedrich Engels, The Communist Manifesto 
 	  - Charles Darwin, “The Descent of Man”
 	  - Friedrich Nietzsche, “Beyond Good and Evil”
 	  - Sigmund Freud, “The Interpretation of Dreams”
 	  - George Orwell, “Shooting an Elephant”
-   7. . Imperialism, Fascism and World Wars
-	  - Eric Hobsbawm, The Age of Extremes, pp. 21-53
-	  - Mark Mazower, The Dark Continent, pp. 77-105 
-   8. . Midterm
-   9. . Cold War and the Age of Intellectuals
+   7. Imperialism, Fascism and World Wars
+	  - Eric Hobsbawm, The Age of Extremes, pp 21-53
+	  - Mark Mazower, The Dark Continent, pp 77-105 
+   8. Midterm
+   9. Cold War and the Age of Intellectuals
 	  - Tony Judt, Reappraisals, pp. 95-146
 	  - Nikita Kruschev, “Report to the Communist Party Congress”
 	  - Winston Churchill, “The Iron Curtain”
@@ -49,118 +49,6 @@
    13. The Age of Populism
 	   - Jan-Werner Müller, What is Populism, Philadelphia: University of Pennsylvania Press, 2016, pp. 1-40
    14. Conclusions
-** Textbooks
-*** [[file:docs/Norman Davies - Europe_ A History-Harper Perennial (1998).epub][Norman Davies. Europe, a History. (1998)]]
-    :PROPERTIES:
-    :NOTER_DOCUMENT: docs/Norman Davies - Europe_ A History-Harper Perennial (1998).epub
-    :END:
-**** Renaissances and Reformations
-     :PROPERTIES:
-     :NOTER_PAGE: (20 . 847)
-     :END:
-**** Notes for page (20 . 1080)
-     :PROPERTIES:
-     :NOTER_PAGE: (20 . 1080)
-     :END:
-#+BEGIN_QUOTE
-In the so-called ‘Age of the Renaissance and Reformation’ which
-conventionally begins c.1450, it can only be described as a minority interest.
-#+END_QUOTE
-**** Notes for page (20 . 1961)
-     :PROPERTIES:
-     :NOTER_PAGE: (20 . 1961)
-     :END:
-#+BEGIN_QUOTE
- One implication is that this ‘Early
-Modern Period’ may not be quite so modern after all. Despite the fresh seeds that were sown, it could
-well have had more in common with the medievalism that preceded it than with the Enlightenment
-which followed.
-#+END_QUOTE
-**** Notes for page (20 . 4248)
-     :PROPERTIES:
-     :NOTER_PAGE: (20 . 4248)
-     :END:
-#+BEGIN_QUOTE
-The essence of the Renaissance lay not in any sudden rediscovery of classical
-civilization but rather in the use which was made of classical models to test the authority
-underlying conventional taste and wisdom
-#+END_QUOTE
-**** Notes for page (20 . 5708)
-     :PROPERTIES:
-     :NOTER_PAGE: (20 . 5708)
-     :END:
-#+BEGIN_QUOTE
-Its ideal was a person who, by
-mastering all branches of art and thought, need depend on no outside authority for the formation
-of knowledge, tastes, and beliefs. Such a person was l‘uomo universale, the ‘complete man’
-#+END_QUOTE
-**** Notes for page (20 . 11228)
-     :PROPERTIES:
-     :NOTER_PAGE: (20 . 11228)
-     :END:
-#+BEGIN_QUOTE
- Indeed, by giving a new lease of life to the
-Latin West, the Renaissance only deepened the gulf between East and West.
-#+END_QUOTE
-**** Flagellation
-     :PROPERTIES:
-     :NOTER_PAGE: (20 . 15439)
-     :END:
-#+BEGIN_QUOTE
-A leading British authority, however, is adamant that the picture represents The Dream of St Jerome.
-Jerome once dreamed that he was being flogged for reading the pagan Cicero. This would explain the
-discordance between the two sections. The three foreground figures—two men and ‘a barefoot
-angel’—’are discussing the relation between classical and patristic literature embodied in the story of St
-Jerome’s dream’.4
-#+END_QUOTE
-**** Notes for page (20 . 21026)
-     :PROPERTIES:
-     :NOTER_PAGE: (20 . 21026)
-     :END:
-#+BEGIN_QUOTE
-The causes of the Renaissance were as deep as they were broad. They can be related to the growth of
-cities and of late medieval trade, to the rise of rich and powerful capitalist patrons, to technical progress
-which affected both economic and artistic life. But the source of spiritual developments must be sought
-above all in the spiritual sphere. 
-#+END_QUOTE
-**** novel features
-     :PROPERTIES:
-     :NOTER_PAGE: (20 . 21026)
-     :END:
-#+BEGIN_QUOTE
-One was the cultivation of
-long-neglected classical authors, especially those such as Cicero or Homer who had not attracted the
-medieval schoolmen. The second was the cultivation of ancient Greek as an essential partner to Latin.
-The third was the rise of biblical scholarship based on the critical study of the original Hebrew and Greek
-texts. This last activity provided an important bond between the secular Renaissance and the religious
-Reformation which was to place special emphasis on the authority of the Scriptures. 
-#+END_QUOTE
-**** Notes for page (20 . 27338)
-     :PROPERTIES:
-     :NOTER_PAGE: (20 . 27338)
-     :END:
-#+BEGIN_QUOTE
-Renaissance humanism contradicted the prevailing modes and assumptions of Christian practice.
-Notwithstanding its intentions, traditionalists believed that it was destructive of religion, and ought to
-have been restrained. Five hundred years later, when the disintegration of Christendom was far more
-advanced, it has been seen by many Christian theologians as the source of all the rot. According to one
-Catholic philosopher:
-
-The difference between the Renaissance and the Middle Ages was not a difference by addition but by
-subtraction. The Renaissance … was not the Middle Ages plus Man, but the Middle Ages minus God.
-#+END_QUOTE
-**** Notes for page (20 . 50813)
-     :PROPERTIES:
-     :NOTER_PAGE: (20 . 50813)
-     :END:
-#+BEGIN_QUOTE
-The Lutheran musical tradition had far-reaching consequences. It required every parish to keep its
-cantor, its organist, its choir school, and its body of trained singers and instrumentalists. As a result, it
-played a  prominent role in turning Germany into the most musically educated nation in Europe—the
-richest resource for Europe’s secular music-making. The genius of J. S. Bach could have found no more
-fertile soil than in Lutheranism.
-
-#+END_QUOTE
 ** Notes
 *** Week 2
 *** Week 3
@@ -408,7 +296,7 @@ We hold these truths to be self-evident, that all men are created equal, that th
 **** Not all romantistist support the French revolution
 **** Madame Bovery, Gustave Flaubert
 	 - Manifesto of anti-romantisism. Romantic ideas misrepresent the reality and are futile. Realism.
-	 - in 1950's romantisism dies, materialism begins
+	 - in 1850's romantisism dies, materialism begins
 **** Dostoyevski
 	 - He hated socialists and anarchists, all his books are political
 	 - If there is no god, everything is permissible
@@ -475,4 +363,65 @@ We hold these truths to be self-evident, that all men are created equal, that th
 	 - Children should be hearing military marches in kindergarten, not romatic and folk stories, which soften their hearts.
 	 - Total war, everything is a part of warfare, the hymn of militarists.
 	 - Everybody knew that when the war comes, it will be disastrous.
-**** Social Darwinism
+**** Week 11. Fascism and WWII
+***** WWI results
+	  - Destroyed aristocratic power in Britain, Germany, Austria
+	  - Emergence of modern national state
+	  - Elections, democracy
+
+***** Mid 1920's
+	  - Countries began to be ruled by new authoritarian parties.
+	  - Italy, Mussolini in 1922.
+	  - Many political parties that could not rule, and Mussolini promised stability.
+	  - Became a dictator in a few years. Exile, kill, terrorize opponents.
+	  - First dictators. Napoleon was elected with plebiscite, vote yes or no.
+		#+begin_quote
+	  Plebiscite n. [F. pl['e]biscite, fr. L. plebiscitum.]
+	  A vote by universal male suffrage; especially, in France, a
+	  popular vote, as first sanctioned by the National
+	  Constitution of 1791
+		#+end_quote
+	  - Popular support, national interest equals me
+	  - Democracy experiment enabled the spread of unspoken ideas. Rise of right-wing populist leaders.
+	  - To the surprise of many, the first government was established by social-democrats in Germany.
+	  - Berlin is compared to Babylon, for it was the capital of gays.
+	  - The rise of free women. Bob haircut. Feminism emerged, because women replaced the men in economy during WWI.
+	  - Suffragettes in UK
+		#+begin_quote
+    n 1: a woman advocate of women's right to vote (especially a
+         militant advocate in the United Kingdom at the beginning of
+         the 20th century)
+		#+end_quote
+	  - Hatred towards WWI, Jews, rich, politicians resulted in election of fascists.
+	  - Pacifism lead to more authoritarian solutionx
+	  - Christopher Isherwood, gay.
+	  - Cabaret movie (1972). "Tomorrow belongs to me".
+	  - Marburg Files
+	  - Triumph of the Will, one of the best documentary. 16 years of German suffering (democracy was not seen good).
+	  - A youth which knows no classes or castes. Sinifsiz imtiyasiz. Youth is selfless. You are loyal to us, we are loyal to you. Contract of loyalty. We want you to be one people.
+	  - I want you to be obedient. People accept being obedient so that they do not have responsibility. Small peopled share the joy of success of big people.
+	  - Walter Benjamin: "Fascism is aestetization of politics".
+	  - Ceausescu in North Corea 1971. "Partidul Comunist Roman" channel.
+	  - Fascism promised to win the war
+	  - Katyn massacre, Russians captures Polish officers and massacred. NKVD.
+	  - Half of killed Jews were Polish, then soviet, and others.
+	  - Killings of civilians in masses was unprecedented.
+	  - Carnegie report on Balkan wars. Mutual enthic cleansings. War is the perfect time to use violence against ethnic minorities.
+	  - More Jews live in Argentina than in the whole Balkans.
+	  - Red army raped tens of thousands of German women
+	  - Comfort women. Japanese took girls as prostitutes for the army. 50k-200k.
+	  - Munich conference "surrender to the huger force". France, Britain allowed Germany invading Czechoslovakia.
+	  - Acropolis nazi flag.
+	  - No treaty that symbolizes the end of war.
+	  - USA, Britain, France didn't bomb Germany to the stone age. They wanted Germany to be on their side.
+	  - Yalta conference. Fate of Eastern Europe was decided.
+	  - Before WWII, USA didn't have a strong land army.
+	  - Flag over the Reichstag. Perstige of communism.
+	  - I love Germany so much, I'm glad ther are two of them.
+	  - With NATO, Americans could deploy their military forces in Europe.
+	  - Americans airlifted their army in West Berlin. Soviet Union gave up on West Berlin.
+	  - Berlin is the beginning of Cold War.
+	  - Iron curtain countries. Europe divided.
+	  - Yugoslavia liberated itself. Tito could challange Stalin's authority.
+	  - In Greece and Italy, communists were strong political powers, due to partisan movements.
+	  - Bella Ciao
